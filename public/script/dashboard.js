@@ -1,26 +1,6 @@
 import { api, loggedUser, parsePrice, loggedInKey, token, userKey, tokenKey, isLoggedIn } from "./util.js";
 
 
-
-function logOut() {
-    const logOutBtn = document.getElementById('logout-btn');
-
-    logOutBtn.addEventListener('click',(e)=>{
-        sessionStorage.setItem(loggedInKey,JSON.stringify(false));
-        localStorage.setItem(tokenKey,"");
-        localStorage.setItem(userKey,JSON.stringify({user: ""}));
-        isLoggedIn.isLogged = false;
-        token.token = "";
-        window.location.replace("../index.html")
-    });
-
-}
-
-logOut()
-
-console.log("user",JSON.parse(localStorage.getItem(userKey)))
-loggedUser.user = JSON.parse(localStorage.getItem(userKey)).user;
-
 if(true){
     var pageP = 1, limitP = 10;
     const username = document.getElementById("dash-username");

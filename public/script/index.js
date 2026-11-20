@@ -1,23 +1,6 @@
 
 import { api, isLoggedIn , loggedInKey, token, tokenKey, userKey} from "./util.js";
 
-
-function logOut() {
-    const logOutBtn = document.getElementById('logout-btn');
-
-    logOutBtn.addEventListener('click',(e)=>{
-        const a = false;
-        localStorage.setItem(loggedInKey,JSON.stringify(false));
-        localStorage.setItem(tokenKey,"");
-        localStorage.setItem(userKey,JSON.stringify({user: ""}));
-        isLoggedIn.isLogged = false;
-        token.token = ""
-        window.location.href = "./index.html"
-    });
-
-}
-
-logOut()
 const cardContainer = document.getElementById('card-container');
 
 console.log("index", isLoggedIn.isLogged)
@@ -202,7 +185,7 @@ function productHolder(container) {
     container.insertAdjacentHTML('beforeend',
         `
         <article class="card">
-            <figure class="img-box"><figcaption>Fresh Produce Image</figcaption></figure>
+            <figure class="img-box"><img src="./images/veggies.jpg" alt="Image of veggies"></figure>
             <h3>Fresh Produce</h3>
             <p>Buy fresh fruits and vegetables directly from local farmers.</p>
             <a class="view-btn" href="./pages/marketplace.html">View</a>
@@ -213,7 +196,7 @@ function productHolder(container) {
     container.insertAdjacentHTML('beforeend',
         `
         <article class="card">
-            <figure class="img-box"><figcaption>Livestock Products Image</figcaption></figure>
+            <figure class="img-box"><img src="./images/meat.avif" alt="Image of livestock product"></figure>
             <h3>Livestock Products</h3>
             <p>Purchase meat, dairy, and other livestock products from trusted local sources.</p>
             <a class="view-btn" href="./pages/marketplace.html">View</a>
@@ -224,7 +207,7 @@ function productHolder(container) {
     container.insertAdjacentHTML('beforeend',
         `
         <article class="card">
-            <figure class="img-box"><figcaption>Agricultural Tools Image</figcaption></figure>
+            <figure class="img-box"><img src="./images/tools.jpg" alt="image of agriculture tools"></figure>
             <h3>Agricultural Tools</h3>
             <p>Find a variety of farming tools and equipment to support your agricultural activities.</p>
             <a class="view-btn" href="./pages/marketplace.html">View</a>
@@ -237,7 +220,7 @@ function infoHolder(container) {
     container.insertAdjacentHTML('beforeend',
         `
         <article class="card">
-            <figure class="img-box"><figcaption>Crop Guide Image</figcaption></figure>
+            <figure class="img-box"><img src="./images/soil-preparation.webp" alt="farming info image, image of people farmin"></figure>
             <h3>Crop Guide</h3>
             <p>Learn about different crops, their growth requirements, and best practices for cultivation.</p>
             <a href="./pages/farming-info.html">Learn More</a>
@@ -248,7 +231,7 @@ function infoHolder(container) {
     container.insertAdjacentHTML('beforeend',
         `
         <article class="card">
-            <figure class="img-box"><figcaption>Livestock Guide Image</figcaption></figure>
+            <figure class="img-box"><img src="../public/images/cattle.jpg" alt="Image of cattle"></figure>
             <h3>Livestock Guide</h3>
             <p>Discover best practices for raising healthy livestock, including nutrition, housing, and disease prevention.</p>
             <a href="./pages/farming-info.html">Learn More</a>
@@ -259,7 +242,7 @@ function infoHolder(container) {
     container.insertAdjacentHTML('beforeend',
         `
         <article class="card">
-            <figure class="img-box"><figcaption>Soil Health Image</figcaption></figure>
+            <figure class="img-box"><img src="./images/soil-health.jpg" alt="Image of someone holding soil"></figure>
             <h3>Soil Health Guide</h3>
             <p>Understand the importance of soil health and learn techniques to improve soil fertility and structure.</p>
             <a href="./pages/farming-info.html">Learn More</a>
