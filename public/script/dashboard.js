@@ -1,4 +1,10 @@
 import { api, loggedUser, parsePrice, loggedInKey, token, userKey, tokenKey, isLoggedIn } from "./util.js";
+import dotenv from 'dotenv'
+
+dotenv.config()
+
+const serverUrl = process.env.SERVER_URL;
+const serverPort = process.env.SERVER_PORT;
 
 
 if(true){
@@ -480,7 +486,7 @@ if(true){
 
     async function getProducts(){
 
-        const products =  await api(`http://127.0.0.1:3000/product/user?id=${loggedUser.user.userId}&page=${pageP}&limit=${limitP}`,{
+        const products =  await api(`${serverUrl}:${serverPort}/product/user?id=${loggedUser.user.userId}&page=${pageP}&limit=${limitP}`,{
             method: 'GET',
             mode: 'cors'
         });
@@ -490,7 +496,7 @@ if(true){
 
     //this one is for the api call
     async function createProduct(data) {
-         const product = await api('http://127.0.0.1:3000/product/create',{
+         const product = await api(`${serverUrl}:${serverPort}/product/create`,{
             method: 'POST',
             mode: 'cors',
             body: JSON.stringify(data)
@@ -500,7 +506,7 @@ if(true){
 
     async function editProduct(data) {
         
-        const product = await api('http://127.0.0.1:3000/product/update',{
+        const product = await api(`${serverUrl}:${serverPort}/product/update`,{
             method: 'POST',
             mode: 'cors',
             body: JSON.stringify(data)
@@ -510,7 +516,7 @@ if(true){
     }
 
     async function deleteProduct(id) {
-        const product = await api(`http://127.0.0.1:3000/product/delete`,{
+        const product = await api(`${serverUrl}:${serverPort}/product/delete`,{
             method: 'DELETE',
             mode: 'cors',
             body: JSON.stringify({id:id})

@@ -1,4 +1,10 @@
 import { api, showLoginUi, loggedInKey, token, tokenKey, userKey, isLoggedIn } from "./util.js";
+import dotenv from 'dotenv'
+
+dotenv.config()
+
+const serverUrl = process.env.SERVER_URL;
+const serverPort = process.env.SERVER_PORT;
 
 const productContainer = document.getElementById("market-container");
 
@@ -113,7 +119,7 @@ function setData(mData) {
 
 async function getProducts() {
     
-    const products = await api(`http://127.0.0.1:3000/product?page=${page}&limit=${limit}`,{
+    const products = await api(`${serverUrl}:${serverPort}/product?page=${page}&limit=${limit}`,{
         method: 'GET',
         mode: 'cors'
     });
@@ -123,7 +129,7 @@ async function getProducts() {
 
 async function searchProducts(querys) {
 
-    const products = await api(`http://127.0.0.1:3000/product/search?q=${querys}&page=${page}&limit=${limit}`,{
+    const products = await api(`${serverUrl}:${serverPort}/product/search?q=${querys}&page=${page}&limit=${limit}`,{
         method: 'GET',
         mode: 'cors'
     });

@@ -1,5 +1,11 @@
 
 import { api, isLoggedIn , loggedInKey, token, tokenKey, userKey} from "./util.js";
+import dotenv from 'dotenv'
+
+dotenv.config()
+
+const serverUrl = process.env.SERVER_URL;
+const serverPort = process.env.SERVER_PORT;
 
 const cardContainer = document.getElementById('card-container');
 
@@ -150,7 +156,7 @@ function parseDate(date) {
 
 async function getProducts(){
 
-    const products = await api(`http://127.0.0.1:3000/product?page=${1}&limit=${6}`,{
+    const products = await api(`${serverUrl}:${serverPort}/product?page=${1}&limit=${6}`,{
         method: 'GET',
         mode: 'cors'
     });
@@ -160,7 +166,7 @@ async function getProducts(){
 
 async function getFarmingInfo(){
     
-    const info = await api("http://127.0.0.1:3000/product/",{
+    const info = await api(`${serverUrl}:${serverPort}/product/`,{
         method: 'GET',
         mode: 'cors'
     });
@@ -170,7 +176,7 @@ async function getFarmingInfo(){
 
 async function getEvents() {
     
-    const event = await api("http://127.0.0.1:3000/product/",{
+    const event = await api(`${serverUrl}:${serverPort}/product/`,{
         method: 'GET',
         mode: 'cors'
     });

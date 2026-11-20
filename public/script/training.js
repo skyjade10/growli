@@ -1,4 +1,10 @@
 import { api, loggedInKey, token, tokenKey, userKey, isLoggedIn } from "./util.js";
+import dotenv from 'dotenv'
+
+dotenv.config()
+
+const serverUrl = process.env.SERVER_URL;
+const serverPort = process.env.SERVER_PORT;
 
 const trainingContainer = document.getElementById("training-container");
 
@@ -108,7 +114,7 @@ function setData(mData) {
 
 async function getTainings() {
     
-    const trainings = await api(`http://127.0.0.1:3000/training?page=${page}&limit=${limit}`,{
+    const trainings = await api(`${serverUrl}:${serverPort}/training?page=${page}&limit=${limit}`,{
         method: 'GET',
         mode: 'cors'
     });
@@ -118,7 +124,7 @@ async function getTainings() {
 
 async function searchTrainings(querys) {
 
-    const trainings = await api(`http://127.0.0.1:3000/training/search?q=${querys}&page=${page}&limit=${limit}`,{
+    const trainings = await api(`${serverUrl}:${serverPort}/training/search?q=${querys}&page=${page}&limit=${limit}`,{
         method: 'GET',
         mode: 'cors'
     });

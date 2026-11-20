@@ -1,4 +1,10 @@
 import {api , valueLengthIsValid, isLoggedIn, token, loggedUser, loggedInKey, tokenKey, userKey} from './util.js'
+import dotenv from 'dotenv'
+
+dotenv.config()
+
+const serverUrl = process.env.SERVER_URL;
+const serverPort = process.env.SERVER_PORT;
 
 const form = document.getElementById("form-login");
 var IS_VALID = false;
@@ -28,7 +34,7 @@ form.addEventListener('submit',async (e) => {
 const login = async (mData) => {
     
     try {
-        const user = await api("http://127.0.0.1:3000/login/",{
+        const user = await api(`${serverUrl}:${serverPort}/login/`,{
             method: 'POST',
             mode: 'cors',
             body: JSON.stringify(mData)

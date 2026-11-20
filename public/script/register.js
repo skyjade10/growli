@@ -1,5 +1,11 @@
 
 import {tokenKey, userKey, isLoggedIn, api, valueLengthIsValid, loggedInKey, token } from "./util.js";
+import dotenv from 'dotenv'
+
+dotenv.config()
+
+const serverUrl = process.env.SERVER_URL;
+const serverPort = process.env.SERVER_PORT;
 
 const form = document.getElementById("register-form");
 
@@ -42,7 +48,7 @@ const createUser = async (data) =>{
 
     try {
 
-        const user = await api("http://127.0.0.1:3000/signup/",{
+        const user = await api(`${serverUrl}:${serverPort}/signup/`,{
             method: 'POST',
             mode: 'cors',
             body: JSON.stringify(data)
