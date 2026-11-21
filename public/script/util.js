@@ -1,3 +1,7 @@
+
+export const SERVER_URL = "https://growli.onrender.com";
+export const SERVER_PORT = 3000;
+
 //Uses localStorage not advisable
 
 export const loggedInKey = "LOG_IN";

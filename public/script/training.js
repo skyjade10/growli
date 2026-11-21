@@ -1,10 +1,7 @@
-import { api, loggedInKey, token, tokenKey, userKey, isLoggedIn } from "./util.js";
-import dotenv from 'dotenv'
+import { api, loggedInKey, token, tokenKey, userKey, isLoggedIn,SERVER_PORT,SERVER_URL } from "./util.js";
 
-dotenv.config()
-
-const serverUrl = process.env.SERVER_URL;
-const serverPort = process.env.SERVER_PORT;
+const serverUrl = SERVER_URL;
+const serverPort = SERVER_PORT;
 
 const trainingContainer = document.getElementById("training-container");
 

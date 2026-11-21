@@ -1,10 +1,7 @@
-import {api , valueLengthIsValid, isLoggedIn, token, loggedUser, loggedInKey, tokenKey, userKey} from './util.js'
-import dotenv from 'dotenv'
+import {api , valueLengthIsValid, isLoggedIn, token, loggedUser, loggedInKey, tokenKey, userKey, SERVER_PORT,SERVER_URL} from './util.js'
 
-dotenv.config()
-
-const serverUrl = process.env.SERVER_URL;
-const serverPort = process.env.SERVER_PORT;
+const serverUrl = SERVER_URL;
+const serverPort = SERVER_PORT;
 
 const form = document.getElementById("form-login");
 var IS_VALID = false;

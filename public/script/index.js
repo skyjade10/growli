@@ -1,11 +1,8 @@
 
-import { api, isLoggedIn , loggedInKey, token, tokenKey, userKey} from "./util.js";
-import dotenv from 'dotenv'
+import { api, isLoggedIn , loggedInKey, token, tokenKey, userKey,SERVER_PORT,SERVER_URL} from "./util.js";
 
-dotenv.config()
-
-const serverUrl = process.env.SERVER_URL;
-const serverPort = process.env.SERVER_PORT;
+const serverUrl = SERVER_URL;
+const serverPort = SERVER_PORT;
 
 const cardContainer = document.getElementById('card-container');
 
