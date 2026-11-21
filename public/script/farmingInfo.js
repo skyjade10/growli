@@ -5,6 +5,7 @@ dotenv.config()
 
 const serverUrl = process.env.SERVER_URL;
 const serverPort = process.env.SERVER_PORT;
+console.log("HOST",process.env.HOST);
 
 const infoContainer = document.getElementById("farming-info-container");
 

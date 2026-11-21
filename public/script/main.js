@@ -11,7 +11,8 @@ const nav = document.getElementById('main-nav');
 const spinner = document.getElementById('spinner');
 
 //close the loading spinner
-spinner.close()
+if(spinner)
+    spinner.close()
 
 console.log(spinner)
 
