@@ -46,9 +46,8 @@ export const showLoginUi = () =>{
     const authC = document.getElementById("auth");
     const profile = document.getElementById("profile");
 
-    console.log(authC,profile);
-    console.log("utils is logged in: ",JSON.parse(localStorage.getItem(JSON.parse(loggedInKey))))
-    let isLog = JSON.parse(localStorage.getItem(JSON.parse(loggedInKey)))
+    const isLog = JSON.parse(localStorage.getItem(loggedInKey))? true : false;
+    console.log("isLog: ",isLog)
 
     if(isLog){
         console.log("Is logged in")

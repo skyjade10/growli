@@ -40,12 +40,17 @@ function logOut() {
     const logOutBtn = document.getElementById('logout-btn');
 
     logOutBtn.addEventListener('click',(e)=>{
-        sessionStorage.setItem(loggedInKey,JSON.stringify(false));
+        localStorage.setItem(loggedInKey,JSON.stringify(false));
         localStorage.setItem(tokenKey,"");
         localStorage.setItem(userKey,JSON.stringify({user: ""}));
         isLoggedIn.isLogged = false;
         token.token = "";
-        window.location.href = "../index.html"
+
+        if(window.location.pathname.includes("index.html")){
+            window.location.href = "./index.html";
+        }else{
+            window.location.href = "../index.html"
+        }
     });
 
 }
