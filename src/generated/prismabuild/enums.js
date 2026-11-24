@@ -7,29 +7,29 @@
 *
 * 🟢 You can import this file directly.
 */
-export const Role = {
+export const farminginformation_status = {
+    ADMIN: 'ADMIN',
+    VERIFIED: 'VERIFIED',
+    UNVERIFIED: 'UNVERIFIED'
+};
+export const user_role = {
     ADMIN: 'ADMIN',
     USER: 'USER',
     SUPER_USER: 'SUPER_USER'
 };
-export const Scale = {
-    SMALL_SCALE: 'SMALL_SCALE',
-    LARGE_SCALE: 'LARGE_SCALE'
+export const training_status = {
+    ON_GOING: 'ON_GOING',
+    ENDED: 'ENDED'
 };
-export const FarmingCategory = {
+export const user_farming = {
     CROP_FARMING: 'CROP_FARMING',
     LIVESTOCK_FARMING: 'LIVESTOCK_FARMING',
     POULTRY_FARMING: 'POULTRY_FARMING',
     FISHERY: 'FISHERY',
     HORTICULTURE: 'HORTICULTURE'
 };
-export const TrainingStatus = {
-    ON_GOING: 'ON_GOING',
-    ENDED: 'ENDED'
-};
-export const FarmingInfoStatus = {
-    ADMIN: 'ADMIN',
-    VERIFIED: 'VERIFIED',
-    UNVERIFIED: 'UNVERIFIED'
+export const user_scale = {
+    SMALL_SCALE: 'SMALL_SCALE',
+    LARGE_SCALE: 'LARGE_SCALE'
 };
 //# sourceMappingURL=enums.js.map

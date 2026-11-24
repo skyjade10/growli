@@ -244,11 +244,11 @@ export type ExcludeUnderscoreKeys<T extends string> = T extends `_${string}` ? n
 export type FieldRef<Model, FieldType> = runtime.FieldRef<Model, FieldType>;
 type FieldRefInputType<Model, FieldType> = Model extends never ? never : FieldRef<Model, FieldType>;
 export declare const ModelName: {
-    readonly User: "User";
     readonly Product: "Product";
-    readonly Training: "Training";
-    readonly TrainingRegisterUser: "TrainingRegisterUser";
-    readonly FarmingInformation: "FarmingInformation";
+    readonly farminginformation: "farminginformation";
+    readonly training: "training";
+    readonly trainingregisteruser: "trainingregisteruser";
+    readonly user: "user";
 };
 export type ModelName = (typeof ModelName)[keyof typeof ModelName];
 export interface TypeMapCb<GlobalOmitOptions = {}> extends runtime.Types.Utils.Fn<{
@@ -261,76 +261,10 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         omit: GlobalOmitOptions;
     };
     meta: {
-        modelProps: "user" | "product" | "training" | "trainingRegisterUser" | "farmingInformation";
+        modelProps: "product" | "farminginformation" | "training" | "trainingregisteruser" | "user";
         txIsolationLevel: TransactionIsolationLevel;
     };
     model: {
-        User: {
-            payload: Prisma.$UserPayload<ExtArgs>;
-            fields: Prisma.UserFieldRefs;
-            operations: {
-                findUnique: {
-                    args: Prisma.UserFindUniqueArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$UserPayload> | null;
-                };
-                findUniqueOrThrow: {
-                    args: Prisma.UserFindUniqueOrThrowArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$UserPayload>;
-                };
-                findFirst: {
-                    args: Prisma.UserFindFirstArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$UserPayload> | null;
-                };
-                findFirstOrThrow: {
-                    args: Prisma.UserFindFirstOrThrowArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$UserPayload>;
-                };
-                findMany: {
-                    args: Prisma.UserFindManyArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$UserPayload>[];
-                };
-                create: {
-                    args: Prisma.UserCreateArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$UserPayload>;
-                };
-                createMany: {
-                    args: Prisma.UserCreateManyArgs<ExtArgs>;
-                    result: BatchPayload;
-                };
-                delete: {
-                    args: Prisma.UserDeleteArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$UserPayload>;
-                };
-                update: {
-                    args: Prisma.UserUpdateArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$UserPayload>;
-                };
-                deleteMany: {
-                    args: Prisma.UserDeleteManyArgs<ExtArgs>;
-                    result: BatchPayload;
-                };
-                updateMany: {
-                    args: Prisma.UserUpdateManyArgs<ExtArgs>;
-                    result: BatchPayload;
-                };
-                upsert: {
-                    args: Prisma.UserUpsertArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$UserPayload>;
-                };
-                aggregate: {
-                    args: Prisma.UserAggregateArgs<ExtArgs>;
-                    result: runtime.Types.Utils.Optional<Prisma.AggregateUser>;
-                };
-                groupBy: {
-                    args: Prisma.UserGroupByArgs<ExtArgs>;
-                    result: runtime.Types.Utils.Optional<Prisma.UserGroupByOutputType>[];
-                };
-                count: {
-                    args: Prisma.UserCountArgs<ExtArgs>;
-                    result: runtime.Types.Utils.Optional<Prisma.UserCountAggregateOutputType> | number;
-                };
-            };
-        };
         Product: {
             payload: Prisma.$ProductPayload<ExtArgs>;
             fields: Prisma.ProductFieldRefs;
@@ -397,201 +331,267 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
                 };
             };
         };
-        Training: {
-            payload: Prisma.$TrainingPayload<ExtArgs>;
-            fields: Prisma.TrainingFieldRefs;
+        farminginformation: {
+            payload: Prisma.$farminginformationPayload<ExtArgs>;
+            fields: Prisma.farminginformationFieldRefs;
             operations: {
                 findUnique: {
-                    args: Prisma.TrainingFindUniqueArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$TrainingPayload> | null;
+                    args: Prisma.farminginformationFindUniqueArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$farminginformationPayload> | null;
                 };
                 findUniqueOrThrow: {
-                    args: Prisma.TrainingFindUniqueOrThrowArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$TrainingPayload>;
+                    args: Prisma.farminginformationFindUniqueOrThrowArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$farminginformationPayload>;
                 };
                 findFirst: {
-                    args: Prisma.TrainingFindFirstArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$TrainingPayload> | null;
+                    args: Prisma.farminginformationFindFirstArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$farminginformationPayload> | null;
                 };
                 findFirstOrThrow: {
-                    args: Prisma.TrainingFindFirstOrThrowArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$TrainingPayload>;
+                    args: Prisma.farminginformationFindFirstOrThrowArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$farminginformationPayload>;
                 };
                 findMany: {
-                    args: Prisma.TrainingFindManyArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$TrainingPayload>[];
+                    args: Prisma.farminginformationFindManyArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$farminginformationPayload>[];
                 };
                 create: {
-                    args: Prisma.TrainingCreateArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$TrainingPayload>;
+                    args: Prisma.farminginformationCreateArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$farminginformationPayload>;
                 };
                 createMany: {
-                    args: Prisma.TrainingCreateManyArgs<ExtArgs>;
+                    args: Prisma.farminginformationCreateManyArgs<ExtArgs>;
                     result: BatchPayload;
                 };
                 delete: {
-                    args: Prisma.TrainingDeleteArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$TrainingPayload>;
+                    args: Prisma.farminginformationDeleteArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$farminginformationPayload>;
                 };
                 update: {
-                    args: Prisma.TrainingUpdateArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$TrainingPayload>;
+                    args: Prisma.farminginformationUpdateArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$farminginformationPayload>;
                 };
                 deleteMany: {
-                    args: Prisma.TrainingDeleteManyArgs<ExtArgs>;
+                    args: Prisma.farminginformationDeleteManyArgs<ExtArgs>;
                     result: BatchPayload;
                 };
                 updateMany: {
-                    args: Prisma.TrainingUpdateManyArgs<ExtArgs>;
+                    args: Prisma.farminginformationUpdateManyArgs<ExtArgs>;
                     result: BatchPayload;
                 };
                 upsert: {
-                    args: Prisma.TrainingUpsertArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$TrainingPayload>;
+                    args: Prisma.farminginformationUpsertArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$farminginformationPayload>;
+                };
+                aggregate: {
+                    args: Prisma.FarminginformationAggregateArgs<ExtArgs>;
+                    result: runtime.Types.Utils.Optional<Prisma.AggregateFarminginformation>;
+                };
+                groupBy: {
+                    args: Prisma.farminginformationGroupByArgs<ExtArgs>;
+                    result: runtime.Types.Utils.Optional<Prisma.FarminginformationGroupByOutputType>[];
+                };
+                count: {
+                    args: Prisma.farminginformationCountArgs<ExtArgs>;
+                    result: runtime.Types.Utils.Optional<Prisma.FarminginformationCountAggregateOutputType> | number;
+                };
+            };
+        };
+        training: {
+            payload: Prisma.$trainingPayload<ExtArgs>;
+            fields: Prisma.trainingFieldRefs;
+            operations: {
+                findUnique: {
+                    args: Prisma.trainingFindUniqueArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$trainingPayload> | null;
+                };
+                findUniqueOrThrow: {
+                    args: Prisma.trainingFindUniqueOrThrowArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$trainingPayload>;
+                };
+                findFirst: {
+                    args: Prisma.trainingFindFirstArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$trainingPayload> | null;
+                };
+                findFirstOrThrow: {
+                    args: Prisma.trainingFindFirstOrThrowArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$trainingPayload>;
+                };
+                findMany: {
+                    args: Prisma.trainingFindManyArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$trainingPayload>[];
+                };
+                create: {
+                    args: Prisma.trainingCreateArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$trainingPayload>;
+                };
+                createMany: {
+                    args: Prisma.trainingCreateManyArgs<ExtArgs>;
+                    result: BatchPayload;
+                };
+                delete: {
+                    args: Prisma.trainingDeleteArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$trainingPayload>;
+                };
+                update: {
+                    args: Prisma.trainingUpdateArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$trainingPayload>;
+                };
+                deleteMany: {
+                    args: Prisma.trainingDeleteManyArgs<ExtArgs>;
+                    result: BatchPayload;
+                };
+                updateMany: {
+                    args: Prisma.trainingUpdateManyArgs<ExtArgs>;
+                    result: BatchPayload;
+                };
+                upsert: {
+                    args: Prisma.trainingUpsertArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$trainingPayload>;
                 };
                 aggregate: {
                     args: Prisma.TrainingAggregateArgs<ExtArgs>;
                     result: runtime.Types.Utils.Optional<Prisma.AggregateTraining>;
                 };
                 groupBy: {
-                    args: Prisma.TrainingGroupByArgs<ExtArgs>;
+                    args: Prisma.trainingGroupByArgs<ExtArgs>;
                     result: runtime.Types.Utils.Optional<Prisma.TrainingGroupByOutputType>[];
                 };
                 count: {
-                    args: Prisma.TrainingCountArgs<ExtArgs>;
+                    args: Prisma.trainingCountArgs<ExtArgs>;
                     result: runtime.Types.Utils.Optional<Prisma.TrainingCountAggregateOutputType> | number;
                 };
             };
         };
-        TrainingRegisterUser: {
-            payload: Prisma.$TrainingRegisterUserPayload<ExtArgs>;
-            fields: Prisma.TrainingRegisterUserFieldRefs;
+        trainingregisteruser: {
+            payload: Prisma.$trainingregisteruserPayload<ExtArgs>;
+            fields: Prisma.trainingregisteruserFieldRefs;
             operations: {
                 findUnique: {
-                    args: Prisma.TrainingRegisterUserFindUniqueArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$TrainingRegisterUserPayload> | null;
+                    args: Prisma.trainingregisteruserFindUniqueArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$trainingregisteruserPayload> | null;
                 };
                 findUniqueOrThrow: {
-                    args: Prisma.TrainingRegisterUserFindUniqueOrThrowArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$TrainingRegisterUserPayload>;
+                    args: Prisma.trainingregisteruserFindUniqueOrThrowArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$trainingregisteruserPayload>;
                 };
                 findFirst: {
-                    args: Prisma.TrainingRegisterUserFindFirstArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$TrainingRegisterUserPayload> | null;
+                    args: Prisma.trainingregisteruserFindFirstArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$trainingregisteruserPayload> | null;
                 };
                 findFirstOrThrow: {
-                    args: Prisma.TrainingRegisterUserFindFirstOrThrowArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$TrainingRegisterUserPayload>;
+                    args: Prisma.trainingregisteruserFindFirstOrThrowArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$trainingregisteruserPayload>;
                 };
                 findMany: {
-                    args: Prisma.TrainingRegisterUserFindManyArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$TrainingRegisterUserPayload>[];
+                    args: Prisma.trainingregisteruserFindManyArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$trainingregisteruserPayload>[];
                 };
                 create: {
-                    args: Prisma.TrainingRegisterUserCreateArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$TrainingRegisterUserPayload>;
+                    args: Prisma.trainingregisteruserCreateArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$trainingregisteruserPayload>;
                 };
                 createMany: {
-                    args: Prisma.TrainingRegisterUserCreateManyArgs<ExtArgs>;
+                    args: Prisma.trainingregisteruserCreateManyArgs<ExtArgs>;
                     result: BatchPayload;
                 };
                 delete: {
-                    args: Prisma.TrainingRegisterUserDeleteArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$TrainingRegisterUserPayload>;
+                    args: Prisma.trainingregisteruserDeleteArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$trainingregisteruserPayload>;
                 };
                 update: {
-                    args: Prisma.TrainingRegisterUserUpdateArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$TrainingRegisterUserPayload>;
+                    args: Prisma.trainingregisteruserUpdateArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$trainingregisteruserPayload>;
                 };
                 deleteMany: {
-                    args: Prisma.TrainingRegisterUserDeleteManyArgs<ExtArgs>;
+                    args: Prisma.trainingregisteruserDeleteManyArgs<ExtArgs>;
                     result: BatchPayload;
                 };
                 updateMany: {
-                    args: Prisma.TrainingRegisterUserUpdateManyArgs<ExtArgs>;
+                    args: Prisma.trainingregisteruserUpdateManyArgs<ExtArgs>;
                     result: BatchPayload;
                 };
                 upsert: {
-                    args: Prisma.TrainingRegisterUserUpsertArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$TrainingRegisterUserPayload>;
+                    args: Prisma.trainingregisteruserUpsertArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$trainingregisteruserPayload>;
                 };
                 aggregate: {
-                    args: Prisma.TrainingRegisterUserAggregateArgs<ExtArgs>;
-                    result: runtime.Types.Utils.Optional<Prisma.AggregateTrainingRegisterUser>;
+                    args: Prisma.TrainingregisteruserAggregateArgs<ExtArgs>;
+                    result: runtime.Types.Utils.Optional<Prisma.AggregateTrainingregisteruser>;
                 };
                 groupBy: {
-                    args: Prisma.TrainingRegisterUserGroupByArgs<ExtArgs>;
-                    result: runtime.Types.Utils.Optional<Prisma.TrainingRegisterUserGroupByOutputType>[];
+                    args: Prisma.trainingregisteruserGroupByArgs<ExtArgs>;
+                    result: runtime.Types.Utils.Optional<Prisma.TrainingregisteruserGroupByOutputType>[];
                 };
                 count: {
-                    args: Prisma.TrainingRegisterUserCountArgs<ExtArgs>;
-                    result: runtime.Types.Utils.Optional<Prisma.TrainingRegisterUserCountAggregateOutputType> | number;
+                    args: Prisma.trainingregisteruserCountArgs<ExtArgs>;
+                    result: runtime.Types.Utils.Optional<Prisma.TrainingregisteruserCountAggregateOutputType> | number;
                 };
             };
         };
-        FarmingInformation: {
-            payload: Prisma.$FarmingInformationPayload<ExtArgs>;
-            fields: Prisma.FarmingInformationFieldRefs;
+        user: {
+            payload: Prisma.$userPayload<ExtArgs>;
+            fields: Prisma.userFieldRefs;
             operations: {
                 findUnique: {
-                    args: Prisma.FarmingInformationFindUniqueArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$FarmingInformationPayload> | null;
+                    args: Prisma.userFindUniqueArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$userPayload> | null;
                 };
                 findUniqueOrThrow: {
-                    args: Prisma.FarmingInformationFindUniqueOrThrowArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$FarmingInformationPayload>;
+                    args: Prisma.userFindUniqueOrThrowArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$userPayload>;
                 };
                 findFirst: {
-                    args: Prisma.FarmingInformationFindFirstArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$FarmingInformationPayload> | null;
+                    args: Prisma.userFindFirstArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$userPayload> | null;
                 };
                 findFirstOrThrow: {
-                    args: Prisma.FarmingInformationFindFirstOrThrowArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$FarmingInformationPayload>;
+                    args: Prisma.userFindFirstOrThrowArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$userPayload>;
                 };
                 findMany: {
-                    args: Prisma.FarmingInformationFindManyArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$FarmingInformationPayload>[];
+                    args: Prisma.userFindManyArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$userPayload>[];
                 };
                 create: {
-                    args: Prisma.FarmingInformationCreateArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$FarmingInformationPayload>;
+                    args: Prisma.userCreateArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$userPayload>;
                 };
                 createMany: {
-                    args: Prisma.FarmingInformationCreateManyArgs<ExtArgs>;
+                    args: Prisma.userCreateManyArgs<ExtArgs>;
                     result: BatchPayload;
                 };
                 delete: {
-                    args: Prisma.FarmingInformationDeleteArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$FarmingInformationPayload>;
+                    args: Prisma.userDeleteArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$userPayload>;
                 };
                 update: {
-                    args: Prisma.FarmingInformationUpdateArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$FarmingInformationPayload>;
+                    args: Prisma.userUpdateArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$userPayload>;
                 };
                 deleteMany: {
-                    args: Prisma.FarmingInformationDeleteManyArgs<ExtArgs>;
+                    args: Prisma.userDeleteManyArgs<ExtArgs>;
                     result: BatchPayload;
                 };
                 updateMany: {
-                    args: Prisma.FarmingInformationUpdateManyArgs<ExtArgs>;
+                    args: Prisma.userUpdateManyArgs<ExtArgs>;
                     result: BatchPayload;
                 };
                 upsert: {
-                    args: Prisma.FarmingInformationUpsertArgs<ExtArgs>;
-                    result: runtime.Types.Utils.PayloadToResult<Prisma.$FarmingInformationPayload>;
+                    args: Prisma.userUpsertArgs<ExtArgs>;
+                    result: runtime.Types.Utils.PayloadToResult<Prisma.$userPayload>;
                 };
                 aggregate: {
-                    args: Prisma.FarmingInformationAggregateArgs<ExtArgs>;
-                    result: runtime.Types.Utils.Optional<Prisma.AggregateFarmingInformation>;
+                    args: Prisma.UserAggregateArgs<ExtArgs>;
+                    result: runtime.Types.Utils.Optional<Prisma.AggregateUser>;
                 };
                 groupBy: {
-                    args: Prisma.FarmingInformationGroupByArgs<ExtArgs>;
-                    result: runtime.Types.Utils.Optional<Prisma.FarmingInformationGroupByOutputType>[];
+                    args: Prisma.userGroupByArgs<ExtArgs>;
+                    result: runtime.Types.Utils.Optional<Prisma.UserGroupByOutputType>[];
                 };
                 count: {
-                    args: Prisma.FarmingInformationCountArgs<ExtArgs>;
-                    result: runtime.Types.Utils.Optional<Prisma.FarmingInformationCountAggregateOutputType> | number;
+                    args: Prisma.userCountArgs<ExtArgs>;
+                    result: runtime.Types.Utils.Optional<Prisma.UserCountAggregateOutputType> | number;
                 };
             };
         };
@@ -629,72 +629,72 @@ export declare const TransactionIsolationLevel: {
     readonly Serializable: "Serializable";
 };
 export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel];
-export declare const UserScalarFieldEnum: {
-    readonly userId: "userId";
-    readonly email: "email";
-    readonly password: "password";
-    readonly profileImage: "profileImage";
-    readonly role: "role";
-    readonly firstName: "firstName";
-    readonly lastName: "lastName";
-    readonly bio: "bio";
-    readonly country: "country";
-    readonly state: "state";
-    readonly city: "city";
-    readonly farming: "farming";
-    readonly scale: "scale";
-    readonly createdAt: "createdAt";
-    readonly updatedAt: "updatedAt";
-};
-export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum];
 export declare const ProductScalarFieldEnum: {
     readonly productId: "productId";
     readonly userId: "userId";
     readonly price: "price";
-    readonly pronductImage: "pronductImage";
     readonly quantity: "quantity";
     readonly farmersName: "farmersName";
     readonly productName: "productName";
     readonly phoneNumber: "phoneNumber";
     readonly createdAt: "createdAt";
     readonly updatedAt: "updatedAt";
+    readonly pronductImage: "pronductImage";
 };
 export type ProductScalarFieldEnum = (typeof ProductScalarFieldEnum)[keyof typeof ProductScalarFieldEnum];
+export declare const FarminginformationScalarFieldEnum: {
+    readonly farmingId: "farmingId";
+    readonly authorId: "authorId";
+    readonly status: "status";
+    readonly title: "title";
+    readonly article: "article";
+    readonly createdAt: "createdAt";
+    readonly updatedAt: "updatedAt";
+    readonly farmingInfoImage: "farmingInfoImage";
+};
+export type FarminginformationScalarFieldEnum = (typeof FarminginformationScalarFieldEnum)[keyof typeof FarminginformationScalarFieldEnum];
 export declare const TrainingScalarFieldEnum: {
     readonly trainingId: "trainingId";
     readonly authorId: "authorId";
     readonly title: "title";
-    readonly trainingDate: "trainingDate";
-    readonly trainingImage: "trainingImage";
-    readonly country: "country";
-    readonly state: "state";
     readonly city: "city";
     readonly place: "place";
     readonly description: "description";
     readonly status: "status";
     readonly createdAt: "createdAt";
     readonly updatedAt: "updatedAt";
+    readonly country: "country";
+    readonly state: "state";
+    readonly trainingDate: "trainingDate";
+    readonly trainingImage: "trainingImage";
 };
 export type TrainingScalarFieldEnum = (typeof TrainingScalarFieldEnum)[keyof typeof TrainingScalarFieldEnum];
-export declare const TrainingRegisterUserScalarFieldEnum: {
+export declare const TrainingregisteruserScalarFieldEnum: {
     readonly registryId: "registryId";
     readonly userId: "userId";
     readonly trainingEventId: "trainingEventId";
     readonly createdAt: "createdAt";
     readonly updatedAt: "updatedAt";
 };
-export type TrainingRegisterUserScalarFieldEnum = (typeof TrainingRegisterUserScalarFieldEnum)[keyof typeof TrainingRegisterUserScalarFieldEnum];
-export declare const FarmingInformationScalarFieldEnum: {
-    readonly farmingId: "farmingId";
-    readonly authorId: "authorId";
-    readonly farmingInfoImage: "farmingInfoImage";
-    readonly status: "status";
-    readonly title: "title";
-    readonly article: "article";
+export type TrainingregisteruserScalarFieldEnum = (typeof TrainingregisteruserScalarFieldEnum)[keyof typeof TrainingregisteruserScalarFieldEnum];
+export declare const UserScalarFieldEnum: {
+    readonly userId: "userId";
+    readonly email: "email";
+    readonly password: "password";
+    readonly role: "role";
+    readonly firstName: "firstName";
+    readonly lastName: "lastName";
     readonly createdAt: "createdAt";
     readonly updatedAt: "updatedAt";
+    readonly bio: "bio";
+    readonly city: "city";
+    readonly country: "country";
+    readonly farming: "farming";
+    readonly scale: "scale";
+    readonly state: "state";
+    readonly profileImage: "profileImage";
 };
-export type FarmingInformationScalarFieldEnum = (typeof FarmingInformationScalarFieldEnum)[keyof typeof FarmingInformationScalarFieldEnum];
+export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum];
 export declare const SortOrder: {
     readonly asc: "asc";
     readonly desc: "desc";
@@ -705,54 +705,54 @@ export declare const NullsOrder: {
     readonly last: "last";
 };
 export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder];
-export declare const UserOrderByRelevanceFieldEnum: {
-    readonly userId: "userId";
-    readonly email: "email";
-    readonly password: "password";
-    readonly profileImage: "profileImage";
-    readonly firstName: "firstName";
-    readonly lastName: "lastName";
-    readonly bio: "bio";
-    readonly country: "country";
-    readonly state: "state";
-    readonly city: "city";
-};
-export type UserOrderByRelevanceFieldEnum = (typeof UserOrderByRelevanceFieldEnum)[keyof typeof UserOrderByRelevanceFieldEnum];
 export declare const ProductOrderByRelevanceFieldEnum: {
     readonly productId: "productId";
     readonly userId: "userId";
-    readonly pronductImage: "pronductImage";
     readonly farmersName: "farmersName";
     readonly productName: "productName";
     readonly phoneNumber: "phoneNumber";
+    readonly pronductImage: "pronductImage";
 };
 export type ProductOrderByRelevanceFieldEnum = (typeof ProductOrderByRelevanceFieldEnum)[keyof typeof ProductOrderByRelevanceFieldEnum];
-export declare const TrainingOrderByRelevanceFieldEnum: {
+export declare const farminginformationOrderByRelevanceFieldEnum: {
+    readonly farmingId: "farmingId";
+    readonly authorId: "authorId";
+    readonly title: "title";
+    readonly article: "article";
+    readonly farmingInfoImage: "farmingInfoImage";
+};
+export type farminginformationOrderByRelevanceFieldEnum = (typeof farminginformationOrderByRelevanceFieldEnum)[keyof typeof farminginformationOrderByRelevanceFieldEnum];
+export declare const trainingOrderByRelevanceFieldEnum: {
     readonly trainingId: "trainingId";
     readonly authorId: "authorId";
     readonly title: "title";
-    readonly trainingImage: "trainingImage";
-    readonly country: "country";
-    readonly state: "state";
     readonly city: "city";
     readonly place: "place";
     readonly description: "description";
+    readonly country: "country";
+    readonly state: "state";
+    readonly trainingImage: "trainingImage";
 };
-export type TrainingOrderByRelevanceFieldEnum = (typeof TrainingOrderByRelevanceFieldEnum)[keyof typeof TrainingOrderByRelevanceFieldEnum];
-export declare const TrainingRegisterUserOrderByRelevanceFieldEnum: {
+export type trainingOrderByRelevanceFieldEnum = (typeof trainingOrderByRelevanceFieldEnum)[keyof typeof trainingOrderByRelevanceFieldEnum];
+export declare const trainingregisteruserOrderByRelevanceFieldEnum: {
     readonly registryId: "registryId";
     readonly userId: "userId";
     readonly trainingEventId: "trainingEventId";
 };
-export type TrainingRegisterUserOrderByRelevanceFieldEnum = (typeof TrainingRegisterUserOrderByRelevanceFieldEnum)[keyof typeof TrainingRegisterUserOrderByRelevanceFieldEnum];
-export declare const FarmingInformationOrderByRelevanceFieldEnum: {
-    readonly farmingId: "farmingId";
-    readonly authorId: "authorId";
-    readonly farmingInfoImage: "farmingInfoImage";
-    readonly title: "title";
-    readonly article: "article";
+export type trainingregisteruserOrderByRelevanceFieldEnum = (typeof trainingregisteruserOrderByRelevanceFieldEnum)[keyof typeof trainingregisteruserOrderByRelevanceFieldEnum];
+export declare const userOrderByRelevanceFieldEnum: {
+    readonly userId: "userId";
+    readonly email: "email";
+    readonly password: "password";
+    readonly firstName: "firstName";
+    readonly lastName: "lastName";
+    readonly bio: "bio";
+    readonly city: "city";
+    readonly country: "country";
+    readonly state: "state";
+    readonly profileImage: "profileImage";
 };
-export type FarmingInformationOrderByRelevanceFieldEnum = (typeof FarmingInformationOrderByRelevanceFieldEnum)[keyof typeof FarmingInformationOrderByRelevanceFieldEnum];
+export type userOrderByRelevanceFieldEnum = (typeof userOrderByRelevanceFieldEnum)[keyof typeof userOrderByRelevanceFieldEnum];
 /**
  * Field references
  */
@@ -761,33 +761,33 @@ export type FarmingInformationOrderByRelevanceFieldEnum = (typeof FarmingInforma
  */
 export type StringFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'String'>;
 /**
- * Reference to a field of type 'Role'
+ * Reference to a field of type 'Float'
  */
-export type EnumRoleFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Role'>;
-/**
- * Reference to a field of type 'FarmingCategory'
- */
-export type EnumFarmingCategoryFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'FarmingCategory'>;
-/**
- * Reference to a field of type 'Scale'
- */
-export type EnumScaleFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Scale'>;
+export type FloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float'>;
 /**
  * Reference to a field of type 'DateTime'
  */
 export type DateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'DateTime'>;
 /**
- * Reference to a field of type 'Float'
+ * Reference to a field of type 'farminginformation_status'
  */
-export type FloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float'>;
+export type Enumfarminginformation_statusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'farminginformation_status'>;
 /**
- * Reference to a field of type 'TrainingStatus'
+ * Reference to a field of type 'training_status'
  */
-export type EnumTrainingStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'TrainingStatus'>;
+export type Enumtraining_statusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'training_status'>;
 /**
- * Reference to a field of type 'FarmingInfoStatus'
+ * Reference to a field of type 'user_role'
  */
-export type EnumFarmingInfoStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'FarmingInfoStatus'>;
+export type Enumuser_roleFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'user_role'>;
+/**
+ * Reference to a field of type 'user_farming'
+ */
+export type Enumuser_farmingFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'user_farming'>;
+/**
+ * Reference to a field of type 'user_scale'
+ */
+export type Enumuser_scaleFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'user_scale'>;
 /**
  * Reference to a field of type 'Int'
  */
@@ -939,11 +939,11 @@ export interface PrismaClientOptionsWithAdapter extends PrismaClientBaseOptions 
  */
 export type PrismaClientOptions = PrismaClientOptionsWithAccelerateUrl | PrismaClientOptionsWithAdapter;
 export type GlobalOmitConfig = {
-    user?: Prisma.UserOmit;
     product?: Prisma.ProductOmit;
-    training?: Prisma.TrainingOmit;
-    trainingRegisterUser?: Prisma.TrainingRegisterUserOmit;
-    farmingInformation?: Prisma.FarmingInformationOmit;
+    farminginformation?: Prisma.farminginformationOmit;
+    training?: Prisma.trainingOmit;
+    trainingregisteruser?: Prisma.trainingregisteruserOmit;
+    user?: Prisma.userOmit;
 };
 export type LogLevel = 'info' | 'query' | 'warn' | 'error';
 export type LogDefinition = {

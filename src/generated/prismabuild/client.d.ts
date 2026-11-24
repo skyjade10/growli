@@ -12,8 +12,8 @@ export * from "./enums.js";
  * const prisma = new PrismaClient({
  *   adapter: new PrismaPg({ connectionString: process.env.DATABASE_URL })
  * })
- * // Fetch zero or more Users
- * const users = await prisma.user.findMany()
+ * // Fetch zero or more Products
+ * const products = await prisma.product.findMany()
  * ```
  *
  * Read more in our [docs](https://pris.ly/d/client).
@@ -22,28 +22,28 @@ export declare const PrismaClient: $Class.PrismaClientConstructor;
 export type PrismaClient<LogOpts extends Prisma.LogLevel = never, OmitOpts extends Prisma.PrismaClientOptions["omit"] = Prisma.PrismaClientOptions["omit"], ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = $Class.PrismaClient<LogOpts, OmitOpts, ExtArgs>;
 export { Prisma };
 /**
- * Model User
- *
- */
-export type User = Prisma.UserModel;
-/**
  * Model Product
  *
  */
 export type Product = Prisma.ProductModel;
 /**
- * Model Training
+ * Model farminginformation
  *
  */
-export type Training = Prisma.TrainingModel;
+export type farminginformation = Prisma.farminginformationModel;
 /**
- * Model TrainingRegisterUser
+ * Model training
  *
  */
-export type TrainingRegisterUser = Prisma.TrainingRegisterUserModel;
+export type training = Prisma.trainingModel;
 /**
- * Model FarmingInformation
+ * Model trainingregisteruser
  *
  */
-export type FarmingInformation = Prisma.FarmingInformationModel;
+export type trainingregisteruser = Prisma.trainingregisteruserModel;
+/**
+ * Model user
+ *
+ */
+export type user = Prisma.userModel;
 //# sourceMappingURL=client.d.ts.map

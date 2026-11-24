@@ -1,30 +1,30 @@
 import type * as runtime from "@prisma/client/runtime/client";
 import type * as Prisma from "../internal/prismaNamespace.js";
 /**
- * Model TrainingRegisterUser
+ * Model trainingregisteruser
  *
  */
-export type TrainingRegisterUserModel = runtime.Types.Result.DefaultSelection<Prisma.$TrainingRegisterUserPayload>;
-export type AggregateTrainingRegisterUser = {
-    _count: TrainingRegisterUserCountAggregateOutputType | null;
-    _min: TrainingRegisterUserMinAggregateOutputType | null;
-    _max: TrainingRegisterUserMaxAggregateOutputType | null;
+export type trainingregisteruserModel = runtime.Types.Result.DefaultSelection<Prisma.$trainingregisteruserPayload>;
+export type AggregateTrainingregisteruser = {
+    _count: TrainingregisteruserCountAggregateOutputType | null;
+    _min: TrainingregisteruserMinAggregateOutputType | null;
+    _max: TrainingregisteruserMaxAggregateOutputType | null;
 };
-export type TrainingRegisterUserMinAggregateOutputType = {
+export type TrainingregisteruserMinAggregateOutputType = {
     registryId: string | null;
     userId: string | null;
     trainingEventId: string | null;
     createdAt: Date | null;
     updatedAt: Date | null;
 };
-export type TrainingRegisterUserMaxAggregateOutputType = {
+export type TrainingregisteruserMaxAggregateOutputType = {
     registryId: string | null;
     userId: string | null;
     trainingEventId: string | null;
     createdAt: Date | null;
     updatedAt: Date | null;
 };
-export type TrainingRegisterUserCountAggregateOutputType = {
+export type TrainingregisteruserCountAggregateOutputType = {
     registryId: number;
     userId: number;
     trainingEventId: number;
@@ -32,21 +32,21 @@ export type TrainingRegisterUserCountAggregateOutputType = {
     updatedAt: number;
     _all: number;
 };
-export type TrainingRegisterUserMinAggregateInputType = {
+export type TrainingregisteruserMinAggregateInputType = {
     registryId?: true;
     userId?: true;
     trainingEventId?: true;
     createdAt?: true;
     updatedAt?: true;
 };
-export type TrainingRegisterUserMaxAggregateInputType = {
+export type TrainingregisteruserMaxAggregateInputType = {
     registryId?: true;
     userId?: true;
     trainingEventId?: true;
     createdAt?: true;
     updatedAt?: true;
 };
-export type TrainingRegisterUserCountAggregateInputType = {
+export type TrainingregisteruserCountAggregateInputType = {
     registryId?: true;
     userId?: true;
     trainingEventId?: true;
@@ -54,442 +54,442 @@ export type TrainingRegisterUserCountAggregateInputType = {
     updatedAt?: true;
     _all?: true;
 };
-export type TrainingRegisterUserAggregateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type TrainingregisteruserAggregateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Filter which TrainingRegisterUser to aggregate.
+     * Filter which trainingregisteruser to aggregate.
      */
-    where?: Prisma.TrainingRegisterUserWhereInput;
+    where?: Prisma.trainingregisteruserWhereInput;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      *
-     * Determine the order of TrainingRegisterUsers to fetch.
+     * Determine the order of trainingregisterusers to fetch.
      */
-    orderBy?: Prisma.TrainingRegisterUserOrderByWithRelationInput | Prisma.TrainingRegisterUserOrderByWithRelationInput[];
+    orderBy?: Prisma.trainingregisteruserOrderByWithRelationInput | Prisma.trainingregisteruserOrderByWithRelationInput[];
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      *
      * Sets the start position
      */
-    cursor?: Prisma.TrainingRegisterUserWhereUniqueInput;
+    cursor?: Prisma.trainingregisteruserWhereUniqueInput;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      *
-     * Take `±n` TrainingRegisterUsers from the position of the cursor.
+     * Take `±n` trainingregisterusers from the position of the cursor.
      */
     take?: number;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      *
-     * Skip the first `n` TrainingRegisterUsers.
+     * Skip the first `n` trainingregisterusers.
      */
     skip?: number;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      *
-     * Count returned TrainingRegisterUsers
+     * Count returned trainingregisterusers
     **/
-    _count?: true | TrainingRegisterUserCountAggregateInputType;
+    _count?: true | TrainingregisteruserCountAggregateInputType;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      *
      * Select which fields to find the minimum value
     **/
-    _min?: TrainingRegisterUserMinAggregateInputType;
+    _min?: TrainingregisteruserMinAggregateInputType;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      *
      * Select which fields to find the maximum value
     **/
-    _max?: TrainingRegisterUserMaxAggregateInputType;
+    _max?: TrainingregisteruserMaxAggregateInputType;
 };
-export type GetTrainingRegisterUserAggregateType<T extends TrainingRegisterUserAggregateArgs> = {
-    [P in keyof T & keyof AggregateTrainingRegisterUser]: P extends '_count' | 'count' ? T[P] extends true ? number : Prisma.GetScalarType<T[P], AggregateTrainingRegisterUser[P]> : Prisma.GetScalarType<T[P], AggregateTrainingRegisterUser[P]>;
+export type GetTrainingregisteruserAggregateType<T extends TrainingregisteruserAggregateArgs> = {
+    [P in keyof T & keyof AggregateTrainingregisteruser]: P extends '_count' | 'count' ? T[P] extends true ? number : Prisma.GetScalarType<T[P], AggregateTrainingregisteruser[P]> : Prisma.GetScalarType<T[P], AggregateTrainingregisteruser[P]>;
 };
-export type TrainingRegisterUserGroupByArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-    where?: Prisma.TrainingRegisterUserWhereInput;
-    orderBy?: Prisma.TrainingRegisterUserOrderByWithAggregationInput | Prisma.TrainingRegisterUserOrderByWithAggregationInput[];
-    by: Prisma.TrainingRegisterUserScalarFieldEnum[] | Prisma.TrainingRegisterUserScalarFieldEnum;
-    having?: Prisma.TrainingRegisterUserScalarWhereWithAggregatesInput;
+export type trainingregisteruserGroupByArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+    where?: Prisma.trainingregisteruserWhereInput;
+    orderBy?: Prisma.trainingregisteruserOrderByWithAggregationInput | Prisma.trainingregisteruserOrderByWithAggregationInput[];
+    by: Prisma.TrainingregisteruserScalarFieldEnum[] | Prisma.TrainingregisteruserScalarFieldEnum;
+    having?: Prisma.trainingregisteruserScalarWhereWithAggregatesInput;
     take?: number;
     skip?: number;
-    _count?: TrainingRegisterUserCountAggregateInputType | true;
-    _min?: TrainingRegisterUserMinAggregateInputType;
-    _max?: TrainingRegisterUserMaxAggregateInputType;
+    _count?: TrainingregisteruserCountAggregateInputType | true;
+    _min?: TrainingregisteruserMinAggregateInputType;
+    _max?: TrainingregisteruserMaxAggregateInputType;
 };
-export type TrainingRegisterUserGroupByOutputType = {
+export type TrainingregisteruserGroupByOutputType = {
     registryId: string;
     userId: string;
     trainingEventId: string;
     createdAt: Date;
     updatedAt: Date;
-    _count: TrainingRegisterUserCountAggregateOutputType | null;
-    _min: TrainingRegisterUserMinAggregateOutputType | null;
-    _max: TrainingRegisterUserMaxAggregateOutputType | null;
+    _count: TrainingregisteruserCountAggregateOutputType | null;
+    _min: TrainingregisteruserMinAggregateOutputType | null;
+    _max: TrainingregisteruserMaxAggregateOutputType | null;
 };
-export type GetTrainingRegisterUserGroupByPayload<T extends TrainingRegisterUserGroupByArgs> = Prisma.PrismaPromise<Array<Prisma.PickEnumerable<TrainingRegisterUserGroupByOutputType, T['by']> & {
-    [P in ((keyof T) & (keyof TrainingRegisterUserGroupByOutputType))]: P extends '_count' ? T[P] extends boolean ? number : Prisma.GetScalarType<T[P], TrainingRegisterUserGroupByOutputType[P]> : Prisma.GetScalarType<T[P], TrainingRegisterUserGroupByOutputType[P]>;
+export type GetTrainingregisteruserGroupByPayload<T extends trainingregisteruserGroupByArgs> = Prisma.PrismaPromise<Array<Prisma.PickEnumerable<TrainingregisteruserGroupByOutputType, T['by']> & {
+    [P in ((keyof T) & (keyof TrainingregisteruserGroupByOutputType))]: P extends '_count' ? T[P] extends boolean ? number : Prisma.GetScalarType<T[P], TrainingregisteruserGroupByOutputType[P]> : Prisma.GetScalarType<T[P], TrainingregisteruserGroupByOutputType[P]>;
 }>>;
-export type TrainingRegisterUserWhereInput = {
-    AND?: Prisma.TrainingRegisterUserWhereInput | Prisma.TrainingRegisterUserWhereInput[];
-    OR?: Prisma.TrainingRegisterUserWhereInput[];
-    NOT?: Prisma.TrainingRegisterUserWhereInput | Prisma.TrainingRegisterUserWhereInput[];
-    registryId?: Prisma.StringFilter<"TrainingRegisterUser"> | string;
-    userId?: Prisma.StringFilter<"TrainingRegisterUser"> | string;
-    trainingEventId?: Prisma.StringFilter<"TrainingRegisterUser"> | string;
-    createdAt?: Prisma.DateTimeFilter<"TrainingRegisterUser"> | Date | string;
-    updatedAt?: Prisma.DateTimeFilter<"TrainingRegisterUser"> | Date | string;
-    user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>;
-    trainimg?: Prisma.XOR<Prisma.TrainingScalarRelationFilter, Prisma.TrainingWhereInput>;
+export type trainingregisteruserWhereInput = {
+    AND?: Prisma.trainingregisteruserWhereInput | Prisma.trainingregisteruserWhereInput[];
+    OR?: Prisma.trainingregisteruserWhereInput[];
+    NOT?: Prisma.trainingregisteruserWhereInput | Prisma.trainingregisteruserWhereInput[];
+    registryId?: Prisma.StringFilter<"trainingregisteruser"> | string;
+    userId?: Prisma.StringFilter<"trainingregisteruser"> | string;
+    trainingEventId?: Prisma.StringFilter<"trainingregisteruser"> | string;
+    createdAt?: Prisma.DateTimeFilter<"trainingregisteruser"> | Date | string;
+    updatedAt?: Prisma.DateTimeFilter<"trainingregisteruser"> | Date | string;
+    training?: Prisma.XOR<Prisma.TrainingScalarRelationFilter, Prisma.trainingWhereInput>;
+    user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.userWhereInput>;
 };
-export type TrainingRegisterUserOrderByWithRelationInput = {
+export type trainingregisteruserOrderByWithRelationInput = {
     registryId?: Prisma.SortOrder;
     userId?: Prisma.SortOrder;
     trainingEventId?: Prisma.SortOrder;
     createdAt?: Prisma.SortOrder;
     updatedAt?: Prisma.SortOrder;
-    user?: Prisma.UserOrderByWithRelationInput;
-    trainimg?: Prisma.TrainingOrderByWithRelationInput;
-    _relevance?: Prisma.TrainingRegisterUserOrderByRelevanceInput;
+    training?: Prisma.trainingOrderByWithRelationInput;
+    user?: Prisma.userOrderByWithRelationInput;
+    _relevance?: Prisma.trainingregisteruserOrderByRelevanceInput;
 };
-export type TrainingRegisterUserWhereUniqueInput = Prisma.AtLeast<{
+export type trainingregisteruserWhereUniqueInput = Prisma.AtLeast<{
     registryId?: string;
-    AND?: Prisma.TrainingRegisterUserWhereInput | Prisma.TrainingRegisterUserWhereInput[];
-    OR?: Prisma.TrainingRegisterUserWhereInput[];
-    NOT?: Prisma.TrainingRegisterUserWhereInput | Prisma.TrainingRegisterUserWhereInput[];
-    userId?: Prisma.StringFilter<"TrainingRegisterUser"> | string;
-    trainingEventId?: Prisma.StringFilter<"TrainingRegisterUser"> | string;
-    createdAt?: Prisma.DateTimeFilter<"TrainingRegisterUser"> | Date | string;
-    updatedAt?: Prisma.DateTimeFilter<"TrainingRegisterUser"> | Date | string;
-    user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>;
-    trainimg?: Prisma.XOR<Prisma.TrainingScalarRelationFilter, Prisma.TrainingWhereInput>;
+    AND?: Prisma.trainingregisteruserWhereInput | Prisma.trainingregisteruserWhereInput[];
+    OR?: Prisma.trainingregisteruserWhereInput[];
+    NOT?: Prisma.trainingregisteruserWhereInput | Prisma.trainingregisteruserWhereInput[];
+    userId?: Prisma.StringFilter<"trainingregisteruser"> | string;
+    trainingEventId?: Prisma.StringFilter<"trainingregisteruser"> | string;
+    createdAt?: Prisma.DateTimeFilter<"trainingregisteruser"> | Date | string;
+    updatedAt?: Prisma.DateTimeFilter<"trainingregisteruser"> | Date | string;
+    training?: Prisma.XOR<Prisma.TrainingScalarRelationFilter, Prisma.trainingWhereInput>;
+    user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.userWhereInput>;
 }, "registryId">;
-export type TrainingRegisterUserOrderByWithAggregationInput = {
+export type trainingregisteruserOrderByWithAggregationInput = {
     registryId?: Prisma.SortOrder;
     userId?: Prisma.SortOrder;
     trainingEventId?: Prisma.SortOrder;
     createdAt?: Prisma.SortOrder;
     updatedAt?: Prisma.SortOrder;
-    _count?: Prisma.TrainingRegisterUserCountOrderByAggregateInput;
-    _max?: Prisma.TrainingRegisterUserMaxOrderByAggregateInput;
-    _min?: Prisma.TrainingRegisterUserMinOrderByAggregateInput;
+    _count?: Prisma.trainingregisteruserCountOrderByAggregateInput;
+    _max?: Prisma.trainingregisteruserMaxOrderByAggregateInput;
+    _min?: Prisma.trainingregisteruserMinOrderByAggregateInput;
 };
-export type TrainingRegisterUserScalarWhereWithAggregatesInput = {
-    AND?: Prisma.TrainingRegisterUserScalarWhereWithAggregatesInput | Prisma.TrainingRegisterUserScalarWhereWithAggregatesInput[];
-    OR?: Prisma.TrainingRegisterUserScalarWhereWithAggregatesInput[];
-    NOT?: Prisma.TrainingRegisterUserScalarWhereWithAggregatesInput | Prisma.TrainingRegisterUserScalarWhereWithAggregatesInput[];
-    registryId?: Prisma.StringWithAggregatesFilter<"TrainingRegisterUser"> | string;
-    userId?: Prisma.StringWithAggregatesFilter<"TrainingRegisterUser"> | string;
-    trainingEventId?: Prisma.StringWithAggregatesFilter<"TrainingRegisterUser"> | string;
-    createdAt?: Prisma.DateTimeWithAggregatesFilter<"TrainingRegisterUser"> | Date | string;
-    updatedAt?: Prisma.DateTimeWithAggregatesFilter<"TrainingRegisterUser"> | Date | string;
+export type trainingregisteruserScalarWhereWithAggregatesInput = {
+    AND?: Prisma.trainingregisteruserScalarWhereWithAggregatesInput | Prisma.trainingregisteruserScalarWhereWithAggregatesInput[];
+    OR?: Prisma.trainingregisteruserScalarWhereWithAggregatesInput[];
+    NOT?: Prisma.trainingregisteruserScalarWhereWithAggregatesInput | Prisma.trainingregisteruserScalarWhereWithAggregatesInput[];
+    registryId?: Prisma.StringWithAggregatesFilter<"trainingregisteruser"> | string;
+    userId?: Prisma.StringWithAggregatesFilter<"trainingregisteruser"> | string;
+    trainingEventId?: Prisma.StringWithAggregatesFilter<"trainingregisteruser"> | string;
+    createdAt?: Prisma.DateTimeWithAggregatesFilter<"trainingregisteruser"> | Date | string;
+    updatedAt?: Prisma.DateTimeWithAggregatesFilter<"trainingregisteruser"> | Date | string;
 };
-export type TrainingRegisterUserCreateInput = {
-    registryId?: string;
+export type trainingregisteruserCreateInput = {
+    registryId: string;
     createdAt?: Date | string;
-    updatedAt?: Date | string;
-    user: Prisma.UserCreateNestedOneWithoutTrainingRegisterUserInput;
-    trainimg: Prisma.TrainingCreateNestedOneWithoutTrainingRegisterUserInput;
+    updatedAt: Date | string;
+    training: Prisma.trainingCreateNestedOneWithoutTrainingregisteruserInput;
+    user: Prisma.userCreateNestedOneWithoutTrainingregisteruserInput;
 };
-export type TrainingRegisterUserUncheckedCreateInput = {
-    registryId?: string;
+export type trainingregisteruserUncheckedCreateInput = {
+    registryId: string;
     userId: string;
     trainingEventId: string;
     createdAt?: Date | string;
-    updatedAt?: Date | string;
+    updatedAt: Date | string;
 };
-export type TrainingRegisterUserUpdateInput = {
+export type trainingregisteruserUpdateInput = {
     registryId?: Prisma.StringFieldUpdateOperationsInput | string;
     createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
     updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
-    user?: Prisma.UserUpdateOneRequiredWithoutTrainingRegisterUserNestedInput;
-    trainimg?: Prisma.TrainingUpdateOneRequiredWithoutTrainingRegisterUserNestedInput;
+    training?: Prisma.trainingUpdateOneRequiredWithoutTrainingregisteruserNestedInput;
+    user?: Prisma.userUpdateOneRequiredWithoutTrainingregisteruserNestedInput;
 };
-export type TrainingRegisterUserUncheckedUpdateInput = {
+export type trainingregisteruserUncheckedUpdateInput = {
     registryId?: Prisma.StringFieldUpdateOperationsInput | string;
     userId?: Prisma.StringFieldUpdateOperationsInput | string;
     trainingEventId?: Prisma.StringFieldUpdateOperationsInput | string;
     createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
     updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
 };
-export type TrainingRegisterUserCreateManyInput = {
-    registryId?: string;
+export type trainingregisteruserCreateManyInput = {
+    registryId: string;
     userId: string;
     trainingEventId: string;
     createdAt?: Date | string;
-    updatedAt?: Date | string;
+    updatedAt: Date | string;
 };
-export type TrainingRegisterUserUpdateManyMutationInput = {
+export type trainingregisteruserUpdateManyMutationInput = {
     registryId?: Prisma.StringFieldUpdateOperationsInput | string;
     createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
     updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
 };
-export type TrainingRegisterUserUncheckedUpdateManyInput = {
+export type trainingregisteruserUncheckedUpdateManyInput = {
     registryId?: Prisma.StringFieldUpdateOperationsInput | string;
     userId?: Prisma.StringFieldUpdateOperationsInput | string;
     trainingEventId?: Prisma.StringFieldUpdateOperationsInput | string;
     createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
     updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
 };
-export type TrainingRegisterUserListRelationFilter = {
-    every?: Prisma.TrainingRegisterUserWhereInput;
-    some?: Prisma.TrainingRegisterUserWhereInput;
-    none?: Prisma.TrainingRegisterUserWhereInput;
+export type TrainingregisteruserListRelationFilter = {
+    every?: Prisma.trainingregisteruserWhereInput;
+    some?: Prisma.trainingregisteruserWhereInput;
+    none?: Prisma.trainingregisteruserWhereInput;
 };
-export type TrainingRegisterUserOrderByRelationAggregateInput = {
+export type trainingregisteruserOrderByRelationAggregateInput = {
     _count?: Prisma.SortOrder;
 };
-export type TrainingRegisterUserOrderByRelevanceInput = {
-    fields: Prisma.TrainingRegisterUserOrderByRelevanceFieldEnum | Prisma.TrainingRegisterUserOrderByRelevanceFieldEnum[];
+export type trainingregisteruserOrderByRelevanceInput = {
+    fields: Prisma.trainingregisteruserOrderByRelevanceFieldEnum | Prisma.trainingregisteruserOrderByRelevanceFieldEnum[];
     sort: Prisma.SortOrder;
     search: string;
 };
-export type TrainingRegisterUserCountOrderByAggregateInput = {
+export type trainingregisteruserCountOrderByAggregateInput = {
     registryId?: Prisma.SortOrder;
     userId?: Prisma.SortOrder;
     trainingEventId?: Prisma.SortOrder;
     createdAt?: Prisma.SortOrder;
     updatedAt?: Prisma.SortOrder;
 };
-export type TrainingRegisterUserMaxOrderByAggregateInput = {
+export type trainingregisteruserMaxOrderByAggregateInput = {
     registryId?: Prisma.SortOrder;
     userId?: Prisma.SortOrder;
     trainingEventId?: Prisma.SortOrder;
     createdAt?: Prisma.SortOrder;
     updatedAt?: Prisma.SortOrder;
 };
-export type TrainingRegisterUserMinOrderByAggregateInput = {
+export type trainingregisteruserMinOrderByAggregateInput = {
     registryId?: Prisma.SortOrder;
     userId?: Prisma.SortOrder;
     trainingEventId?: Prisma.SortOrder;
     createdAt?: Prisma.SortOrder;
     updatedAt?: Prisma.SortOrder;
 };
-export type TrainingRegisterUserCreateNestedManyWithoutUserInput = {
-    create?: Prisma.XOR<Prisma.TrainingRegisterUserCreateWithoutUserInput, Prisma.TrainingRegisterUserUncheckedCreateWithoutUserInput> | Prisma.TrainingRegisterUserCreateWithoutUserInput[] | Prisma.TrainingRegisterUserUncheckedCreateWithoutUserInput[];
-    connectOrCreate?: Prisma.TrainingRegisterUserCreateOrConnectWithoutUserInput | Prisma.TrainingRegisterUserCreateOrConnectWithoutUserInput[];
-    createMany?: Prisma.TrainingRegisterUserCreateManyUserInputEnvelope;
-    connect?: Prisma.TrainingRegisterUserWhereUniqueInput | Prisma.TrainingRegisterUserWhereUniqueInput[];
+export type trainingregisteruserCreateNestedManyWithoutTrainingInput = {
+    create?: Prisma.XOR<Prisma.trainingregisteruserCreateWithoutTrainingInput, Prisma.trainingregisteruserUncheckedCreateWithoutTrainingInput> | Prisma.trainingregisteruserCreateWithoutTrainingInput[] | Prisma.trainingregisteruserUncheckedCreateWithoutTrainingInput[];
+    connectOrCreate?: Prisma.trainingregisteruserCreateOrConnectWithoutTrainingInput | Prisma.trainingregisteruserCreateOrConnectWithoutTrainingInput[];
+    createMany?: Prisma.trainingregisteruserCreateManyTrainingInputEnvelope;
+    connect?: Prisma.trainingregisteruserWhereUniqueInput | Prisma.trainingregisteruserWhereUniqueInput[];
 };
-export type TrainingRegisterUserUncheckedCreateNestedManyWithoutUserInput = {
-    create?: Prisma.XOR<Prisma.TrainingRegisterUserCreateWithoutUserInput, Prisma.TrainingRegisterUserUncheckedCreateWithoutUserInput> | Prisma.TrainingRegisterUserCreateWithoutUserInput[] | Prisma.TrainingRegisterUserUncheckedCreateWithoutUserInput[];
-    connectOrCreate?: Prisma.TrainingRegisterUserCreateOrConnectWithoutUserInput | Prisma.TrainingRegisterUserCreateOrConnectWithoutUserInput[];
-    createMany?: Prisma.TrainingRegisterUserCreateManyUserInputEnvelope;
-    connect?: Prisma.TrainingRegisterUserWhereUniqueInput | Prisma.TrainingRegisterUserWhereUniqueInput[];
+export type trainingregisteruserUncheckedCreateNestedManyWithoutTrainingInput = {
+    create?: Prisma.XOR<Prisma.trainingregisteruserCreateWithoutTrainingInput, Prisma.trainingregisteruserUncheckedCreateWithoutTrainingInput> | Prisma.trainingregisteruserCreateWithoutTrainingInput[] | Prisma.trainingregisteruserUncheckedCreateWithoutTrainingInput[];
+    connectOrCreate?: Prisma.trainingregisteruserCreateOrConnectWithoutTrainingInput | Prisma.trainingregisteruserCreateOrConnectWithoutTrainingInput[];
+    createMany?: Prisma.trainingregisteruserCreateManyTrainingInputEnvelope;
+    connect?: Prisma.trainingregisteruserWhereUniqueInput | Prisma.trainingregisteruserWhereUniqueInput[];
 };
-export type TrainingRegisterUserUpdateManyWithoutUserNestedInput = {
-    create?: Prisma.XOR<Prisma.TrainingRegisterUserCreateWithoutUserInput, Prisma.TrainingRegisterUserUncheckedCreateWithoutUserInput> | Prisma.TrainingRegisterUserCreateWithoutUserInput[] | Prisma.TrainingRegisterUserUncheckedCreateWithoutUserInput[];
-    connectOrCreate?: Prisma.TrainingRegisterUserCreateOrConnectWithoutUserInput | Prisma.TrainingRegisterUserCreateOrConnectWithoutUserInput[];
-    upsert?: Prisma.TrainingRegisterUserUpsertWithWhereUniqueWithoutUserInput | Prisma.TrainingRegisterUserUpsertWithWhereUniqueWithoutUserInput[];
-    createMany?: Prisma.TrainingRegisterUserCreateManyUserInputEnvelope;
-    set?: Prisma.TrainingRegisterUserWhereUniqueInput | Prisma.TrainingRegisterUserWhereUniqueInput[];
-    disconnect?: Prisma.TrainingRegisterUserWhereUniqueInput | Prisma.TrainingRegisterUserWhereUniqueInput[];
-    delete?: Prisma.TrainingRegisterUserWhereUniqueInput | Prisma.TrainingRegisterUserWhereUniqueInput[];
-    connect?: Prisma.TrainingRegisterUserWhereUniqueInput | Prisma.TrainingRegisterUserWhereUniqueInput[];
-    update?: Prisma.TrainingRegisterUserUpdateWithWhereUniqueWithoutUserInput | Prisma.TrainingRegisterUserUpdateWithWhereUniqueWithoutUserInput[];
-    updateMany?: Prisma.TrainingRegisterUserUpdateManyWithWhereWithoutUserInput | Prisma.TrainingRegisterUserUpdateManyWithWhereWithoutUserInput[];
-    deleteMany?: Prisma.TrainingRegisterUserScalarWhereInput | Prisma.TrainingRegisterUserScalarWhereInput[];
+export type trainingregisteruserUpdateManyWithoutTrainingNestedInput = {
+    create?: Prisma.XOR<Prisma.trainingregisteruserCreateWithoutTrainingInput, Prisma.trainingregisteruserUncheckedCreateWithoutTrainingInput> | Prisma.trainingregisteruserCreateWithoutTrainingInput[] | Prisma.trainingregisteruserUncheckedCreateWithoutTrainingInput[];
+    connectOrCreate?: Prisma.trainingregisteruserCreateOrConnectWithoutTrainingInput | Prisma.trainingregisteruserCreateOrConnectWithoutTrainingInput[];
+    upsert?: Prisma.trainingregisteruserUpsertWithWhereUniqueWithoutTrainingInput | Prisma.trainingregisteruserUpsertWithWhereUniqueWithoutTrainingInput[];
+    createMany?: Prisma.trainingregisteruserCreateManyTrainingInputEnvelope;
+    set?: Prisma.trainingregisteruserWhereUniqueInput | Prisma.trainingregisteruserWhereUniqueInput[];
+    disconnect?: Prisma.trainingregisteruserWhereUniqueInput | Prisma.trainingregisteruserWhereUniqueInput[];
+    delete?: Prisma.trainingregisteruserWhereUniqueInput | Prisma.trainingregisteruserWhereUniqueInput[];
+    connect?: Prisma.trainingregisteruserWhereUniqueInput | Prisma.trainingregisteruserWhereUniqueInput[];
+    update?: Prisma.trainingregisteruserUpdateWithWhereUniqueWithoutTrainingInput | Prisma.trainingregisteruserUpdateWithWhereUniqueWithoutTrainingInput[];
+    updateMany?: Prisma.trainingregisteruserUpdateManyWithWhereWithoutTrainingInput | Prisma.trainingregisteruserUpdateManyWithWhereWithoutTrainingInput[];
+    deleteMany?: Prisma.trainingregisteruserScalarWhereInput | Prisma.trainingregisteruserScalarWhereInput[];
 };
-export type TrainingRegisterUserUncheckedUpdateManyWithoutUserNestedInput = {
-    create?: Prisma.XOR<Prisma.TrainingRegisterUserCreateWithoutUserInput, Prisma.TrainingRegisterUserUncheckedCreateWithoutUserInput> | Prisma.TrainingRegisterUserCreateWithoutUserInput[] | Prisma.TrainingRegisterUserUncheckedCreateWithoutUserInput[];
-    connectOrCreate?: Prisma.TrainingRegisterUserCreateOrConnectWithoutUserInput | Prisma.TrainingRegisterUserCreateOrConnectWithoutUserInput[];
-    upsert?: Prisma.TrainingRegisterUserUpsertWithWhereUniqueWithoutUserInput | Prisma.TrainingRegisterUserUpsertWithWhereUniqueWithoutUserInput[];
-    createMany?: Prisma.TrainingRegisterUserCreateManyUserInputEnvelope;
-    set?: Prisma.TrainingRegisterUserWhereUniqueInput | Prisma.TrainingRegisterUserWhereUniqueInput[];
-    disconnect?: Prisma.TrainingRegisterUserWhereUniqueInput | Prisma.TrainingRegisterUserWhereUniqueInput[];
-    delete?: Prisma.TrainingRegisterUserWhereUniqueInput | Prisma.TrainingRegisterUserWhereUniqueInput[];
-    connect?: Prisma.TrainingRegisterUserWhereUniqueInput | Prisma.TrainingRegisterUserWhereUniqueInput[];
-    update?: Prisma.TrainingRegisterUserUpdateWithWhereUniqueWithoutUserInput | Prisma.TrainingRegisterUserUpdateWithWhereUniqueWithoutUserInput[];
-    updateMany?: Prisma.TrainingRegisterUserUpdateManyWithWhereWithoutUserInput | Prisma.TrainingRegisterUserUpdateManyWithWhereWithoutUserInput[];
-    deleteMany?: Prisma.TrainingRegisterUserScalarWhereInput | Prisma.TrainingRegisterUserScalarWhereInput[];
+export type trainingregisteruserUncheckedUpdateManyWithoutTrainingNestedInput = {
+    create?: Prisma.XOR<Prisma.trainingregisteruserCreateWithoutTrainingInput, Prisma.trainingregisteruserUncheckedCreateWithoutTrainingInput> | Prisma.trainingregisteruserCreateWithoutTrainingInput[] | Prisma.trainingregisteruserUncheckedCreateWithoutTrainingInput[];
+    connectOrCreate?: Prisma.trainingregisteruserCreateOrConnectWithoutTrainingInput | Prisma.trainingregisteruserCreateOrConnectWithoutTrainingInput[];
+    upsert?: Prisma.trainingregisteruserUpsertWithWhereUniqueWithoutTrainingInput | Prisma.trainingregisteruserUpsertWithWhereUniqueWithoutTrainingInput[];
+    createMany?: Prisma.trainingregisteruserCreateManyTrainingInputEnvelope;
+    set?: Prisma.trainingregisteruserWhereUniqueInput | Prisma.trainingregisteruserWhereUniqueInput[];
+    disconnect?: Prisma.trainingregisteruserWhereUniqueInput | Prisma.trainingregisteruserWhereUniqueInput[];
+    delete?: Prisma.trainingregisteruserWhereUniqueInput | Prisma.trainingregisteruserWhereUniqueInput[];
+    connect?: Prisma.trainingregisteruserWhereUniqueInput | Prisma.trainingregisteruserWhereUniqueInput[];
+    update?: Prisma.trainingregisteruserUpdateWithWhereUniqueWithoutTrainingInput | Prisma.trainingregisteruserUpdateWithWhereUniqueWithoutTrainingInput[];
+    updateMany?: Prisma.trainingregisteruserUpdateManyWithWhereWithoutTrainingInput | Prisma.trainingregisteruserUpdateManyWithWhereWithoutTrainingInput[];
+    deleteMany?: Prisma.trainingregisteruserScalarWhereInput | Prisma.trainingregisteruserScalarWhereInput[];
 };
-export type TrainingRegisterUserCreateNestedManyWithoutTrainimgInput = {
-    create?: Prisma.XOR<Prisma.TrainingRegisterUserCreateWithoutTrainimgInput, Prisma.TrainingRegisterUserUncheckedCreateWithoutTrainimgInput> | Prisma.TrainingRegisterUserCreateWithoutTrainimgInput[] | Prisma.TrainingRegisterUserUncheckedCreateWithoutTrainimgInput[];
-    connectOrCreate?: Prisma.TrainingRegisterUserCreateOrConnectWithoutTrainimgInput | Prisma.TrainingRegisterUserCreateOrConnectWithoutTrainimgInput[];
-    createMany?: Prisma.TrainingRegisterUserCreateManyTrainimgInputEnvelope;
-    connect?: Prisma.TrainingRegisterUserWhereUniqueInput | Prisma.TrainingRegisterUserWhereUniqueInput[];
+export type trainingregisteruserCreateNestedManyWithoutUserInput = {
+    create?: Prisma.XOR<Prisma.trainingregisteruserCreateWithoutUserInput, Prisma.trainingregisteruserUncheckedCreateWithoutUserInput> | Prisma.trainingregisteruserCreateWithoutUserInput[] | Prisma.trainingregisteruserUncheckedCreateWithoutUserInput[];
+    connectOrCreate?: Prisma.trainingregisteruserCreateOrConnectWithoutUserInput | Prisma.trainingregisteruserCreateOrConnectWithoutUserInput[];
+    createMany?: Prisma.trainingregisteruserCreateManyUserInputEnvelope;
+    connect?: Prisma.trainingregisteruserWhereUniqueInput | Prisma.trainingregisteruserWhereUniqueInput[];
 };
-export type TrainingRegisterUserUncheckedCreateNestedManyWithoutTrainimgInput = {
-    create?: Prisma.XOR<Prisma.TrainingRegisterUserCreateWithoutTrainimgInput, Prisma.TrainingRegisterUserUncheckedCreateWithoutTrainimgInput> | Prisma.TrainingRegisterUserCreateWithoutTrainimgInput[] | Prisma.TrainingRegisterUserUncheckedCreateWithoutTrainimgInput[];
-    connectOrCreate?: Prisma.TrainingRegisterUserCreateOrConnectWithoutTrainimgInput | Prisma.TrainingRegisterUserCreateOrConnectWithoutTrainimgInput[];
-    createMany?: Prisma.TrainingRegisterUserCreateManyTrainimgInputEnvelope;
-    connect?: Prisma.TrainingRegisterUserWhereUniqueInput | Prisma.TrainingRegisterUserWhereUniqueInput[];
+export type trainingregisteruserUncheckedCreateNestedManyWithoutUserInput = {
+    create?: Prisma.XOR<Prisma.trainingregisteruserCreateWithoutUserInput, Prisma.trainingregisteruserUncheckedCreateWithoutUserInput> | Prisma.trainingregisteruserCreateWithoutUserInput[] | Prisma.trainingregisteruserUncheckedCreateWithoutUserInput[];
+    connectOrCreate?: Prisma.trainingregisteruserCreateOrConnectWithoutUserInput | Prisma.trainingregisteruserCreateOrConnectWithoutUserInput[];
+    createMany?: Prisma.trainingregisteruserCreateManyUserInputEnvelope;
+    connect?: Prisma.trainingregisteruserWhereUniqueInput | Prisma.trainingregisteruserWhereUniqueInput[];
 };
-export type TrainingRegisterUserUpdateManyWithoutTrainimgNestedInput = {
-    create?: Prisma.XOR<Prisma.TrainingRegisterUserCreateWithoutTrainimgInput, Prisma.TrainingRegisterUserUncheckedCreateWithoutTrainimgInput> | Prisma.TrainingRegisterUserCreateWithoutTrainimgInput[] | Prisma.TrainingRegisterUserUncheckedCreateWithoutTrainimgInput[];
-    connectOrCreate?: Prisma.TrainingRegisterUserCreateOrConnectWithoutTrainimgInput | Prisma.TrainingRegisterUserCreateOrConnectWithoutTrainimgInput[];
-    upsert?: Prisma.TrainingRegisterUserUpsertWithWhereUniqueWithoutTrainimgInput | Prisma.TrainingRegisterUserUpsertWithWhereUniqueWithoutTrainimgInput[];
-    createMany?: Prisma.TrainingRegisterUserCreateManyTrainimgInputEnvelope;
-    set?: Prisma.TrainingRegisterUserWhereUniqueInput | Prisma.TrainingRegisterUserWhereUniqueInput[];
-    disconnect?: Prisma.TrainingRegisterUserWhereUniqueInput | Prisma.TrainingRegisterUserWhereUniqueInput[];
-    delete?: Prisma.TrainingRegisterUserWhereUniqueInput | Prisma.TrainingRegisterUserWhereUniqueInput[];
-    connect?: Prisma.TrainingRegisterUserWhereUniqueInput | Prisma.TrainingRegisterUserWhereUniqueInput[];
-    update?: Prisma.TrainingRegisterUserUpdateWithWhereUniqueWithoutTrainimgInput | Prisma.TrainingRegisterUserUpdateWithWhereUniqueWithoutTrainimgInput[];
-    updateMany?: Prisma.TrainingRegisterUserUpdateManyWithWhereWithoutTrainimgInput | Prisma.TrainingRegisterUserUpdateManyWithWhereWithoutTrainimgInput[];
-    deleteMany?: Prisma.TrainingRegisterUserScalarWhereInput | Prisma.TrainingRegisterUserScalarWhereInput[];
+export type trainingregisteruserUpdateManyWithoutUserNestedInput = {
+    create?: Prisma.XOR<Prisma.trainingregisteruserCreateWithoutUserInput, Prisma.trainingregisteruserUncheckedCreateWithoutUserInput> | Prisma.trainingregisteruserCreateWithoutUserInput[] | Prisma.trainingregisteruserUncheckedCreateWithoutUserInput[];
+    connectOrCreate?: Prisma.trainingregisteruserCreateOrConnectWithoutUserInput | Prisma.trainingregisteruserCreateOrConnectWithoutUserInput[];
+    upsert?: Prisma.trainingregisteruserUpsertWithWhereUniqueWithoutUserInput | Prisma.trainingregisteruserUpsertWithWhereUniqueWithoutUserInput[];
+    createMany?: Prisma.trainingregisteruserCreateManyUserInputEnvelope;
+    set?: Prisma.trainingregisteruserWhereUniqueInput | Prisma.trainingregisteruserWhereUniqueInput[];
+    disconnect?: Prisma.trainingregisteruserWhereUniqueInput | Prisma.trainingregisteruserWhereUniqueInput[];
+    delete?: Prisma.trainingregisteruserWhereUniqueInput | Prisma.trainingregisteruserWhereUniqueInput[];
+    connect?: Prisma.trainingregisteruserWhereUniqueInput | Prisma.trainingregisteruserWhereUniqueInput[];
+    update?: Prisma.trainingregisteruserUpdateWithWhereUniqueWithoutUserInput | Prisma.trainingregisteruserUpdateWithWhereUniqueWithoutUserInput[];
+    updateMany?: Prisma.trainingregisteruserUpdateManyWithWhereWithoutUserInput | Prisma.trainingregisteruserUpdateManyWithWhereWithoutUserInput[];
+    deleteMany?: Prisma.trainingregisteruserScalarWhereInput | Prisma.trainingregisteruserScalarWhereInput[];
 };
-export type TrainingRegisterUserUncheckedUpdateManyWithoutTrainimgNestedInput = {
-    create?: Prisma.XOR<Prisma.TrainingRegisterUserCreateWithoutTrainimgInput, Prisma.TrainingRegisterUserUncheckedCreateWithoutTrainimgInput> | Prisma.TrainingRegisterUserCreateWithoutTrainimgInput[] | Prisma.TrainingRegisterUserUncheckedCreateWithoutTrainimgInput[];
-    connectOrCreate?: Prisma.TrainingRegisterUserCreateOrConnectWithoutTrainimgInput | Prisma.TrainingRegisterUserCreateOrConnectWithoutTrainimgInput[];
-    upsert?: Prisma.TrainingRegisterUserUpsertWithWhereUniqueWithoutTrainimgInput | Prisma.TrainingRegisterUserUpsertWithWhereUniqueWithoutTrainimgInput[];
-    createMany?: Prisma.TrainingRegisterUserCreateManyTrainimgInputEnvelope;
-    set?: Prisma.TrainingRegisterUserWhereUniqueInput | Prisma.TrainingRegisterUserWhereUniqueInput[];
-    disconnect?: Prisma.TrainingRegisterUserWhereUniqueInput | Prisma.TrainingRegisterUserWhereUniqueInput[];
-    delete?: Prisma.TrainingRegisterUserWhereUniqueInput | Prisma.TrainingRegisterUserWhereUniqueInput[];
-    connect?: Prisma.TrainingRegisterUserWhereUniqueInput | Prisma.TrainingRegisterUserWhereUniqueInput[];
-    update?: Prisma.TrainingRegisterUserUpdateWithWhereUniqueWithoutTrainimgInput | Prisma.TrainingRegisterUserUpdateWithWhereUniqueWithoutTrainimgInput[];
-    updateMany?: Prisma.TrainingRegisterUserUpdateManyWithWhereWithoutTrainimgInput | Prisma.TrainingRegisterUserUpdateManyWithWhereWithoutTrainimgInput[];
-    deleteMany?: Prisma.TrainingRegisterUserScalarWhereInput | Prisma.TrainingRegisterUserScalarWhereInput[];
+export type trainingregisteruserUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: Prisma.XOR<Prisma.trainingregisteruserCreateWithoutUserInput, Prisma.trainingregisteruserUncheckedCreateWithoutUserInput> | Prisma.trainingregisteruserCreateWithoutUserInput[] | Prisma.trainingregisteruserUncheckedCreateWithoutUserInput[];
+    connectOrCreate?: Prisma.trainingregisteruserCreateOrConnectWithoutUserInput | Prisma.trainingregisteruserCreateOrConnectWithoutUserInput[];
+    upsert?: Prisma.trainingregisteruserUpsertWithWhereUniqueWithoutUserInput | Prisma.trainingregisteruserUpsertWithWhereUniqueWithoutUserInput[];
+    createMany?: Prisma.trainingregisteruserCreateManyUserInputEnvelope;
+    set?: Prisma.trainingregisteruserWhereUniqueInput | Prisma.trainingregisteruserWhereUniqueInput[];
+    disconnect?: Prisma.trainingregisteruserWhereUniqueInput | Prisma.trainingregisteruserWhereUniqueInput[];
+    delete?: Prisma.trainingregisteruserWhereUniqueInput | Prisma.trainingregisteruserWhereUniqueInput[];
+    connect?: Prisma.trainingregisteruserWhereUniqueInput | Prisma.trainingregisteruserWhereUniqueInput[];
+    update?: Prisma.trainingregisteruserUpdateWithWhereUniqueWithoutUserInput | Prisma.trainingregisteruserUpdateWithWhereUniqueWithoutUserInput[];
+    updateMany?: Prisma.trainingregisteruserUpdateManyWithWhereWithoutUserInput | Prisma.trainingregisteruserUpdateManyWithWhereWithoutUserInput[];
+    deleteMany?: Prisma.trainingregisteruserScalarWhereInput | Prisma.trainingregisteruserScalarWhereInput[];
 };
-export type TrainingRegisterUserCreateWithoutUserInput = {
-    registryId?: string;
+export type trainingregisteruserCreateWithoutTrainingInput = {
+    registryId: string;
     createdAt?: Date | string;
-    updatedAt?: Date | string;
-    trainimg: Prisma.TrainingCreateNestedOneWithoutTrainingRegisterUserInput;
+    updatedAt: Date | string;
+    user: Prisma.userCreateNestedOneWithoutTrainingregisteruserInput;
 };
-export type TrainingRegisterUserUncheckedCreateWithoutUserInput = {
-    registryId?: string;
-    trainingEventId: string;
-    createdAt?: Date | string;
-    updatedAt?: Date | string;
-};
-export type TrainingRegisterUserCreateOrConnectWithoutUserInput = {
-    where: Prisma.TrainingRegisterUserWhereUniqueInput;
-    create: Prisma.XOR<Prisma.TrainingRegisterUserCreateWithoutUserInput, Prisma.TrainingRegisterUserUncheckedCreateWithoutUserInput>;
-};
-export type TrainingRegisterUserCreateManyUserInputEnvelope = {
-    data: Prisma.TrainingRegisterUserCreateManyUserInput | Prisma.TrainingRegisterUserCreateManyUserInput[];
-    skipDuplicates?: boolean;
-};
-export type TrainingRegisterUserUpsertWithWhereUniqueWithoutUserInput = {
-    where: Prisma.TrainingRegisterUserWhereUniqueInput;
-    update: Prisma.XOR<Prisma.TrainingRegisterUserUpdateWithoutUserInput, Prisma.TrainingRegisterUserUncheckedUpdateWithoutUserInput>;
-    create: Prisma.XOR<Prisma.TrainingRegisterUserCreateWithoutUserInput, Prisma.TrainingRegisterUserUncheckedCreateWithoutUserInput>;
-};
-export type TrainingRegisterUserUpdateWithWhereUniqueWithoutUserInput = {
-    where: Prisma.TrainingRegisterUserWhereUniqueInput;
-    data: Prisma.XOR<Prisma.TrainingRegisterUserUpdateWithoutUserInput, Prisma.TrainingRegisterUserUncheckedUpdateWithoutUserInput>;
-};
-export type TrainingRegisterUserUpdateManyWithWhereWithoutUserInput = {
-    where: Prisma.TrainingRegisterUserScalarWhereInput;
-    data: Prisma.XOR<Prisma.TrainingRegisterUserUpdateManyMutationInput, Prisma.TrainingRegisterUserUncheckedUpdateManyWithoutUserInput>;
-};
-export type TrainingRegisterUserScalarWhereInput = {
-    AND?: Prisma.TrainingRegisterUserScalarWhereInput | Prisma.TrainingRegisterUserScalarWhereInput[];
-    OR?: Prisma.TrainingRegisterUserScalarWhereInput[];
-    NOT?: Prisma.TrainingRegisterUserScalarWhereInput | Prisma.TrainingRegisterUserScalarWhereInput[];
-    registryId?: Prisma.StringFilter<"TrainingRegisterUser"> | string;
-    userId?: Prisma.StringFilter<"TrainingRegisterUser"> | string;
-    trainingEventId?: Prisma.StringFilter<"TrainingRegisterUser"> | string;
-    createdAt?: Prisma.DateTimeFilter<"TrainingRegisterUser"> | Date | string;
-    updatedAt?: Prisma.DateTimeFilter<"TrainingRegisterUser"> | Date | string;
-};
-export type TrainingRegisterUserCreateWithoutTrainimgInput = {
-    registryId?: string;
-    createdAt?: Date | string;
-    updatedAt?: Date | string;
-    user: Prisma.UserCreateNestedOneWithoutTrainingRegisterUserInput;
-};
-export type TrainingRegisterUserUncheckedCreateWithoutTrainimgInput = {
-    registryId?: string;
+export type trainingregisteruserUncheckedCreateWithoutTrainingInput = {
+    registryId: string;
     userId: string;
     createdAt?: Date | string;
-    updatedAt?: Date | string;
+    updatedAt: Date | string;
 };
-export type TrainingRegisterUserCreateOrConnectWithoutTrainimgInput = {
-    where: Prisma.TrainingRegisterUserWhereUniqueInput;
-    create: Prisma.XOR<Prisma.TrainingRegisterUserCreateWithoutTrainimgInput, Prisma.TrainingRegisterUserUncheckedCreateWithoutTrainimgInput>;
+export type trainingregisteruserCreateOrConnectWithoutTrainingInput = {
+    where: Prisma.trainingregisteruserWhereUniqueInput;
+    create: Prisma.XOR<Prisma.trainingregisteruserCreateWithoutTrainingInput, Prisma.trainingregisteruserUncheckedCreateWithoutTrainingInput>;
 };
-export type TrainingRegisterUserCreateManyTrainimgInputEnvelope = {
-    data: Prisma.TrainingRegisterUserCreateManyTrainimgInput | Prisma.TrainingRegisterUserCreateManyTrainimgInput[];
+export type trainingregisteruserCreateManyTrainingInputEnvelope = {
+    data: Prisma.trainingregisteruserCreateManyTrainingInput | Prisma.trainingregisteruserCreateManyTrainingInput[];
     skipDuplicates?: boolean;
 };
-export type TrainingRegisterUserUpsertWithWhereUniqueWithoutTrainimgInput = {
-    where: Prisma.TrainingRegisterUserWhereUniqueInput;
-    update: Prisma.XOR<Prisma.TrainingRegisterUserUpdateWithoutTrainimgInput, Prisma.TrainingRegisterUserUncheckedUpdateWithoutTrainimgInput>;
-    create: Prisma.XOR<Prisma.TrainingRegisterUserCreateWithoutTrainimgInput, Prisma.TrainingRegisterUserUncheckedCreateWithoutTrainimgInput>;
+export type trainingregisteruserUpsertWithWhereUniqueWithoutTrainingInput = {
+    where: Prisma.trainingregisteruserWhereUniqueInput;
+    update: Prisma.XOR<Prisma.trainingregisteruserUpdateWithoutTrainingInput, Prisma.trainingregisteruserUncheckedUpdateWithoutTrainingInput>;
+    create: Prisma.XOR<Prisma.trainingregisteruserCreateWithoutTrainingInput, Prisma.trainingregisteruserUncheckedCreateWithoutTrainingInput>;
 };
-export type TrainingRegisterUserUpdateWithWhereUniqueWithoutTrainimgInput = {
-    where: Prisma.TrainingRegisterUserWhereUniqueInput;
-    data: Prisma.XOR<Prisma.TrainingRegisterUserUpdateWithoutTrainimgInput, Prisma.TrainingRegisterUserUncheckedUpdateWithoutTrainimgInput>;
+export type trainingregisteruserUpdateWithWhereUniqueWithoutTrainingInput = {
+    where: Prisma.trainingregisteruserWhereUniqueInput;
+    data: Prisma.XOR<Prisma.trainingregisteruserUpdateWithoutTrainingInput, Prisma.trainingregisteruserUncheckedUpdateWithoutTrainingInput>;
 };
-export type TrainingRegisterUserUpdateManyWithWhereWithoutTrainimgInput = {
-    where: Prisma.TrainingRegisterUserScalarWhereInput;
-    data: Prisma.XOR<Prisma.TrainingRegisterUserUpdateManyMutationInput, Prisma.TrainingRegisterUserUncheckedUpdateManyWithoutTrainimgInput>;
+export type trainingregisteruserUpdateManyWithWhereWithoutTrainingInput = {
+    where: Prisma.trainingregisteruserScalarWhereInput;
+    data: Prisma.XOR<Prisma.trainingregisteruserUpdateManyMutationInput, Prisma.trainingregisteruserUncheckedUpdateManyWithoutTrainingInput>;
 };
-export type TrainingRegisterUserCreateManyUserInput = {
-    registryId?: string;
+export type trainingregisteruserScalarWhereInput = {
+    AND?: Prisma.trainingregisteruserScalarWhereInput | Prisma.trainingregisteruserScalarWhereInput[];
+    OR?: Prisma.trainingregisteruserScalarWhereInput[];
+    NOT?: Prisma.trainingregisteruserScalarWhereInput | Prisma.trainingregisteruserScalarWhereInput[];
+    registryId?: Prisma.StringFilter<"trainingregisteruser"> | string;
+    userId?: Prisma.StringFilter<"trainingregisteruser"> | string;
+    trainingEventId?: Prisma.StringFilter<"trainingregisteruser"> | string;
+    createdAt?: Prisma.DateTimeFilter<"trainingregisteruser"> | Date | string;
+    updatedAt?: Prisma.DateTimeFilter<"trainingregisteruser"> | Date | string;
+};
+export type trainingregisteruserCreateWithoutUserInput = {
+    registryId: string;
+    createdAt?: Date | string;
+    updatedAt: Date | string;
+    training: Prisma.trainingCreateNestedOneWithoutTrainingregisteruserInput;
+};
+export type trainingregisteruserUncheckedCreateWithoutUserInput = {
+    registryId: string;
     trainingEventId: string;
     createdAt?: Date | string;
-    updatedAt?: Date | string;
+    updatedAt: Date | string;
 };
-export type TrainingRegisterUserUpdateWithoutUserInput = {
-    registryId?: Prisma.StringFieldUpdateOperationsInput | string;
-    createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
-    updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
-    trainimg?: Prisma.TrainingUpdateOneRequiredWithoutTrainingRegisterUserNestedInput;
+export type trainingregisteruserCreateOrConnectWithoutUserInput = {
+    where: Prisma.trainingregisteruserWhereUniqueInput;
+    create: Prisma.XOR<Prisma.trainingregisteruserCreateWithoutUserInput, Prisma.trainingregisteruserUncheckedCreateWithoutUserInput>;
 };
-export type TrainingRegisterUserUncheckedUpdateWithoutUserInput = {
-    registryId?: Prisma.StringFieldUpdateOperationsInput | string;
-    trainingEventId?: Prisma.StringFieldUpdateOperationsInput | string;
-    createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
-    updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+export type trainingregisteruserCreateManyUserInputEnvelope = {
+    data: Prisma.trainingregisteruserCreateManyUserInput | Prisma.trainingregisteruserCreateManyUserInput[];
+    skipDuplicates?: boolean;
 };
-export type TrainingRegisterUserUncheckedUpdateManyWithoutUserInput = {
-    registryId?: Prisma.StringFieldUpdateOperationsInput | string;
-    trainingEventId?: Prisma.StringFieldUpdateOperationsInput | string;
-    createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
-    updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+export type trainingregisteruserUpsertWithWhereUniqueWithoutUserInput = {
+    where: Prisma.trainingregisteruserWhereUniqueInput;
+    update: Prisma.XOR<Prisma.trainingregisteruserUpdateWithoutUserInput, Prisma.trainingregisteruserUncheckedUpdateWithoutUserInput>;
+    create: Prisma.XOR<Prisma.trainingregisteruserCreateWithoutUserInput, Prisma.trainingregisteruserUncheckedCreateWithoutUserInput>;
 };
-export type TrainingRegisterUserCreateManyTrainimgInput = {
-    registryId?: string;
+export type trainingregisteruserUpdateWithWhereUniqueWithoutUserInput = {
+    where: Prisma.trainingregisteruserWhereUniqueInput;
+    data: Prisma.XOR<Prisma.trainingregisteruserUpdateWithoutUserInput, Prisma.trainingregisteruserUncheckedUpdateWithoutUserInput>;
+};
+export type trainingregisteruserUpdateManyWithWhereWithoutUserInput = {
+    where: Prisma.trainingregisteruserScalarWhereInput;
+    data: Prisma.XOR<Prisma.trainingregisteruserUpdateManyMutationInput, Prisma.trainingregisteruserUncheckedUpdateManyWithoutUserInput>;
+};
+export type trainingregisteruserCreateManyTrainingInput = {
+    registryId: string;
     userId: string;
     createdAt?: Date | string;
-    updatedAt?: Date | string;
+    updatedAt: Date | string;
 };
-export type TrainingRegisterUserUpdateWithoutTrainimgInput = {
+export type trainingregisteruserUpdateWithoutTrainingInput = {
     registryId?: Prisma.StringFieldUpdateOperationsInput | string;
     createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
     updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
-    user?: Prisma.UserUpdateOneRequiredWithoutTrainingRegisterUserNestedInput;
+    user?: Prisma.userUpdateOneRequiredWithoutTrainingregisteruserNestedInput;
 };
-export type TrainingRegisterUserUncheckedUpdateWithoutTrainimgInput = {
+export type trainingregisteruserUncheckedUpdateWithoutTrainingInput = {
     registryId?: Prisma.StringFieldUpdateOperationsInput | string;
     userId?: Prisma.StringFieldUpdateOperationsInput | string;
     createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
     updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
 };
-export type TrainingRegisterUserUncheckedUpdateManyWithoutTrainimgInput = {
+export type trainingregisteruserUncheckedUpdateManyWithoutTrainingInput = {
     registryId?: Prisma.StringFieldUpdateOperationsInput | string;
     userId?: Prisma.StringFieldUpdateOperationsInput | string;
     createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
     updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
 };
-export type TrainingRegisterUserSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
+export type trainingregisteruserCreateManyUserInput = {
+    registryId: string;
+    trainingEventId: string;
+    createdAt?: Date | string;
+    updatedAt: Date | string;
+};
+export type trainingregisteruserUpdateWithoutUserInput = {
+    registryId?: Prisma.StringFieldUpdateOperationsInput | string;
+    createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+    updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+    training?: Prisma.trainingUpdateOneRequiredWithoutTrainingregisteruserNestedInput;
+};
+export type trainingregisteruserUncheckedUpdateWithoutUserInput = {
+    registryId?: Prisma.StringFieldUpdateOperationsInput | string;
+    trainingEventId?: Prisma.StringFieldUpdateOperationsInput | string;
+    createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+    updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+};
+export type trainingregisteruserUncheckedUpdateManyWithoutUserInput = {
+    registryId?: Prisma.StringFieldUpdateOperationsInput | string;
+    trainingEventId?: Prisma.StringFieldUpdateOperationsInput | string;
+    createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+    updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+};
+export type trainingregisteruserSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
     registryId?: boolean;
     userId?: boolean;
     trainingEventId?: boolean;
     createdAt?: boolean;
     updatedAt?: boolean;
-    user?: boolean | Prisma.UserDefaultArgs<ExtArgs>;
-    trainimg?: boolean | Prisma.TrainingDefaultArgs<ExtArgs>;
-}, ExtArgs["result"]["trainingRegisterUser"]>;
-export type TrainingRegisterUserSelectScalar = {
+    training?: boolean | Prisma.trainingDefaultArgs<ExtArgs>;
+    user?: boolean | Prisma.userDefaultArgs<ExtArgs>;
+}, ExtArgs["result"]["trainingregisteruser"]>;
+export type trainingregisteruserSelectScalar = {
     registryId?: boolean;
     userId?: boolean;
     trainingEventId?: boolean;
     createdAt?: boolean;
     updatedAt?: boolean;
 };
-export type TrainingRegisterUserOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"registryId" | "userId" | "trainingEventId" | "createdAt" | "updatedAt", ExtArgs["result"]["trainingRegisterUser"]>;
-export type TrainingRegisterUserInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-    user?: boolean | Prisma.UserDefaultArgs<ExtArgs>;
-    trainimg?: boolean | Prisma.TrainingDefaultArgs<ExtArgs>;
+export type trainingregisteruserOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"registryId" | "userId" | "trainingEventId" | "createdAt" | "updatedAt", ExtArgs["result"]["trainingregisteruser"]>;
+export type trainingregisteruserInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+    training?: boolean | Prisma.trainingDefaultArgs<ExtArgs>;
+    user?: boolean | Prisma.userDefaultArgs<ExtArgs>;
 };
-export type $TrainingRegisterUserPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-    name: "TrainingRegisterUser";
+export type $trainingregisteruserPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+    name: "trainingregisteruser";
     objects: {
-        user: Prisma.$UserPayload<ExtArgs>;
-        trainimg: Prisma.$TrainingPayload<ExtArgs>;
+        training: Prisma.$trainingPayload<ExtArgs>;
+        user: Prisma.$userPayload<ExtArgs>;
     };
     scalars: runtime.Types.Extensions.GetPayloadResult<{
         registryId: string;
@@ -497,136 +497,136 @@ export type $TrainingRegisterUserPayload<ExtArgs extends runtime.Types.Extension
         trainingEventId: string;
         createdAt: Date;
         updatedAt: Date;
-    }, ExtArgs["result"]["trainingRegisterUser"]>;
+    }, ExtArgs["result"]["trainingregisteruser"]>;
     composites: {};
 };
-export type TrainingRegisterUserGetPayload<S extends boolean | null | undefined | TrainingRegisterUserDefaultArgs> = runtime.Types.Result.GetResult<Prisma.$TrainingRegisterUserPayload, S>;
-export type TrainingRegisterUserCountArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = Omit<TrainingRegisterUserFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-    select?: TrainingRegisterUserCountAggregateInputType | true;
+export type trainingregisteruserGetPayload<S extends boolean | null | undefined | trainingregisteruserDefaultArgs> = runtime.Types.Result.GetResult<Prisma.$trainingregisteruserPayload, S>;
+export type trainingregisteruserCountArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = Omit<trainingregisteruserFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+    select?: TrainingregisteruserCountAggregateInputType | true;
 };
-export interface TrainingRegisterUserDelegate<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+export interface trainingregisteruserDelegate<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> {
     [K: symbol]: {
-        types: Prisma.TypeMap<ExtArgs>['model']['TrainingRegisterUser'];
+        types: Prisma.TypeMap<ExtArgs>['model']['trainingregisteruser'];
         meta: {
-            name: 'TrainingRegisterUser';
+            name: 'trainingregisteruser';
         };
     };
     /**
-     * Find zero or one TrainingRegisterUser that matches the filter.
-     * @param {TrainingRegisterUserFindUniqueArgs} args - Arguments to find a TrainingRegisterUser
+     * Find zero or one Trainingregisteruser that matches the filter.
+     * @param {trainingregisteruserFindUniqueArgs} args - Arguments to find a Trainingregisteruser
      * @example
-     * // Get one TrainingRegisterUser
-     * const trainingRegisterUser = await prisma.trainingRegisterUser.findUnique({
+     * // Get one Trainingregisteruser
+     * const trainingregisteruser = await prisma.trainingregisteruser.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends TrainingRegisterUserFindUniqueArgs>(args: Prisma.SelectSubset<T, TrainingRegisterUserFindUniqueArgs<ExtArgs>>): Prisma.Prisma__TrainingRegisterUserClient<runtime.Types.Result.GetResult<Prisma.$TrainingRegisterUserPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>;
+    findUnique<T extends trainingregisteruserFindUniqueArgs>(args: Prisma.SelectSubset<T, trainingregisteruserFindUniqueArgs<ExtArgs>>): Prisma.Prisma__trainingregisteruserClient<runtime.Types.Result.GetResult<Prisma.$trainingregisteruserPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>;
     /**
-     * Find one TrainingRegisterUser that matches the filter or throw an error with `error.code='P2025'`
+     * Find one Trainingregisteruser that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {TrainingRegisterUserFindUniqueOrThrowArgs} args - Arguments to find a TrainingRegisterUser
+     * @param {trainingregisteruserFindUniqueOrThrowArgs} args - Arguments to find a Trainingregisteruser
      * @example
-     * // Get one TrainingRegisterUser
-     * const trainingRegisterUser = await prisma.trainingRegisterUser.findUniqueOrThrow({
+     * // Get one Trainingregisteruser
+     * const trainingregisteruser = await prisma.trainingregisteruser.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends TrainingRegisterUserFindUniqueOrThrowArgs>(args: Prisma.SelectSubset<T, TrainingRegisterUserFindUniqueOrThrowArgs<ExtArgs>>): Prisma.Prisma__TrainingRegisterUserClient<runtime.Types.Result.GetResult<Prisma.$TrainingRegisterUserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
+    findUniqueOrThrow<T extends trainingregisteruserFindUniqueOrThrowArgs>(args: Prisma.SelectSubset<T, trainingregisteruserFindUniqueOrThrowArgs<ExtArgs>>): Prisma.Prisma__trainingregisteruserClient<runtime.Types.Result.GetResult<Prisma.$trainingregisteruserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
     /**
-     * Find the first TrainingRegisterUser that matches the filter.
+     * Find the first Trainingregisteruser that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TrainingRegisterUserFindFirstArgs} args - Arguments to find a TrainingRegisterUser
+     * @param {trainingregisteruserFindFirstArgs} args - Arguments to find a Trainingregisteruser
      * @example
-     * // Get one TrainingRegisterUser
-     * const trainingRegisterUser = await prisma.trainingRegisterUser.findFirst({
+     * // Get one Trainingregisteruser
+     * const trainingregisteruser = await prisma.trainingregisteruser.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends TrainingRegisterUserFindFirstArgs>(args?: Prisma.SelectSubset<T, TrainingRegisterUserFindFirstArgs<ExtArgs>>): Prisma.Prisma__TrainingRegisterUserClient<runtime.Types.Result.GetResult<Prisma.$TrainingRegisterUserPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>;
+    findFirst<T extends trainingregisteruserFindFirstArgs>(args?: Prisma.SelectSubset<T, trainingregisteruserFindFirstArgs<ExtArgs>>): Prisma.Prisma__trainingregisteruserClient<runtime.Types.Result.GetResult<Prisma.$trainingregisteruserPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>;
     /**
-     * Find the first TrainingRegisterUser that matches the filter or
+     * Find the first Trainingregisteruser that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TrainingRegisterUserFindFirstOrThrowArgs} args - Arguments to find a TrainingRegisterUser
+     * @param {trainingregisteruserFindFirstOrThrowArgs} args - Arguments to find a Trainingregisteruser
      * @example
-     * // Get one TrainingRegisterUser
-     * const trainingRegisterUser = await prisma.trainingRegisterUser.findFirstOrThrow({
+     * // Get one Trainingregisteruser
+     * const trainingregisteruser = await prisma.trainingregisteruser.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends TrainingRegisterUserFindFirstOrThrowArgs>(args?: Prisma.SelectSubset<T, TrainingRegisterUserFindFirstOrThrowArgs<ExtArgs>>): Prisma.Prisma__TrainingRegisterUserClient<runtime.Types.Result.GetResult<Prisma.$TrainingRegisterUserPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
+    findFirstOrThrow<T extends trainingregisteruserFindFirstOrThrowArgs>(args?: Prisma.SelectSubset<T, trainingregisteruserFindFirstOrThrowArgs<ExtArgs>>): Prisma.Prisma__trainingregisteruserClient<runtime.Types.Result.GetResult<Prisma.$trainingregisteruserPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
     /**
-     * Find zero or more TrainingRegisterUsers that matches the filter.
+     * Find zero or more Trainingregisterusers that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TrainingRegisterUserFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {trainingregisteruserFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all TrainingRegisterUsers
-     * const trainingRegisterUsers = await prisma.trainingRegisterUser.findMany()
+     * // Get all Trainingregisterusers
+     * const trainingregisterusers = await prisma.trainingregisteruser.findMany()
      *
-     * // Get first 10 TrainingRegisterUsers
-     * const trainingRegisterUsers = await prisma.trainingRegisterUser.findMany({ take: 10 })
+     * // Get first 10 Trainingregisterusers
+     * const trainingregisterusers = await prisma.trainingregisteruser.findMany({ take: 10 })
      *
      * // Only select the `registryId`
-     * const trainingRegisterUserWithRegistryIdOnly = await prisma.trainingRegisterUser.findMany({ select: { registryId: true } })
+     * const trainingregisteruserWithRegistryIdOnly = await prisma.trainingregisteruser.findMany({ select: { registryId: true } })
      *
      */
-    findMany<T extends TrainingRegisterUserFindManyArgs>(args?: Prisma.SelectSubset<T, TrainingRegisterUserFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$TrainingRegisterUserPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>;
+    findMany<T extends trainingregisteruserFindManyArgs>(args?: Prisma.SelectSubset<T, trainingregisteruserFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$trainingregisteruserPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>;
     /**
-     * Create a TrainingRegisterUser.
-     * @param {TrainingRegisterUserCreateArgs} args - Arguments to create a TrainingRegisterUser.
+     * Create a Trainingregisteruser.
+     * @param {trainingregisteruserCreateArgs} args - Arguments to create a Trainingregisteruser.
      * @example
-     * // Create one TrainingRegisterUser
-     * const TrainingRegisterUser = await prisma.trainingRegisterUser.create({
+     * // Create one Trainingregisteruser
+     * const Trainingregisteruser = await prisma.trainingregisteruser.create({
      *   data: {
-     *     // ... data to create a TrainingRegisterUser
+     *     // ... data to create a Trainingregisteruser
      *   }
      * })
      *
      */
-    create<T extends TrainingRegisterUserCreateArgs>(args: Prisma.SelectSubset<T, TrainingRegisterUserCreateArgs<ExtArgs>>): Prisma.Prisma__TrainingRegisterUserClient<runtime.Types.Result.GetResult<Prisma.$TrainingRegisterUserPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
+    create<T extends trainingregisteruserCreateArgs>(args: Prisma.SelectSubset<T, trainingregisteruserCreateArgs<ExtArgs>>): Prisma.Prisma__trainingregisteruserClient<runtime.Types.Result.GetResult<Prisma.$trainingregisteruserPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
     /**
-     * Create many TrainingRegisterUsers.
-     * @param {TrainingRegisterUserCreateManyArgs} args - Arguments to create many TrainingRegisterUsers.
+     * Create many Trainingregisterusers.
+     * @param {trainingregisteruserCreateManyArgs} args - Arguments to create many Trainingregisterusers.
      * @example
-     * // Create many TrainingRegisterUsers
-     * const trainingRegisterUser = await prisma.trainingRegisterUser.createMany({
+     * // Create many Trainingregisterusers
+     * const trainingregisteruser = await prisma.trainingregisteruser.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *
      */
-    createMany<T extends TrainingRegisterUserCreateManyArgs>(args?: Prisma.SelectSubset<T, TrainingRegisterUserCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>;
+    createMany<T extends trainingregisteruserCreateManyArgs>(args?: Prisma.SelectSubset<T, trainingregisteruserCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>;
     /**
-     * Delete a TrainingRegisterUser.
-     * @param {TrainingRegisterUserDeleteArgs} args - Arguments to delete one TrainingRegisterUser.
+     * Delete a Trainingregisteruser.
+     * @param {trainingregisteruserDeleteArgs} args - Arguments to delete one Trainingregisteruser.
      * @example
-     * // Delete one TrainingRegisterUser
-     * const TrainingRegisterUser = await prisma.trainingRegisterUser.delete({
+     * // Delete one Trainingregisteruser
+     * const Trainingregisteruser = await prisma.trainingregisteruser.delete({
      *   where: {
-     *     // ... filter to delete one TrainingRegisterUser
+     *     // ... filter to delete one Trainingregisteruser
      *   }
      * })
      *
      */
-    delete<T extends TrainingRegisterUserDeleteArgs>(args: Prisma.SelectSubset<T, TrainingRegisterUserDeleteArgs<ExtArgs>>): Prisma.Prisma__TrainingRegisterUserClient<runtime.Types.Result.GetResult<Prisma.$TrainingRegisterUserPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
+    delete<T extends trainingregisteruserDeleteArgs>(args: Prisma.SelectSubset<T, trainingregisteruserDeleteArgs<ExtArgs>>): Prisma.Prisma__trainingregisteruserClient<runtime.Types.Result.GetResult<Prisma.$trainingregisteruserPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
     /**
-     * Update one TrainingRegisterUser.
-     * @param {TrainingRegisterUserUpdateArgs} args - Arguments to update one TrainingRegisterUser.
+     * Update one Trainingregisteruser.
+     * @param {trainingregisteruserUpdateArgs} args - Arguments to update one Trainingregisteruser.
      * @example
-     * // Update one TrainingRegisterUser
-     * const trainingRegisterUser = await prisma.trainingRegisterUser.update({
+     * // Update one Trainingregisteruser
+     * const trainingregisteruser = await prisma.trainingregisteruser.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -636,28 +636,28 @@ export interface TrainingRegisterUserDelegate<ExtArgs extends runtime.Types.Exte
      * })
      *
      */
-    update<T extends TrainingRegisterUserUpdateArgs>(args: Prisma.SelectSubset<T, TrainingRegisterUserUpdateArgs<ExtArgs>>): Prisma.Prisma__TrainingRegisterUserClient<runtime.Types.Result.GetResult<Prisma.$TrainingRegisterUserPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
+    update<T extends trainingregisteruserUpdateArgs>(args: Prisma.SelectSubset<T, trainingregisteruserUpdateArgs<ExtArgs>>): Prisma.Prisma__trainingregisteruserClient<runtime.Types.Result.GetResult<Prisma.$trainingregisteruserPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
     /**
-     * Delete zero or more TrainingRegisterUsers.
-     * @param {TrainingRegisterUserDeleteManyArgs} args - Arguments to filter TrainingRegisterUsers to delete.
+     * Delete zero or more Trainingregisterusers.
+     * @param {trainingregisteruserDeleteManyArgs} args - Arguments to filter Trainingregisterusers to delete.
      * @example
-     * // Delete a few TrainingRegisterUsers
-     * const { count } = await prisma.trainingRegisterUser.deleteMany({
+     * // Delete a few Trainingregisterusers
+     * const { count } = await prisma.trainingregisteruser.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      *
      */
-    deleteMany<T extends TrainingRegisterUserDeleteManyArgs>(args?: Prisma.SelectSubset<T, TrainingRegisterUserDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>;
+    deleteMany<T extends trainingregisteruserDeleteManyArgs>(args?: Prisma.SelectSubset<T, trainingregisteruserDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>;
     /**
-     * Update zero or more TrainingRegisterUsers.
+     * Update zero or more Trainingregisterusers.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TrainingRegisterUserUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {trainingregisteruserUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many TrainingRegisterUsers
-     * const trainingRegisterUser = await prisma.trainingRegisterUser.updateMany({
+     * // Update many Trainingregisterusers
+     * const trainingregisteruser = await prisma.trainingregisteruser.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -667,44 +667,44 @@ export interface TrainingRegisterUserDelegate<ExtArgs extends runtime.Types.Exte
      * })
      *
      */
-    updateMany<T extends TrainingRegisterUserUpdateManyArgs>(args: Prisma.SelectSubset<T, TrainingRegisterUserUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>;
+    updateMany<T extends trainingregisteruserUpdateManyArgs>(args: Prisma.SelectSubset<T, trainingregisteruserUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>;
     /**
-     * Create or update one TrainingRegisterUser.
-     * @param {TrainingRegisterUserUpsertArgs} args - Arguments to update or create a TrainingRegisterUser.
+     * Create or update one Trainingregisteruser.
+     * @param {trainingregisteruserUpsertArgs} args - Arguments to update or create a Trainingregisteruser.
      * @example
-     * // Update or create a TrainingRegisterUser
-     * const trainingRegisterUser = await prisma.trainingRegisterUser.upsert({
+     * // Update or create a Trainingregisteruser
+     * const trainingregisteruser = await prisma.trainingregisteruser.upsert({
      *   create: {
-     *     // ... data to create a TrainingRegisterUser
+     *     // ... data to create a Trainingregisteruser
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the TrainingRegisterUser we want to update
+     *     // ... the filter for the Trainingregisteruser we want to update
      *   }
      * })
      */
-    upsert<T extends TrainingRegisterUserUpsertArgs>(args: Prisma.SelectSubset<T, TrainingRegisterUserUpsertArgs<ExtArgs>>): Prisma.Prisma__TrainingRegisterUserClient<runtime.Types.Result.GetResult<Prisma.$TrainingRegisterUserPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
+    upsert<T extends trainingregisteruserUpsertArgs>(args: Prisma.SelectSubset<T, trainingregisteruserUpsertArgs<ExtArgs>>): Prisma.Prisma__trainingregisteruserClient<runtime.Types.Result.GetResult<Prisma.$trainingregisteruserPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
     /**
-     * Count the number of TrainingRegisterUsers.
+     * Count the number of Trainingregisterusers.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TrainingRegisterUserCountArgs} args - Arguments to filter TrainingRegisterUsers to count.
+     * @param {trainingregisteruserCountArgs} args - Arguments to filter Trainingregisterusers to count.
      * @example
-     * // Count the number of TrainingRegisterUsers
-     * const count = await prisma.trainingRegisterUser.count({
+     * // Count the number of Trainingregisterusers
+     * const count = await prisma.trainingregisteruser.count({
      *   where: {
-     *     // ... the filter for the TrainingRegisterUsers we want to count
+     *     // ... the filter for the Trainingregisterusers we want to count
      *   }
      * })
     **/
-    count<T extends TrainingRegisterUserCountArgs>(args?: Prisma.Subset<T, TrainingRegisterUserCountArgs>): Prisma.PrismaPromise<T extends runtime.Types.Utils.Record<'select', any> ? T['select'] extends true ? number : Prisma.GetScalarType<T['select'], TrainingRegisterUserCountAggregateOutputType> : number>;
+    count<T extends trainingregisteruserCountArgs>(args?: Prisma.Subset<T, trainingregisteruserCountArgs>): Prisma.PrismaPromise<T extends runtime.Types.Utils.Record<'select', any> ? T['select'] extends true ? number : Prisma.GetScalarType<T['select'], TrainingregisteruserCountAggregateOutputType> : number>;
     /**
-     * Allows you to perform aggregations operations on a TrainingRegisterUser.
+     * Allows you to perform aggregations operations on a Trainingregisteruser.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TrainingRegisterUserAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {TrainingregisteruserAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -724,12 +724,12 @@ export interface TrainingRegisterUserDelegate<ExtArgs extends runtime.Types.Exte
      *   take: 10,
      * })
     **/
-    aggregate<T extends TrainingRegisterUserAggregateArgs>(args: Prisma.Subset<T, TrainingRegisterUserAggregateArgs>): Prisma.PrismaPromise<GetTrainingRegisterUserAggregateType<T>>;
+    aggregate<T extends TrainingregisteruserAggregateArgs>(args: Prisma.Subset<T, TrainingregisteruserAggregateArgs>): Prisma.PrismaPromise<GetTrainingregisteruserAggregateType<T>>;
     /**
-     * Group by TrainingRegisterUser.
+     * Group by Trainingregisteruser.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TrainingRegisterUserGroupByArgs} args - Group by arguments.
+     * @param {trainingregisteruserGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -743,10 +743,10 @@ export interface TrainingRegisterUserDelegate<ExtArgs extends runtime.Types.Exte
      * })
      *
     **/
-    groupBy<T extends TrainingRegisterUserGroupByArgs, HasSelectOrTake extends Prisma.Or<Prisma.Extends<'skip', Prisma.Keys<T>>, Prisma.Extends<'take', Prisma.Keys<T>>>, OrderByArg extends Prisma.True extends HasSelectOrTake ? {
-        orderBy: TrainingRegisterUserGroupByArgs['orderBy'];
+    groupBy<T extends trainingregisteruserGroupByArgs, HasSelectOrTake extends Prisma.Or<Prisma.Extends<'skip', Prisma.Keys<T>>, Prisma.Extends<'take', Prisma.Keys<T>>>, OrderByArg extends Prisma.True extends HasSelectOrTake ? {
+        orderBy: trainingregisteruserGroupByArgs['orderBy'];
     } : {
-        orderBy?: TrainingRegisterUserGroupByArgs['orderBy'];
+        orderBy?: trainingregisteruserGroupByArgs['orderBy'];
     }, OrderFields extends Prisma.ExcludeUnderscoreKeys<Prisma.Keys<Prisma.MaybeTupleToUnion<T['orderBy']>>>, ByFields extends Prisma.MaybeTupleToUnion<T['by']>, ByValid extends Prisma.Has<ByFields, OrderFields>, HavingFields extends Prisma.GetHavingFields<T['having']>, HavingValid extends Prisma.Has<ByFields, HavingFields>, ByEmpty extends T['by'] extends never[] ? Prisma.True : Prisma.False, InputErrors extends ByEmpty extends Prisma.True ? `Error: "by" must not be empty.` : HavingValid extends Prisma.False ? {
         [P in HavingFields]: P extends ByFields ? never : P extends string ? `Error: Field "${P}" used in "having" needs to be provided in "by".` : [
             Error,
@@ -760,22 +760,22 @@ export interface TrainingRegisterUserDelegate<ExtArgs extends runtime.Types.Exte
         [P in OrderFields]: P extends ByFields ? never : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`;
     }[OrderFields] : 'Error: If you provide "skip", you also need to provide "orderBy"' : ByValid extends Prisma.True ? {} : {
         [P in OrderFields]: P extends ByFields ? never : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`;
-    }[OrderFields]>(args: Prisma.SubsetIntersection<T, TrainingRegisterUserGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetTrainingRegisterUserGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>;
+    }[OrderFields]>(args: Prisma.SubsetIntersection<T, trainingregisteruserGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetTrainingregisteruserGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>;
     /**
-     * Fields of the TrainingRegisterUser model
+     * Fields of the trainingregisteruser model
      */
-    readonly fields: TrainingRegisterUserFieldRefs;
+    readonly fields: trainingregisteruserFieldRefs;
 }
 /**
- * The delegate class that acts as a "Promise-like" for TrainingRegisterUser.
+ * The delegate class that acts as a "Promise-like" for trainingregisteruser.
  * Why is this prefixed with `Prisma__`?
  * Because we want to prevent naming conflicts as mentioned in
  * https://github.com/prisma/prisma-client-js/issues/707
  */
-export interface Prisma__TrainingRegisterUserClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+export interface Prisma__trainingregisteruserClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise";
-    user<T extends Prisma.UserDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.UserDefaultArgs<ExtArgs>>): Prisma.Prisma__UserClient<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>;
-    trainimg<T extends Prisma.TrainingDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.TrainingDefaultArgs<ExtArgs>>): Prisma.Prisma__TrainingClient<runtime.Types.Result.GetResult<Prisma.$TrainingPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>;
+    training<T extends Prisma.trainingDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.trainingDefaultArgs<ExtArgs>>): Prisma.Prisma__trainingClient<runtime.Types.Result.GetResult<Prisma.$trainingPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>;
+    user<T extends Prisma.userDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.userDefaultArgs<ExtArgs>>): Prisma.Prisma__userClient<runtime.Types.Result.GetResult<Prisma.$userPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>;
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -798,361 +798,361 @@ export interface Prisma__TrainingRegisterUserClient<T, Null = never, ExtArgs ext
     finally(onfinally?: (() => void) | undefined | null): runtime.Types.Utils.JsPromise<T>;
 }
 /**
- * Fields of the TrainingRegisterUser model
+ * Fields of the trainingregisteruser model
  */
-export interface TrainingRegisterUserFieldRefs {
-    readonly registryId: Prisma.FieldRef<"TrainingRegisterUser", 'String'>;
-    readonly userId: Prisma.FieldRef<"TrainingRegisterUser", 'String'>;
-    readonly trainingEventId: Prisma.FieldRef<"TrainingRegisterUser", 'String'>;
-    readonly createdAt: Prisma.FieldRef<"TrainingRegisterUser", 'DateTime'>;
-    readonly updatedAt: Prisma.FieldRef<"TrainingRegisterUser", 'DateTime'>;
+export interface trainingregisteruserFieldRefs {
+    readonly registryId: Prisma.FieldRef<"trainingregisteruser", 'String'>;
+    readonly userId: Prisma.FieldRef<"trainingregisteruser", 'String'>;
+    readonly trainingEventId: Prisma.FieldRef<"trainingregisteruser", 'String'>;
+    readonly createdAt: Prisma.FieldRef<"trainingregisteruser", 'DateTime'>;
+    readonly updatedAt: Prisma.FieldRef<"trainingregisteruser", 'DateTime'>;
 }
 /**
- * TrainingRegisterUser findUnique
+ * trainingregisteruser findUnique
  */
-export type TrainingRegisterUserFindUniqueArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingregisteruserFindUniqueArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the TrainingRegisterUser
+     * Select specific fields to fetch from the trainingregisteruser
      */
-    select?: Prisma.TrainingRegisterUserSelect<ExtArgs> | null;
+    select?: Prisma.trainingregisteruserSelect<ExtArgs> | null;
     /**
-     * Omit specific fields from the TrainingRegisterUser
+     * Omit specific fields from the trainingregisteruser
      */
-    omit?: Prisma.TrainingRegisterUserOmit<ExtArgs> | null;
+    omit?: Prisma.trainingregisteruserOmit<ExtArgs> | null;
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Prisma.TrainingRegisterUserInclude<ExtArgs> | null;
+    include?: Prisma.trainingregisteruserInclude<ExtArgs> | null;
     /**
-     * Filter, which TrainingRegisterUser to fetch.
+     * Filter, which trainingregisteruser to fetch.
      */
-    where: Prisma.TrainingRegisterUserWhereUniqueInput;
+    where: Prisma.trainingregisteruserWhereUniqueInput;
 };
 /**
- * TrainingRegisterUser findUniqueOrThrow
+ * trainingregisteruser findUniqueOrThrow
  */
-export type TrainingRegisterUserFindUniqueOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingregisteruserFindUniqueOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the TrainingRegisterUser
+     * Select specific fields to fetch from the trainingregisteruser
      */
-    select?: Prisma.TrainingRegisterUserSelect<ExtArgs> | null;
+    select?: Prisma.trainingregisteruserSelect<ExtArgs> | null;
     /**
-     * Omit specific fields from the TrainingRegisterUser
+     * Omit specific fields from the trainingregisteruser
      */
-    omit?: Prisma.TrainingRegisterUserOmit<ExtArgs> | null;
+    omit?: Prisma.trainingregisteruserOmit<ExtArgs> | null;
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Prisma.TrainingRegisterUserInclude<ExtArgs> | null;
+    include?: Prisma.trainingregisteruserInclude<ExtArgs> | null;
     /**
-     * Filter, which TrainingRegisterUser to fetch.
+     * Filter, which trainingregisteruser to fetch.
      */
-    where: Prisma.TrainingRegisterUserWhereUniqueInput;
+    where: Prisma.trainingregisteruserWhereUniqueInput;
 };
 /**
- * TrainingRegisterUser findFirst
+ * trainingregisteruser findFirst
  */
-export type TrainingRegisterUserFindFirstArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingregisteruserFindFirstArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the TrainingRegisterUser
+     * Select specific fields to fetch from the trainingregisteruser
      */
-    select?: Prisma.TrainingRegisterUserSelect<ExtArgs> | null;
+    select?: Prisma.trainingregisteruserSelect<ExtArgs> | null;
     /**
-     * Omit specific fields from the TrainingRegisterUser
+     * Omit specific fields from the trainingregisteruser
      */
-    omit?: Prisma.TrainingRegisterUserOmit<ExtArgs> | null;
+    omit?: Prisma.trainingregisteruserOmit<ExtArgs> | null;
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Prisma.TrainingRegisterUserInclude<ExtArgs> | null;
+    include?: Prisma.trainingregisteruserInclude<ExtArgs> | null;
     /**
-     * Filter, which TrainingRegisterUser to fetch.
+     * Filter, which trainingregisteruser to fetch.
      */
-    where?: Prisma.TrainingRegisterUserWhereInput;
+    where?: Prisma.trainingregisteruserWhereInput;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      *
-     * Determine the order of TrainingRegisterUsers to fetch.
+     * Determine the order of trainingregisterusers to fetch.
      */
-    orderBy?: Prisma.TrainingRegisterUserOrderByWithRelationInput | Prisma.TrainingRegisterUserOrderByWithRelationInput[];
+    orderBy?: Prisma.trainingregisteruserOrderByWithRelationInput | Prisma.trainingregisteruserOrderByWithRelationInput[];
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      *
-     * Sets the position for searching for TrainingRegisterUsers.
+     * Sets the position for searching for trainingregisterusers.
      */
-    cursor?: Prisma.TrainingRegisterUserWhereUniqueInput;
+    cursor?: Prisma.trainingregisteruserWhereUniqueInput;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      *
-     * Take `±n` TrainingRegisterUsers from the position of the cursor.
+     * Take `±n` trainingregisterusers from the position of the cursor.
      */
     take?: number;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      *
-     * Skip the first `n` TrainingRegisterUsers.
+     * Skip the first `n` trainingregisterusers.
      */
     skip?: number;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      *
-     * Filter by unique combinations of TrainingRegisterUsers.
+     * Filter by unique combinations of trainingregisterusers.
      */
-    distinct?: Prisma.TrainingRegisterUserScalarFieldEnum | Prisma.TrainingRegisterUserScalarFieldEnum[];
+    distinct?: Prisma.TrainingregisteruserScalarFieldEnum | Prisma.TrainingregisteruserScalarFieldEnum[];
 };
 /**
- * TrainingRegisterUser findFirstOrThrow
+ * trainingregisteruser findFirstOrThrow
  */
-export type TrainingRegisterUserFindFirstOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingregisteruserFindFirstOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the TrainingRegisterUser
+     * Select specific fields to fetch from the trainingregisteruser
      */
-    select?: Prisma.TrainingRegisterUserSelect<ExtArgs> | null;
+    select?: Prisma.trainingregisteruserSelect<ExtArgs> | null;
     /**
-     * Omit specific fields from the TrainingRegisterUser
+     * Omit specific fields from the trainingregisteruser
      */
-    omit?: Prisma.TrainingRegisterUserOmit<ExtArgs> | null;
+    omit?: Prisma.trainingregisteruserOmit<ExtArgs> | null;
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Prisma.TrainingRegisterUserInclude<ExtArgs> | null;
+    include?: Prisma.trainingregisteruserInclude<ExtArgs> | null;
     /**
-     * Filter, which TrainingRegisterUser to fetch.
+     * Filter, which trainingregisteruser to fetch.
      */
-    where?: Prisma.TrainingRegisterUserWhereInput;
+    where?: Prisma.trainingregisteruserWhereInput;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      *
-     * Determine the order of TrainingRegisterUsers to fetch.
+     * Determine the order of trainingregisterusers to fetch.
      */
-    orderBy?: Prisma.TrainingRegisterUserOrderByWithRelationInput | Prisma.TrainingRegisterUserOrderByWithRelationInput[];
+    orderBy?: Prisma.trainingregisteruserOrderByWithRelationInput | Prisma.trainingregisteruserOrderByWithRelationInput[];
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      *
-     * Sets the position for searching for TrainingRegisterUsers.
+     * Sets the position for searching for trainingregisterusers.
      */
-    cursor?: Prisma.TrainingRegisterUserWhereUniqueInput;
+    cursor?: Prisma.trainingregisteruserWhereUniqueInput;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      *
-     * Take `±n` TrainingRegisterUsers from the position of the cursor.
+     * Take `±n` trainingregisterusers from the position of the cursor.
      */
     take?: number;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      *
-     * Skip the first `n` TrainingRegisterUsers.
+     * Skip the first `n` trainingregisterusers.
      */
     skip?: number;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      *
-     * Filter by unique combinations of TrainingRegisterUsers.
+     * Filter by unique combinations of trainingregisterusers.
      */
-    distinct?: Prisma.TrainingRegisterUserScalarFieldEnum | Prisma.TrainingRegisterUserScalarFieldEnum[];
+    distinct?: Prisma.TrainingregisteruserScalarFieldEnum | Prisma.TrainingregisteruserScalarFieldEnum[];
 };
 /**
- * TrainingRegisterUser findMany
+ * trainingregisteruser findMany
  */
-export type TrainingRegisterUserFindManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingregisteruserFindManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the TrainingRegisterUser
+     * Select specific fields to fetch from the trainingregisteruser
      */
-    select?: Prisma.TrainingRegisterUserSelect<ExtArgs> | null;
+    select?: Prisma.trainingregisteruserSelect<ExtArgs> | null;
     /**
-     * Omit specific fields from the TrainingRegisterUser
+     * Omit specific fields from the trainingregisteruser
      */
-    omit?: Prisma.TrainingRegisterUserOmit<ExtArgs> | null;
+    omit?: Prisma.trainingregisteruserOmit<ExtArgs> | null;
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Prisma.TrainingRegisterUserInclude<ExtArgs> | null;
+    include?: Prisma.trainingregisteruserInclude<ExtArgs> | null;
     /**
-     * Filter, which TrainingRegisterUsers to fetch.
+     * Filter, which trainingregisterusers to fetch.
      */
-    where?: Prisma.TrainingRegisterUserWhereInput;
+    where?: Prisma.trainingregisteruserWhereInput;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      *
-     * Determine the order of TrainingRegisterUsers to fetch.
+     * Determine the order of trainingregisterusers to fetch.
      */
-    orderBy?: Prisma.TrainingRegisterUserOrderByWithRelationInput | Prisma.TrainingRegisterUserOrderByWithRelationInput[];
+    orderBy?: Prisma.trainingregisteruserOrderByWithRelationInput | Prisma.trainingregisteruserOrderByWithRelationInput[];
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      *
-     * Sets the position for listing TrainingRegisterUsers.
+     * Sets the position for listing trainingregisterusers.
      */
-    cursor?: Prisma.TrainingRegisterUserWhereUniqueInput;
+    cursor?: Prisma.trainingregisteruserWhereUniqueInput;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      *
-     * Take `±n` TrainingRegisterUsers from the position of the cursor.
+     * Take `±n` trainingregisterusers from the position of the cursor.
      */
     take?: number;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      *
-     * Skip the first `n` TrainingRegisterUsers.
+     * Skip the first `n` trainingregisterusers.
      */
     skip?: number;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      *
-     * Filter by unique combinations of TrainingRegisterUsers.
+     * Filter by unique combinations of trainingregisterusers.
      */
-    distinct?: Prisma.TrainingRegisterUserScalarFieldEnum | Prisma.TrainingRegisterUserScalarFieldEnum[];
+    distinct?: Prisma.TrainingregisteruserScalarFieldEnum | Prisma.TrainingregisteruserScalarFieldEnum[];
 };
 /**
- * TrainingRegisterUser create
+ * trainingregisteruser create
  */
-export type TrainingRegisterUserCreateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingregisteruserCreateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the TrainingRegisterUser
+     * Select specific fields to fetch from the trainingregisteruser
      */
-    select?: Prisma.TrainingRegisterUserSelect<ExtArgs> | null;
+    select?: Prisma.trainingregisteruserSelect<ExtArgs> | null;
     /**
-     * Omit specific fields from the TrainingRegisterUser
+     * Omit specific fields from the trainingregisteruser
      */
-    omit?: Prisma.TrainingRegisterUserOmit<ExtArgs> | null;
+    omit?: Prisma.trainingregisteruserOmit<ExtArgs> | null;
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Prisma.TrainingRegisterUserInclude<ExtArgs> | null;
+    include?: Prisma.trainingregisteruserInclude<ExtArgs> | null;
     /**
-     * The data needed to create a TrainingRegisterUser.
+     * The data needed to create a trainingregisteruser.
      */
-    data: Prisma.XOR<Prisma.TrainingRegisterUserCreateInput, Prisma.TrainingRegisterUserUncheckedCreateInput>;
+    data: Prisma.XOR<Prisma.trainingregisteruserCreateInput, Prisma.trainingregisteruserUncheckedCreateInput>;
 };
 /**
- * TrainingRegisterUser createMany
+ * trainingregisteruser createMany
  */
-export type TrainingRegisterUserCreateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingregisteruserCreateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * The data used to create many TrainingRegisterUsers.
+     * The data used to create many trainingregisterusers.
      */
-    data: Prisma.TrainingRegisterUserCreateManyInput | Prisma.TrainingRegisterUserCreateManyInput[];
+    data: Prisma.trainingregisteruserCreateManyInput | Prisma.trainingregisteruserCreateManyInput[];
     skipDuplicates?: boolean;
 };
 /**
- * TrainingRegisterUser update
+ * trainingregisteruser update
  */
-export type TrainingRegisterUserUpdateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingregisteruserUpdateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the TrainingRegisterUser
+     * Select specific fields to fetch from the trainingregisteruser
      */
-    select?: Prisma.TrainingRegisterUserSelect<ExtArgs> | null;
+    select?: Prisma.trainingregisteruserSelect<ExtArgs> | null;
     /**
-     * Omit specific fields from the TrainingRegisterUser
+     * Omit specific fields from the trainingregisteruser
      */
-    omit?: Prisma.TrainingRegisterUserOmit<ExtArgs> | null;
+    omit?: Prisma.trainingregisteruserOmit<ExtArgs> | null;
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Prisma.TrainingRegisterUserInclude<ExtArgs> | null;
+    include?: Prisma.trainingregisteruserInclude<ExtArgs> | null;
     /**
-     * The data needed to update a TrainingRegisterUser.
+     * The data needed to update a trainingregisteruser.
      */
-    data: Prisma.XOR<Prisma.TrainingRegisterUserUpdateInput, Prisma.TrainingRegisterUserUncheckedUpdateInput>;
+    data: Prisma.XOR<Prisma.trainingregisteruserUpdateInput, Prisma.trainingregisteruserUncheckedUpdateInput>;
     /**
-     * Choose, which TrainingRegisterUser to update.
+     * Choose, which trainingregisteruser to update.
      */
-    where: Prisma.TrainingRegisterUserWhereUniqueInput;
+    where: Prisma.trainingregisteruserWhereUniqueInput;
 };
 /**
- * TrainingRegisterUser updateMany
+ * trainingregisteruser updateMany
  */
-export type TrainingRegisterUserUpdateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingregisteruserUpdateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * The data used to update TrainingRegisterUsers.
+     * The data used to update trainingregisterusers.
      */
-    data: Prisma.XOR<Prisma.TrainingRegisterUserUpdateManyMutationInput, Prisma.TrainingRegisterUserUncheckedUpdateManyInput>;
+    data: Prisma.XOR<Prisma.trainingregisteruserUpdateManyMutationInput, Prisma.trainingregisteruserUncheckedUpdateManyInput>;
     /**
-     * Filter which TrainingRegisterUsers to update
+     * Filter which trainingregisterusers to update
      */
-    where?: Prisma.TrainingRegisterUserWhereInput;
+    where?: Prisma.trainingregisteruserWhereInput;
     /**
-     * Limit how many TrainingRegisterUsers to update.
+     * Limit how many trainingregisterusers to update.
      */
     limit?: number;
 };
 /**
- * TrainingRegisterUser upsert
+ * trainingregisteruser upsert
  */
-export type TrainingRegisterUserUpsertArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingregisteruserUpsertArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the TrainingRegisterUser
+     * Select specific fields to fetch from the trainingregisteruser
      */
-    select?: Prisma.TrainingRegisterUserSelect<ExtArgs> | null;
+    select?: Prisma.trainingregisteruserSelect<ExtArgs> | null;
     /**
-     * Omit specific fields from the TrainingRegisterUser
+     * Omit specific fields from the trainingregisteruser
      */
-    omit?: Prisma.TrainingRegisterUserOmit<ExtArgs> | null;
+    omit?: Prisma.trainingregisteruserOmit<ExtArgs> | null;
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Prisma.TrainingRegisterUserInclude<ExtArgs> | null;
+    include?: Prisma.trainingregisteruserInclude<ExtArgs> | null;
     /**
-     * The filter to search for the TrainingRegisterUser to update in case it exists.
+     * The filter to search for the trainingregisteruser to update in case it exists.
      */
-    where: Prisma.TrainingRegisterUserWhereUniqueInput;
+    where: Prisma.trainingregisteruserWhereUniqueInput;
     /**
-     * In case the TrainingRegisterUser found by the `where` argument doesn't exist, create a new TrainingRegisterUser with this data.
+     * In case the trainingregisteruser found by the `where` argument doesn't exist, create a new trainingregisteruser with this data.
      */
-    create: Prisma.XOR<Prisma.TrainingRegisterUserCreateInput, Prisma.TrainingRegisterUserUncheckedCreateInput>;
+    create: Prisma.XOR<Prisma.trainingregisteruserCreateInput, Prisma.trainingregisteruserUncheckedCreateInput>;
     /**
-     * In case the TrainingRegisterUser was found with the provided `where` argument, update it with this data.
+     * In case the trainingregisteruser was found with the provided `where` argument, update it with this data.
      */
-    update: Prisma.XOR<Prisma.TrainingRegisterUserUpdateInput, Prisma.TrainingRegisterUserUncheckedUpdateInput>;
+    update: Prisma.XOR<Prisma.trainingregisteruserUpdateInput, Prisma.trainingregisteruserUncheckedUpdateInput>;
 };
 /**
- * TrainingRegisterUser delete
+ * trainingregisteruser delete
  */
-export type TrainingRegisterUserDeleteArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingregisteruserDeleteArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the TrainingRegisterUser
+     * Select specific fields to fetch from the trainingregisteruser
      */
-    select?: Prisma.TrainingRegisterUserSelect<ExtArgs> | null;
+    select?: Prisma.trainingregisteruserSelect<ExtArgs> | null;
     /**
-     * Omit specific fields from the TrainingRegisterUser
+     * Omit specific fields from the trainingregisteruser
      */
-    omit?: Prisma.TrainingRegisterUserOmit<ExtArgs> | null;
+    omit?: Prisma.trainingregisteruserOmit<ExtArgs> | null;
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Prisma.TrainingRegisterUserInclude<ExtArgs> | null;
+    include?: Prisma.trainingregisteruserInclude<ExtArgs> | null;
     /**
-     * Filter which TrainingRegisterUser to delete.
+     * Filter which trainingregisteruser to delete.
      */
-    where: Prisma.TrainingRegisterUserWhereUniqueInput;
+    where: Prisma.trainingregisteruserWhereUniqueInput;
 };
 /**
- * TrainingRegisterUser deleteMany
+ * trainingregisteruser deleteMany
  */
-export type TrainingRegisterUserDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingregisteruserDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Filter which TrainingRegisterUsers to delete
+     * Filter which trainingregisterusers to delete
      */
-    where?: Prisma.TrainingRegisterUserWhereInput;
+    where?: Prisma.trainingregisteruserWhereInput;
     /**
-     * Limit how many TrainingRegisterUsers to delete.
+     * Limit how many trainingregisterusers to delete.
      */
     limit?: number;
 };
 /**
- * TrainingRegisterUser without action
+ * trainingregisteruser without action
  */
-export type TrainingRegisterUserDefaultArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingregisteruserDefaultArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the TrainingRegisterUser
+     * Select specific fields to fetch from the trainingregisteruser
      */
-    select?: Prisma.TrainingRegisterUserSelect<ExtArgs> | null;
+    select?: Prisma.trainingregisteruserSelect<ExtArgs> | null;
     /**
-     * Omit specific fields from the TrainingRegisterUser
+     * Omit specific fields from the trainingregisteruser
      */
-    omit?: Prisma.TrainingRegisterUserOmit<ExtArgs> | null;
+    omit?: Prisma.trainingregisteruserOmit<ExtArgs> | null;
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Prisma.TrainingRegisterUserInclude<ExtArgs> | null;
+    include?: Prisma.trainingregisteruserInclude<ExtArgs> | null;
 };
-//# sourceMappingURL=TrainingRegisterUser.d.ts.map
+//# sourceMappingURL=trainingregisteruser.d.ts.map

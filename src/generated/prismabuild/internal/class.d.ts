@@ -11,8 +11,8 @@ export interface PrismaClientConstructor {
    * const prisma = new PrismaClient({
    *   adapter: new PrismaPg({ connectionString: process.env.DATABASE_URL })
    * })
-   * // Fetch zero or more Users
-   * const users = await prisma.user.findMany()
+   * // Fetch zero or more Products
+   * const products = await prisma.product.findMany()
    * ```
    *
    * Read more in our [docs](https://pris.ly/d/client).
@@ -30,8 +30,8 @@ export interface PrismaClientConstructor {
  * const prisma = new PrismaClient({
  *   adapter: new PrismaPg({ connectionString: process.env.DATABASE_URL })
  * })
- * // Fetch zero or more Users
- * const users = await prisma.user.findMany()
+ * // Fetch zero or more Products
+ * const products = await prisma.product.findMany()
  * ```
  *
  * Read more in our [docs](https://pris.ly/d/client).
@@ -118,58 +118,58 @@ export interface PrismaClient<in LogOpts extends Prisma.LogLevel = never, in out
         extArgs: ExtArgs;
     }>>;
     /**
- * `prisma.user`: Exposes CRUD operations for the **User** model.
+ * `prisma.product`: Exposes CRUD operations for the **Product** model.
   * Example usage:
   * ```ts
-  * // Fetch zero or more Users
-  * const users = await prisma.user.findMany()
+  * // Fetch zero or more Products
+  * const products = await prisma.product.findMany()
   * ```
   */
-    get user(): Prisma.UserDelegate<ExtArgs, {
-        omit: OmitOpts;
-    }>;
-    /**
-     * `prisma.product`: Exposes CRUD operations for the **Product** model.
-      * Example usage:
-      * ```ts
-      * // Fetch zero or more Products
-      * const products = await prisma.product.findMany()
-      * ```
-      */
     get product(): Prisma.ProductDelegate<ExtArgs, {
         omit: OmitOpts;
     }>;
     /**
-     * `prisma.training`: Exposes CRUD operations for the **Training** model.
+     * `prisma.farminginformation`: Exposes CRUD operations for the **farminginformation** model.
+      * Example usage:
+      * ```ts
+      * // Fetch zero or more Farminginformations
+      * const farminginformations = await prisma.farminginformation.findMany()
+      * ```
+      */
+    get farminginformation(): Prisma.farminginformationDelegate<ExtArgs, {
+        omit: OmitOpts;
+    }>;
+    /**
+     * `prisma.training`: Exposes CRUD operations for the **training** model.
       * Example usage:
       * ```ts
       * // Fetch zero or more Trainings
       * const trainings = await prisma.training.findMany()
       * ```
       */
-    get training(): Prisma.TrainingDelegate<ExtArgs, {
+    get training(): Prisma.trainingDelegate<ExtArgs, {
         omit: OmitOpts;
     }>;
     /**
-     * `prisma.trainingRegisterUser`: Exposes CRUD operations for the **TrainingRegisterUser** model.
+     * `prisma.trainingregisteruser`: Exposes CRUD operations for the **trainingregisteruser** model.
       * Example usage:
       * ```ts
-      * // Fetch zero or more TrainingRegisterUsers
-      * const trainingRegisterUsers = await prisma.trainingRegisterUser.findMany()
+      * // Fetch zero or more Trainingregisterusers
+      * const trainingregisterusers = await prisma.trainingregisteruser.findMany()
       * ```
       */
-    get trainingRegisterUser(): Prisma.TrainingRegisterUserDelegate<ExtArgs, {
+    get trainingregisteruser(): Prisma.trainingregisteruserDelegate<ExtArgs, {
         omit: OmitOpts;
     }>;
     /**
-     * `prisma.farmingInformation`: Exposes CRUD operations for the **FarmingInformation** model.
+     * `prisma.user`: Exposes CRUD operations for the **user** model.
       * Example usage:
       * ```ts
-      * // Fetch zero or more FarmingInformations
-      * const farmingInformations = await prisma.farmingInformation.findMany()
+      * // Fetch zero or more Users
+      * const users = await prisma.user.findMany()
       * ```
       */
-    get farmingInformation(): Prisma.FarmingInformationDelegate<ExtArgs, {
+    get user(): Prisma.userDelegate<ExtArgs, {
         omit: OmitOpts;
     }>;
 }

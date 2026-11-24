@@ -1,2 +1,2 @@
 export {};
-//# sourceMappingURL=FarmingInformation.js.map
+//# sourceMappingURL=farminginformation.js.map

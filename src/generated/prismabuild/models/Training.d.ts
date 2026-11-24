@@ -2,10 +2,10 @@ import type * as runtime from "@prisma/client/runtime/client";
 import type * as $Enums from "../enums.js";
 import type * as Prisma from "../internal/prismaNamespace.js";
 /**
- * Model Training
+ * Model training
  *
  */
-export type TrainingModel = runtime.Types.Result.DefaultSelection<Prisma.$TrainingPayload>;
+export type trainingModel = runtime.Types.Result.DefaultSelection<Prisma.$trainingPayload>;
 export type AggregateTraining = {
     _count: TrainingCountAggregateOutputType | null;
     _min: TrainingMinAggregateOutputType | null;
@@ -15,127 +15,127 @@ export type TrainingMinAggregateOutputType = {
     trainingId: string | null;
     authorId: string | null;
     title: string | null;
-    trainingDate: Date | null;
-    trainingImage: string | null;
-    country: string | null;
-    state: string | null;
     city: string | null;
     place: string | null;
     description: string | null;
-    status: $Enums.TrainingStatus | null;
+    status: $Enums.training_status | null;
     createdAt: Date | null;
     updatedAt: Date | null;
+    country: string | null;
+    state: string | null;
+    trainingDate: Date | null;
+    trainingImage: string | null;
 };
 export type TrainingMaxAggregateOutputType = {
     trainingId: string | null;
     authorId: string | null;
     title: string | null;
-    trainingDate: Date | null;
-    trainingImage: string | null;
-    country: string | null;
-    state: string | null;
     city: string | null;
     place: string | null;
     description: string | null;
-    status: $Enums.TrainingStatus | null;
+    status: $Enums.training_status | null;
     createdAt: Date | null;
     updatedAt: Date | null;
+    country: string | null;
+    state: string | null;
+    trainingDate: Date | null;
+    trainingImage: string | null;
 };
 export type TrainingCountAggregateOutputType = {
     trainingId: number;
     authorId: number;
     title: number;
-    trainingDate: number;
-    trainingImage: number;
-    country: number;
-    state: number;
     city: number;
     place: number;
     description: number;
     status: number;
     createdAt: number;
     updatedAt: number;
+    country: number;
+    state: number;
+    trainingDate: number;
+    trainingImage: number;
     _all: number;
 };
 export type TrainingMinAggregateInputType = {
     trainingId?: true;
     authorId?: true;
     title?: true;
-    trainingDate?: true;
-    trainingImage?: true;
-    country?: true;
-    state?: true;
     city?: true;
     place?: true;
     description?: true;
     status?: true;
     createdAt?: true;
     updatedAt?: true;
+    country?: true;
+    state?: true;
+    trainingDate?: true;
+    trainingImage?: true;
 };
 export type TrainingMaxAggregateInputType = {
     trainingId?: true;
     authorId?: true;
     title?: true;
-    trainingDate?: true;
-    trainingImage?: true;
-    country?: true;
-    state?: true;
     city?: true;
     place?: true;
     description?: true;
     status?: true;
     createdAt?: true;
     updatedAt?: true;
+    country?: true;
+    state?: true;
+    trainingDate?: true;
+    trainingImage?: true;
 };
 export type TrainingCountAggregateInputType = {
     trainingId?: true;
     authorId?: true;
     title?: true;
-    trainingDate?: true;
-    trainingImage?: true;
-    country?: true;
-    state?: true;
     city?: true;
     place?: true;
     description?: true;
     status?: true;
     createdAt?: true;
     updatedAt?: true;
+    country?: true;
+    state?: true;
+    trainingDate?: true;
+    trainingImage?: true;
     _all?: true;
 };
 export type TrainingAggregateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Filter which Training to aggregate.
+     * Filter which training to aggregate.
      */
-    where?: Prisma.TrainingWhereInput;
+    where?: Prisma.trainingWhereInput;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      *
-     * Determine the order of Trainings to fetch.
+     * Determine the order of trainings to fetch.
      */
-    orderBy?: Prisma.TrainingOrderByWithRelationInput | Prisma.TrainingOrderByWithRelationInput[];
+    orderBy?: Prisma.trainingOrderByWithRelationInput | Prisma.trainingOrderByWithRelationInput[];
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      *
      * Sets the start position
      */
-    cursor?: Prisma.TrainingWhereUniqueInput;
+    cursor?: Prisma.trainingWhereUniqueInput;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      *
-     * Take `±n` Trainings from the position of the cursor.
+     * Take `±n` trainings from the position of the cursor.
      */
     take?: number;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      *
-     * Skip the first `n` Trainings.
+     * Skip the first `n` trainings.
      */
     skip?: number;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      *
-     * Count returned Trainings
+     * Count returned trainings
     **/
     _count?: true | TrainingCountAggregateInputType;
     /**
@@ -154,11 +154,11 @@ export type TrainingAggregateArgs<ExtArgs extends runtime.Types.Extensions.Inter
 export type GetTrainingAggregateType<T extends TrainingAggregateArgs> = {
     [P in keyof T & keyof AggregateTraining]: P extends '_count' | 'count' ? T[P] extends true ? number : Prisma.GetScalarType<T[P], AggregateTraining[P]> : Prisma.GetScalarType<T[P], AggregateTraining[P]>;
 };
-export type TrainingGroupByArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-    where?: Prisma.TrainingWhereInput;
-    orderBy?: Prisma.TrainingOrderByWithAggregationInput | Prisma.TrainingOrderByWithAggregationInput[];
+export type trainingGroupByArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+    where?: Prisma.trainingWhereInput;
+    orderBy?: Prisma.trainingOrderByWithAggregationInput | Prisma.trainingOrderByWithAggregationInput[];
     by: Prisma.TrainingScalarFieldEnum[] | Prisma.TrainingScalarFieldEnum;
-    having?: Prisma.TrainingScalarWhereWithAggregatesInput;
+    having?: Prisma.trainingScalarWhereWithAggregatesInput;
     take?: number;
     skip?: number;
     _count?: TrainingCountAggregateInputType | true;
@@ -169,548 +169,548 @@ export type TrainingGroupByOutputType = {
     trainingId: string;
     authorId: string;
     title: string;
-    trainingDate: Date;
-    trainingImage: string | null;
-    country: string | null;
-    state: string | null;
     city: string | null;
     place: string | null;
     description: string | null;
-    status: $Enums.TrainingStatus;
+    status: $Enums.training_status;
     createdAt: Date;
     updatedAt: Date;
+    country: string | null;
+    state: string | null;
+    trainingDate: Date;
+    trainingImage: string | null;
     _count: TrainingCountAggregateOutputType | null;
     _min: TrainingMinAggregateOutputType | null;
     _max: TrainingMaxAggregateOutputType | null;
 };
-export type GetTrainingGroupByPayload<T extends TrainingGroupByArgs> = Prisma.PrismaPromise<Array<Prisma.PickEnumerable<TrainingGroupByOutputType, T['by']> & {
+export type GetTrainingGroupByPayload<T extends trainingGroupByArgs> = Prisma.PrismaPromise<Array<Prisma.PickEnumerable<TrainingGroupByOutputType, T['by']> & {
     [P in ((keyof T) & (keyof TrainingGroupByOutputType))]: P extends '_count' ? T[P] extends boolean ? number : Prisma.GetScalarType<T[P], TrainingGroupByOutputType[P]> : Prisma.GetScalarType<T[P], TrainingGroupByOutputType[P]>;
 }>>;
-export type TrainingWhereInput = {
-    AND?: Prisma.TrainingWhereInput | Prisma.TrainingWhereInput[];
-    OR?: Prisma.TrainingWhereInput[];
-    NOT?: Prisma.TrainingWhereInput | Prisma.TrainingWhereInput[];
-    trainingId?: Prisma.StringFilter<"Training"> | string;
-    authorId?: Prisma.StringFilter<"Training"> | string;
-    title?: Prisma.StringFilter<"Training"> | string;
-    trainingDate?: Prisma.DateTimeFilter<"Training"> | Date | string;
-    trainingImage?: Prisma.StringNullableFilter<"Training"> | string | null;
-    country?: Prisma.StringNullableFilter<"Training"> | string | null;
-    state?: Prisma.StringNullableFilter<"Training"> | string | null;
-    city?: Prisma.StringNullableFilter<"Training"> | string | null;
-    place?: Prisma.StringNullableFilter<"Training"> | string | null;
-    description?: Prisma.StringNullableFilter<"Training"> | string | null;
-    status?: Prisma.EnumTrainingStatusFilter<"Training"> | $Enums.TrainingStatus;
-    createdAt?: Prisma.DateTimeFilter<"Training"> | Date | string;
-    updatedAt?: Prisma.DateTimeFilter<"Training"> | Date | string;
-    user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>;
-    trainingRegisterUser?: Prisma.TrainingRegisterUserListRelationFilter;
+export type trainingWhereInput = {
+    AND?: Prisma.trainingWhereInput | Prisma.trainingWhereInput[];
+    OR?: Prisma.trainingWhereInput[];
+    NOT?: Prisma.trainingWhereInput | Prisma.trainingWhereInput[];
+    trainingId?: Prisma.StringFilter<"training"> | string;
+    authorId?: Prisma.StringFilter<"training"> | string;
+    title?: Prisma.StringFilter<"training"> | string;
+    city?: Prisma.StringNullableFilter<"training"> | string | null;
+    place?: Prisma.StringNullableFilter<"training"> | string | null;
+    description?: Prisma.StringNullableFilter<"training"> | string | null;
+    status?: Prisma.Enumtraining_statusFilter<"training"> | $Enums.training_status;
+    createdAt?: Prisma.DateTimeFilter<"training"> | Date | string;
+    updatedAt?: Prisma.DateTimeFilter<"training"> | Date | string;
+    country?: Prisma.StringNullableFilter<"training"> | string | null;
+    state?: Prisma.StringNullableFilter<"training"> | string | null;
+    trainingDate?: Prisma.DateTimeFilter<"training"> | Date | string;
+    trainingImage?: Prisma.StringNullableFilter<"training"> | string | null;
+    user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.userWhereInput>;
+    trainingregisteruser?: Prisma.TrainingregisteruserListRelationFilter;
 };
-export type TrainingOrderByWithRelationInput = {
+export type trainingOrderByWithRelationInput = {
     trainingId?: Prisma.SortOrder;
     authorId?: Prisma.SortOrder;
     title?: Prisma.SortOrder;
-    trainingDate?: Prisma.SortOrder;
-    trainingImage?: Prisma.SortOrderInput | Prisma.SortOrder;
-    country?: Prisma.SortOrderInput | Prisma.SortOrder;
-    state?: Prisma.SortOrderInput | Prisma.SortOrder;
     city?: Prisma.SortOrderInput | Prisma.SortOrder;
     place?: Prisma.SortOrderInput | Prisma.SortOrder;
     description?: Prisma.SortOrderInput | Prisma.SortOrder;
     status?: Prisma.SortOrder;
     createdAt?: Prisma.SortOrder;
     updatedAt?: Prisma.SortOrder;
-    user?: Prisma.UserOrderByWithRelationInput;
-    trainingRegisterUser?: Prisma.TrainingRegisterUserOrderByRelationAggregateInput;
-    _relevance?: Prisma.TrainingOrderByRelevanceInput;
+    country?: Prisma.SortOrderInput | Prisma.SortOrder;
+    state?: Prisma.SortOrderInput | Prisma.SortOrder;
+    trainingDate?: Prisma.SortOrder;
+    trainingImage?: Prisma.SortOrderInput | Prisma.SortOrder;
+    user?: Prisma.userOrderByWithRelationInput;
+    trainingregisteruser?: Prisma.trainingregisteruserOrderByRelationAggregateInput;
+    _relevance?: Prisma.trainingOrderByRelevanceInput;
 };
-export type TrainingWhereUniqueInput = Prisma.AtLeast<{
+export type trainingWhereUniqueInput = Prisma.AtLeast<{
     trainingId?: string;
-    AND?: Prisma.TrainingWhereInput | Prisma.TrainingWhereInput[];
-    OR?: Prisma.TrainingWhereInput[];
-    NOT?: Prisma.TrainingWhereInput | Prisma.TrainingWhereInput[];
-    authorId?: Prisma.StringFilter<"Training"> | string;
-    title?: Prisma.StringFilter<"Training"> | string;
-    trainingDate?: Prisma.DateTimeFilter<"Training"> | Date | string;
-    trainingImage?: Prisma.StringNullableFilter<"Training"> | string | null;
-    country?: Prisma.StringNullableFilter<"Training"> | string | null;
-    state?: Prisma.StringNullableFilter<"Training"> | string | null;
-    city?: Prisma.StringNullableFilter<"Training"> | string | null;
-    place?: Prisma.StringNullableFilter<"Training"> | string | null;
-    description?: Prisma.StringNullableFilter<"Training"> | string | null;
-    status?: Prisma.EnumTrainingStatusFilter<"Training"> | $Enums.TrainingStatus;
-    createdAt?: Prisma.DateTimeFilter<"Training"> | Date | string;
-    updatedAt?: Prisma.DateTimeFilter<"Training"> | Date | string;
-    user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>;
-    trainingRegisterUser?: Prisma.TrainingRegisterUserListRelationFilter;
+    AND?: Prisma.trainingWhereInput | Prisma.trainingWhereInput[];
+    OR?: Prisma.trainingWhereInput[];
+    NOT?: Prisma.trainingWhereInput | Prisma.trainingWhereInput[];
+    authorId?: Prisma.StringFilter<"training"> | string;
+    title?: Prisma.StringFilter<"training"> | string;
+    city?: Prisma.StringNullableFilter<"training"> | string | null;
+    place?: Prisma.StringNullableFilter<"training"> | string | null;
+    description?: Prisma.StringNullableFilter<"training"> | string | null;
+    status?: Prisma.Enumtraining_statusFilter<"training"> | $Enums.training_status;
+    createdAt?: Prisma.DateTimeFilter<"training"> | Date | string;
+    updatedAt?: Prisma.DateTimeFilter<"training"> | Date | string;
+    country?: Prisma.StringNullableFilter<"training"> | string | null;
+    state?: Prisma.StringNullableFilter<"training"> | string | null;
+    trainingDate?: Prisma.DateTimeFilter<"training"> | Date | string;
+    trainingImage?: Prisma.StringNullableFilter<"training"> | string | null;
+    user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.userWhereInput>;
+    trainingregisteruser?: Prisma.TrainingregisteruserListRelationFilter;
 }, "trainingId">;
-export type TrainingOrderByWithAggregationInput = {
+export type trainingOrderByWithAggregationInput = {
     trainingId?: Prisma.SortOrder;
     authorId?: Prisma.SortOrder;
     title?: Prisma.SortOrder;
-    trainingDate?: Prisma.SortOrder;
-    trainingImage?: Prisma.SortOrderInput | Prisma.SortOrder;
-    country?: Prisma.SortOrderInput | Prisma.SortOrder;
-    state?: Prisma.SortOrderInput | Prisma.SortOrder;
     city?: Prisma.SortOrderInput | Prisma.SortOrder;
     place?: Prisma.SortOrderInput | Prisma.SortOrder;
     description?: Prisma.SortOrderInput | Prisma.SortOrder;
     status?: Prisma.SortOrder;
     createdAt?: Prisma.SortOrder;
     updatedAt?: Prisma.SortOrder;
-    _count?: Prisma.TrainingCountOrderByAggregateInput;
-    _max?: Prisma.TrainingMaxOrderByAggregateInput;
-    _min?: Prisma.TrainingMinOrderByAggregateInput;
+    country?: Prisma.SortOrderInput | Prisma.SortOrder;
+    state?: Prisma.SortOrderInput | Prisma.SortOrder;
+    trainingDate?: Prisma.SortOrder;
+    trainingImage?: Prisma.SortOrderInput | Prisma.SortOrder;
+    _count?: Prisma.trainingCountOrderByAggregateInput;
+    _max?: Prisma.trainingMaxOrderByAggregateInput;
+    _min?: Prisma.trainingMinOrderByAggregateInput;
 };
-export type TrainingScalarWhereWithAggregatesInput = {
-    AND?: Prisma.TrainingScalarWhereWithAggregatesInput | Prisma.TrainingScalarWhereWithAggregatesInput[];
-    OR?: Prisma.TrainingScalarWhereWithAggregatesInput[];
-    NOT?: Prisma.TrainingScalarWhereWithAggregatesInput | Prisma.TrainingScalarWhereWithAggregatesInput[];
-    trainingId?: Prisma.StringWithAggregatesFilter<"Training"> | string;
-    authorId?: Prisma.StringWithAggregatesFilter<"Training"> | string;
-    title?: Prisma.StringWithAggregatesFilter<"Training"> | string;
-    trainingDate?: Prisma.DateTimeWithAggregatesFilter<"Training"> | Date | string;
-    trainingImage?: Prisma.StringNullableWithAggregatesFilter<"Training"> | string | null;
-    country?: Prisma.StringNullableWithAggregatesFilter<"Training"> | string | null;
-    state?: Prisma.StringNullableWithAggregatesFilter<"Training"> | string | null;
-    city?: Prisma.StringNullableWithAggregatesFilter<"Training"> | string | null;
-    place?: Prisma.StringNullableWithAggregatesFilter<"Training"> | string | null;
-    description?: Prisma.StringNullableWithAggregatesFilter<"Training"> | string | null;
-    status?: Prisma.EnumTrainingStatusWithAggregatesFilter<"Training"> | $Enums.TrainingStatus;
-    createdAt?: Prisma.DateTimeWithAggregatesFilter<"Training"> | Date | string;
-    updatedAt?: Prisma.DateTimeWithAggregatesFilter<"Training"> | Date | string;
+export type trainingScalarWhereWithAggregatesInput = {
+    AND?: Prisma.trainingScalarWhereWithAggregatesInput | Prisma.trainingScalarWhereWithAggregatesInput[];
+    OR?: Prisma.trainingScalarWhereWithAggregatesInput[];
+    NOT?: Prisma.trainingScalarWhereWithAggregatesInput | Prisma.trainingScalarWhereWithAggregatesInput[];
+    trainingId?: Prisma.StringWithAggregatesFilter<"training"> | string;
+    authorId?: Prisma.StringWithAggregatesFilter<"training"> | string;
+    title?: Prisma.StringWithAggregatesFilter<"training"> | string;
+    city?: Prisma.StringNullableWithAggregatesFilter<"training"> | string | null;
+    place?: Prisma.StringNullableWithAggregatesFilter<"training"> | string | null;
+    description?: Prisma.StringNullableWithAggregatesFilter<"training"> | string | null;
+    status?: Prisma.Enumtraining_statusWithAggregatesFilter<"training"> | $Enums.training_status;
+    createdAt?: Prisma.DateTimeWithAggregatesFilter<"training"> | Date | string;
+    updatedAt?: Prisma.DateTimeWithAggregatesFilter<"training"> | Date | string;
+    country?: Prisma.StringNullableWithAggregatesFilter<"training"> | string | null;
+    state?: Prisma.StringNullableWithAggregatesFilter<"training"> | string | null;
+    trainingDate?: Prisma.DateTimeWithAggregatesFilter<"training"> | Date | string;
+    trainingImage?: Prisma.StringNullableWithAggregatesFilter<"training"> | string | null;
 };
-export type TrainingCreateInput = {
-    trainingId?: string;
+export type trainingCreateInput = {
+    trainingId: string;
     title: string;
-    trainingDate: Date | string;
-    trainingImage?: string | null;
-    country?: string | null;
-    state?: string | null;
     city?: string | null;
     place?: string | null;
     description?: string | null;
-    status?: $Enums.TrainingStatus;
+    status?: $Enums.training_status;
     createdAt?: Date | string;
-    updatedAt?: Date | string;
-    user: Prisma.UserCreateNestedOneWithoutTrainingInput;
-    trainingRegisterUser?: Prisma.TrainingRegisterUserCreateNestedManyWithoutTrainimgInput;
+    updatedAt: Date | string;
+    country?: string | null;
+    state?: string | null;
+    trainingDate: Date | string;
+    trainingImage?: string | null;
+    user: Prisma.userCreateNestedOneWithoutTrainingInput;
+    trainingregisteruser?: Prisma.trainingregisteruserCreateNestedManyWithoutTrainingInput;
 };
-export type TrainingUncheckedCreateInput = {
-    trainingId?: string;
+export type trainingUncheckedCreateInput = {
+    trainingId: string;
     authorId: string;
     title: string;
-    trainingDate: Date | string;
-    trainingImage?: string | null;
-    country?: string | null;
-    state?: string | null;
     city?: string | null;
     place?: string | null;
     description?: string | null;
-    status?: $Enums.TrainingStatus;
+    status?: $Enums.training_status;
     createdAt?: Date | string;
-    updatedAt?: Date | string;
-    trainingRegisterUser?: Prisma.TrainingRegisterUserUncheckedCreateNestedManyWithoutTrainimgInput;
+    updatedAt: Date | string;
+    country?: string | null;
+    state?: string | null;
+    trainingDate: Date | string;
+    trainingImage?: string | null;
+    trainingregisteruser?: Prisma.trainingregisteruserUncheckedCreateNestedManyWithoutTrainingInput;
 };
-export type TrainingUpdateInput = {
+export type trainingUpdateInput = {
     trainingId?: Prisma.StringFieldUpdateOperationsInput | string;
     title?: Prisma.StringFieldUpdateOperationsInput | string;
-    trainingDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
-    trainingImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
-    country?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
-    state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     place?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
-    status?: Prisma.EnumTrainingStatusFieldUpdateOperationsInput | $Enums.TrainingStatus;
+    status?: Prisma.Enumtraining_statusFieldUpdateOperationsInput | $Enums.training_status;
     createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
     updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
-    user?: Prisma.UserUpdateOneRequiredWithoutTrainingNestedInput;
-    trainingRegisterUser?: Prisma.TrainingRegisterUserUpdateManyWithoutTrainimgNestedInput;
+    country?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
+    state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
+    trainingDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+    trainingImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
+    user?: Prisma.userUpdateOneRequiredWithoutTrainingNestedInput;
+    trainingregisteruser?: Prisma.trainingregisteruserUpdateManyWithoutTrainingNestedInput;
 };
-export type TrainingUncheckedUpdateInput = {
+export type trainingUncheckedUpdateInput = {
     trainingId?: Prisma.StringFieldUpdateOperationsInput | string;
     authorId?: Prisma.StringFieldUpdateOperationsInput | string;
     title?: Prisma.StringFieldUpdateOperationsInput | string;
-    trainingDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
-    trainingImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
-    country?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
-    state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     place?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
-    status?: Prisma.EnumTrainingStatusFieldUpdateOperationsInput | $Enums.TrainingStatus;
+    status?: Prisma.Enumtraining_statusFieldUpdateOperationsInput | $Enums.training_status;
     createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
     updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
-    trainingRegisterUser?: Prisma.TrainingRegisterUserUncheckedUpdateManyWithoutTrainimgNestedInput;
+    country?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
+    state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
+    trainingDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+    trainingImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
+    trainingregisteruser?: Prisma.trainingregisteruserUncheckedUpdateManyWithoutTrainingNestedInput;
 };
-export type TrainingCreateManyInput = {
-    trainingId?: string;
+export type trainingCreateManyInput = {
+    trainingId: string;
     authorId: string;
     title: string;
-    trainingDate: Date | string;
-    trainingImage?: string | null;
-    country?: string | null;
-    state?: string | null;
     city?: string | null;
     place?: string | null;
     description?: string | null;
-    status?: $Enums.TrainingStatus;
+    status?: $Enums.training_status;
     createdAt?: Date | string;
-    updatedAt?: Date | string;
+    updatedAt: Date | string;
+    country?: string | null;
+    state?: string | null;
+    trainingDate: Date | string;
+    trainingImage?: string | null;
 };
-export type TrainingUpdateManyMutationInput = {
+export type trainingUpdateManyMutationInput = {
     trainingId?: Prisma.StringFieldUpdateOperationsInput | string;
     title?: Prisma.StringFieldUpdateOperationsInput | string;
-    trainingDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
-    trainingImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
-    country?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
-    state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     place?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
-    status?: Prisma.EnumTrainingStatusFieldUpdateOperationsInput | $Enums.TrainingStatus;
+    status?: Prisma.Enumtraining_statusFieldUpdateOperationsInput | $Enums.training_status;
     createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
     updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+    country?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
+    state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
+    trainingDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+    trainingImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
 };
-export type TrainingUncheckedUpdateManyInput = {
+export type trainingUncheckedUpdateManyInput = {
     trainingId?: Prisma.StringFieldUpdateOperationsInput | string;
     authorId?: Prisma.StringFieldUpdateOperationsInput | string;
     title?: Prisma.StringFieldUpdateOperationsInput | string;
-    trainingDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
-    trainingImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
-    country?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
-    state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     place?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
-    status?: Prisma.EnumTrainingStatusFieldUpdateOperationsInput | $Enums.TrainingStatus;
+    status?: Prisma.Enumtraining_statusFieldUpdateOperationsInput | $Enums.training_status;
     createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
     updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+    country?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
+    state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
+    trainingDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+    trainingImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
 };
-export type TrainingListRelationFilter = {
-    every?: Prisma.TrainingWhereInput;
-    some?: Prisma.TrainingWhereInput;
-    none?: Prisma.TrainingWhereInput;
-};
-export type TrainingOrderByRelationAggregateInput = {
-    _count?: Prisma.SortOrder;
-};
-export type TrainingOrderByRelevanceInput = {
-    fields: Prisma.TrainingOrderByRelevanceFieldEnum | Prisma.TrainingOrderByRelevanceFieldEnum[];
+export type trainingOrderByRelevanceInput = {
+    fields: Prisma.trainingOrderByRelevanceFieldEnum | Prisma.trainingOrderByRelevanceFieldEnum[];
     sort: Prisma.SortOrder;
     search: string;
 };
-export type TrainingCountOrderByAggregateInput = {
+export type trainingCountOrderByAggregateInput = {
     trainingId?: Prisma.SortOrder;
     authorId?: Prisma.SortOrder;
     title?: Prisma.SortOrder;
-    trainingDate?: Prisma.SortOrder;
-    trainingImage?: Prisma.SortOrder;
-    country?: Prisma.SortOrder;
-    state?: Prisma.SortOrder;
     city?: Prisma.SortOrder;
     place?: Prisma.SortOrder;
     description?: Prisma.SortOrder;
     status?: Prisma.SortOrder;
     createdAt?: Prisma.SortOrder;
     updatedAt?: Prisma.SortOrder;
+    country?: Prisma.SortOrder;
+    state?: Prisma.SortOrder;
+    trainingDate?: Prisma.SortOrder;
+    trainingImage?: Prisma.SortOrder;
 };
-export type TrainingMaxOrderByAggregateInput = {
+export type trainingMaxOrderByAggregateInput = {
     trainingId?: Prisma.SortOrder;
     authorId?: Prisma.SortOrder;
     title?: Prisma.SortOrder;
-    trainingDate?: Prisma.SortOrder;
-    trainingImage?: Prisma.SortOrder;
-    country?: Prisma.SortOrder;
-    state?: Prisma.SortOrder;
     city?: Prisma.SortOrder;
     place?: Prisma.SortOrder;
     description?: Prisma.SortOrder;
     status?: Prisma.SortOrder;
     createdAt?: Prisma.SortOrder;
     updatedAt?: Prisma.SortOrder;
+    country?: Prisma.SortOrder;
+    state?: Prisma.SortOrder;
+    trainingDate?: Prisma.SortOrder;
+    trainingImage?: Prisma.SortOrder;
 };
-export type TrainingMinOrderByAggregateInput = {
+export type trainingMinOrderByAggregateInput = {
     trainingId?: Prisma.SortOrder;
     authorId?: Prisma.SortOrder;
     title?: Prisma.SortOrder;
-    trainingDate?: Prisma.SortOrder;
-    trainingImage?: Prisma.SortOrder;
-    country?: Prisma.SortOrder;
-    state?: Prisma.SortOrder;
     city?: Prisma.SortOrder;
     place?: Prisma.SortOrder;
     description?: Prisma.SortOrder;
     status?: Prisma.SortOrder;
     createdAt?: Prisma.SortOrder;
     updatedAt?: Prisma.SortOrder;
+    country?: Prisma.SortOrder;
+    state?: Prisma.SortOrder;
+    trainingDate?: Prisma.SortOrder;
+    trainingImage?: Prisma.SortOrder;
 };
 export type TrainingScalarRelationFilter = {
-    is?: Prisma.TrainingWhereInput;
-    isNot?: Prisma.TrainingWhereInput;
+    is?: Prisma.trainingWhereInput;
+    isNot?: Prisma.trainingWhereInput;
 };
-export type TrainingCreateNestedManyWithoutUserInput = {
-    create?: Prisma.XOR<Prisma.TrainingCreateWithoutUserInput, Prisma.TrainingUncheckedCreateWithoutUserInput> | Prisma.TrainingCreateWithoutUserInput[] | Prisma.TrainingUncheckedCreateWithoutUserInput[];
-    connectOrCreate?: Prisma.TrainingCreateOrConnectWithoutUserInput | Prisma.TrainingCreateOrConnectWithoutUserInput[];
-    createMany?: Prisma.TrainingCreateManyUserInputEnvelope;
-    connect?: Prisma.TrainingWhereUniqueInput | Prisma.TrainingWhereUniqueInput[];
+export type TrainingListRelationFilter = {
+    every?: Prisma.trainingWhereInput;
+    some?: Prisma.trainingWhereInput;
+    none?: Prisma.trainingWhereInput;
 };
-export type TrainingUncheckedCreateNestedManyWithoutUserInput = {
-    create?: Prisma.XOR<Prisma.TrainingCreateWithoutUserInput, Prisma.TrainingUncheckedCreateWithoutUserInput> | Prisma.TrainingCreateWithoutUserInput[] | Prisma.TrainingUncheckedCreateWithoutUserInput[];
-    connectOrCreate?: Prisma.TrainingCreateOrConnectWithoutUserInput | Prisma.TrainingCreateOrConnectWithoutUserInput[];
-    createMany?: Prisma.TrainingCreateManyUserInputEnvelope;
-    connect?: Prisma.TrainingWhereUniqueInput | Prisma.TrainingWhereUniqueInput[];
+export type trainingOrderByRelationAggregateInput = {
+    _count?: Prisma.SortOrder;
 };
-export type TrainingUpdateManyWithoutUserNestedInput = {
-    create?: Prisma.XOR<Prisma.TrainingCreateWithoutUserInput, Prisma.TrainingUncheckedCreateWithoutUserInput> | Prisma.TrainingCreateWithoutUserInput[] | Prisma.TrainingUncheckedCreateWithoutUserInput[];
-    connectOrCreate?: Prisma.TrainingCreateOrConnectWithoutUserInput | Prisma.TrainingCreateOrConnectWithoutUserInput[];
-    upsert?: Prisma.TrainingUpsertWithWhereUniqueWithoutUserInput | Prisma.TrainingUpsertWithWhereUniqueWithoutUserInput[];
-    createMany?: Prisma.TrainingCreateManyUserInputEnvelope;
-    set?: Prisma.TrainingWhereUniqueInput | Prisma.TrainingWhereUniqueInput[];
-    disconnect?: Prisma.TrainingWhereUniqueInput | Prisma.TrainingWhereUniqueInput[];
-    delete?: Prisma.TrainingWhereUniqueInput | Prisma.TrainingWhereUniqueInput[];
-    connect?: Prisma.TrainingWhereUniqueInput | Prisma.TrainingWhereUniqueInput[];
-    update?: Prisma.TrainingUpdateWithWhereUniqueWithoutUserInput | Prisma.TrainingUpdateWithWhereUniqueWithoutUserInput[];
-    updateMany?: Prisma.TrainingUpdateManyWithWhereWithoutUserInput | Prisma.TrainingUpdateManyWithWhereWithoutUserInput[];
-    deleteMany?: Prisma.TrainingScalarWhereInput | Prisma.TrainingScalarWhereInput[];
+export type Enumtraining_statusFieldUpdateOperationsInput = {
+    set?: $Enums.training_status;
 };
-export type TrainingUncheckedUpdateManyWithoutUserNestedInput = {
-    create?: Prisma.XOR<Prisma.TrainingCreateWithoutUserInput, Prisma.TrainingUncheckedCreateWithoutUserInput> | Prisma.TrainingCreateWithoutUserInput[] | Prisma.TrainingUncheckedCreateWithoutUserInput[];
-    connectOrCreate?: Prisma.TrainingCreateOrConnectWithoutUserInput | Prisma.TrainingCreateOrConnectWithoutUserInput[];
-    upsert?: Prisma.TrainingUpsertWithWhereUniqueWithoutUserInput | Prisma.TrainingUpsertWithWhereUniqueWithoutUserInput[];
-    createMany?: Prisma.TrainingCreateManyUserInputEnvelope;
-    set?: Prisma.TrainingWhereUniqueInput | Prisma.TrainingWhereUniqueInput[];
-    disconnect?: Prisma.TrainingWhereUniqueInput | Prisma.TrainingWhereUniqueInput[];
-    delete?: Prisma.TrainingWhereUniqueInput | Prisma.TrainingWhereUniqueInput[];
-    connect?: Prisma.TrainingWhereUniqueInput | Prisma.TrainingWhereUniqueInput[];
-    update?: Prisma.TrainingUpdateWithWhereUniqueWithoutUserInput | Prisma.TrainingUpdateWithWhereUniqueWithoutUserInput[];
-    updateMany?: Prisma.TrainingUpdateManyWithWhereWithoutUserInput | Prisma.TrainingUpdateManyWithWhereWithoutUserInput[];
-    deleteMany?: Prisma.TrainingScalarWhereInput | Prisma.TrainingScalarWhereInput[];
+export type trainingCreateNestedOneWithoutTrainingregisteruserInput = {
+    create?: Prisma.XOR<Prisma.trainingCreateWithoutTrainingregisteruserInput, Prisma.trainingUncheckedCreateWithoutTrainingregisteruserInput>;
+    connectOrCreate?: Prisma.trainingCreateOrConnectWithoutTrainingregisteruserInput;
+    connect?: Prisma.trainingWhereUniqueInput;
 };
-export type EnumTrainingStatusFieldUpdateOperationsInput = {
-    set?: $Enums.TrainingStatus;
+export type trainingUpdateOneRequiredWithoutTrainingregisteruserNestedInput = {
+    create?: Prisma.XOR<Prisma.trainingCreateWithoutTrainingregisteruserInput, Prisma.trainingUncheckedCreateWithoutTrainingregisteruserInput>;
+    connectOrCreate?: Prisma.trainingCreateOrConnectWithoutTrainingregisteruserInput;
+    upsert?: Prisma.trainingUpsertWithoutTrainingregisteruserInput;
+    connect?: Prisma.trainingWhereUniqueInput;
+    update?: Prisma.XOR<Prisma.XOR<Prisma.trainingUpdateToOneWithWhereWithoutTrainingregisteruserInput, Prisma.trainingUpdateWithoutTrainingregisteruserInput>, Prisma.trainingUncheckedUpdateWithoutTrainingregisteruserInput>;
 };
-export type TrainingCreateNestedOneWithoutTrainingRegisterUserInput = {
-    create?: Prisma.XOR<Prisma.TrainingCreateWithoutTrainingRegisterUserInput, Prisma.TrainingUncheckedCreateWithoutTrainingRegisterUserInput>;
-    connectOrCreate?: Prisma.TrainingCreateOrConnectWithoutTrainingRegisterUserInput;
-    connect?: Prisma.TrainingWhereUniqueInput;
+export type trainingCreateNestedManyWithoutUserInput = {
+    create?: Prisma.XOR<Prisma.trainingCreateWithoutUserInput, Prisma.trainingUncheckedCreateWithoutUserInput> | Prisma.trainingCreateWithoutUserInput[] | Prisma.trainingUncheckedCreateWithoutUserInput[];
+    connectOrCreate?: Prisma.trainingCreateOrConnectWithoutUserInput | Prisma.trainingCreateOrConnectWithoutUserInput[];
+    createMany?: Prisma.trainingCreateManyUserInputEnvelope;
+    connect?: Prisma.trainingWhereUniqueInput | Prisma.trainingWhereUniqueInput[];
 };
-export type TrainingUpdateOneRequiredWithoutTrainingRegisterUserNestedInput = {
-    create?: Prisma.XOR<Prisma.TrainingCreateWithoutTrainingRegisterUserInput, Prisma.TrainingUncheckedCreateWithoutTrainingRegisterUserInput>;
-    connectOrCreate?: Prisma.TrainingCreateOrConnectWithoutTrainingRegisterUserInput;
-    upsert?: Prisma.TrainingUpsertWithoutTrainingRegisterUserInput;
-    connect?: Prisma.TrainingWhereUniqueInput;
-    update?: Prisma.XOR<Prisma.XOR<Prisma.TrainingUpdateToOneWithWhereWithoutTrainingRegisterUserInput, Prisma.TrainingUpdateWithoutTrainingRegisterUserInput>, Prisma.TrainingUncheckedUpdateWithoutTrainingRegisterUserInput>;
+export type trainingUncheckedCreateNestedManyWithoutUserInput = {
+    create?: Prisma.XOR<Prisma.trainingCreateWithoutUserInput, Prisma.trainingUncheckedCreateWithoutUserInput> | Prisma.trainingCreateWithoutUserInput[] | Prisma.trainingUncheckedCreateWithoutUserInput[];
+    connectOrCreate?: Prisma.trainingCreateOrConnectWithoutUserInput | Prisma.trainingCreateOrConnectWithoutUserInput[];
+    createMany?: Prisma.trainingCreateManyUserInputEnvelope;
+    connect?: Prisma.trainingWhereUniqueInput | Prisma.trainingWhereUniqueInput[];
 };
-export type TrainingCreateWithoutUserInput = {
-    trainingId?: string;
+export type trainingUpdateManyWithoutUserNestedInput = {
+    create?: Prisma.XOR<Prisma.trainingCreateWithoutUserInput, Prisma.trainingUncheckedCreateWithoutUserInput> | Prisma.trainingCreateWithoutUserInput[] | Prisma.trainingUncheckedCreateWithoutUserInput[];
+    connectOrCreate?: Prisma.trainingCreateOrConnectWithoutUserInput | Prisma.trainingCreateOrConnectWithoutUserInput[];
+    upsert?: Prisma.trainingUpsertWithWhereUniqueWithoutUserInput | Prisma.trainingUpsertWithWhereUniqueWithoutUserInput[];
+    createMany?: Prisma.trainingCreateManyUserInputEnvelope;
+    set?: Prisma.trainingWhereUniqueInput | Prisma.trainingWhereUniqueInput[];
+    disconnect?: Prisma.trainingWhereUniqueInput | Prisma.trainingWhereUniqueInput[];
+    delete?: Prisma.trainingWhereUniqueInput | Prisma.trainingWhereUniqueInput[];
+    connect?: Prisma.trainingWhereUniqueInput | Prisma.trainingWhereUniqueInput[];
+    update?: Prisma.trainingUpdateWithWhereUniqueWithoutUserInput | Prisma.trainingUpdateWithWhereUniqueWithoutUserInput[];
+    updateMany?: Prisma.trainingUpdateManyWithWhereWithoutUserInput | Prisma.trainingUpdateManyWithWhereWithoutUserInput[];
+    deleteMany?: Prisma.trainingScalarWhereInput | Prisma.trainingScalarWhereInput[];
+};
+export type trainingUncheckedUpdateManyWithoutUserNestedInput = {
+    create?: Prisma.XOR<Prisma.trainingCreateWithoutUserInput, Prisma.trainingUncheckedCreateWithoutUserInput> | Prisma.trainingCreateWithoutUserInput[] | Prisma.trainingUncheckedCreateWithoutUserInput[];
+    connectOrCreate?: Prisma.trainingCreateOrConnectWithoutUserInput | Prisma.trainingCreateOrConnectWithoutUserInput[];
+    upsert?: Prisma.trainingUpsertWithWhereUniqueWithoutUserInput | Prisma.trainingUpsertWithWhereUniqueWithoutUserInput[];
+    createMany?: Prisma.trainingCreateManyUserInputEnvelope;
+    set?: Prisma.trainingWhereUniqueInput | Prisma.trainingWhereUniqueInput[];
+    disconnect?: Prisma.trainingWhereUniqueInput | Prisma.trainingWhereUniqueInput[];
+    delete?: Prisma.trainingWhereUniqueInput | Prisma.trainingWhereUniqueInput[];
+    connect?: Prisma.trainingWhereUniqueInput | Prisma.trainingWhereUniqueInput[];
+    update?: Prisma.trainingUpdateWithWhereUniqueWithoutUserInput | Prisma.trainingUpdateWithWhereUniqueWithoutUserInput[];
+    updateMany?: Prisma.trainingUpdateManyWithWhereWithoutUserInput | Prisma.trainingUpdateManyWithWhereWithoutUserInput[];
+    deleteMany?: Prisma.trainingScalarWhereInput | Prisma.trainingScalarWhereInput[];
+};
+export type trainingCreateWithoutTrainingregisteruserInput = {
+    trainingId: string;
     title: string;
-    trainingDate: Date | string;
-    trainingImage?: string | null;
-    country?: string | null;
-    state?: string | null;
     city?: string | null;
     place?: string | null;
     description?: string | null;
-    status?: $Enums.TrainingStatus;
+    status?: $Enums.training_status;
     createdAt?: Date | string;
-    updatedAt?: Date | string;
-    trainingRegisterUser?: Prisma.TrainingRegisterUserCreateNestedManyWithoutTrainimgInput;
-};
-export type TrainingUncheckedCreateWithoutUserInput = {
-    trainingId?: string;
-    title: string;
-    trainingDate: Date | string;
-    trainingImage?: string | null;
+    updatedAt: Date | string;
     country?: string | null;
     state?: string | null;
-    city?: string | null;
-    place?: string | null;
-    description?: string | null;
-    status?: $Enums.TrainingStatus;
-    createdAt?: Date | string;
-    updatedAt?: Date | string;
-    trainingRegisterUser?: Prisma.TrainingRegisterUserUncheckedCreateNestedManyWithoutTrainimgInput;
-};
-export type TrainingCreateOrConnectWithoutUserInput = {
-    where: Prisma.TrainingWhereUniqueInput;
-    create: Prisma.XOR<Prisma.TrainingCreateWithoutUserInput, Prisma.TrainingUncheckedCreateWithoutUserInput>;
-};
-export type TrainingCreateManyUserInputEnvelope = {
-    data: Prisma.TrainingCreateManyUserInput | Prisma.TrainingCreateManyUserInput[];
-    skipDuplicates?: boolean;
-};
-export type TrainingUpsertWithWhereUniqueWithoutUserInput = {
-    where: Prisma.TrainingWhereUniqueInput;
-    update: Prisma.XOR<Prisma.TrainingUpdateWithoutUserInput, Prisma.TrainingUncheckedUpdateWithoutUserInput>;
-    create: Prisma.XOR<Prisma.TrainingCreateWithoutUserInput, Prisma.TrainingUncheckedCreateWithoutUserInput>;
-};
-export type TrainingUpdateWithWhereUniqueWithoutUserInput = {
-    where: Prisma.TrainingWhereUniqueInput;
-    data: Prisma.XOR<Prisma.TrainingUpdateWithoutUserInput, Prisma.TrainingUncheckedUpdateWithoutUserInput>;
-};
-export type TrainingUpdateManyWithWhereWithoutUserInput = {
-    where: Prisma.TrainingScalarWhereInput;
-    data: Prisma.XOR<Prisma.TrainingUpdateManyMutationInput, Prisma.TrainingUncheckedUpdateManyWithoutUserInput>;
-};
-export type TrainingScalarWhereInput = {
-    AND?: Prisma.TrainingScalarWhereInput | Prisma.TrainingScalarWhereInput[];
-    OR?: Prisma.TrainingScalarWhereInput[];
-    NOT?: Prisma.TrainingScalarWhereInput | Prisma.TrainingScalarWhereInput[];
-    trainingId?: Prisma.StringFilter<"Training"> | string;
-    authorId?: Prisma.StringFilter<"Training"> | string;
-    title?: Prisma.StringFilter<"Training"> | string;
-    trainingDate?: Prisma.DateTimeFilter<"Training"> | Date | string;
-    trainingImage?: Prisma.StringNullableFilter<"Training"> | string | null;
-    country?: Prisma.StringNullableFilter<"Training"> | string | null;
-    state?: Prisma.StringNullableFilter<"Training"> | string | null;
-    city?: Prisma.StringNullableFilter<"Training"> | string | null;
-    place?: Prisma.StringNullableFilter<"Training"> | string | null;
-    description?: Prisma.StringNullableFilter<"Training"> | string | null;
-    status?: Prisma.EnumTrainingStatusFilter<"Training"> | $Enums.TrainingStatus;
-    createdAt?: Prisma.DateTimeFilter<"Training"> | Date | string;
-    updatedAt?: Prisma.DateTimeFilter<"Training"> | Date | string;
-};
-export type TrainingCreateWithoutTrainingRegisterUserInput = {
-    trainingId?: string;
-    title: string;
     trainingDate: Date | string;
     trainingImage?: string | null;
-    country?: string | null;
-    state?: string | null;
-    city?: string | null;
-    place?: string | null;
-    description?: string | null;
-    status?: $Enums.TrainingStatus;
-    createdAt?: Date | string;
-    updatedAt?: Date | string;
-    user: Prisma.UserCreateNestedOneWithoutTrainingInput;
+    user: Prisma.userCreateNestedOneWithoutTrainingInput;
 };
-export type TrainingUncheckedCreateWithoutTrainingRegisterUserInput = {
-    trainingId?: string;
+export type trainingUncheckedCreateWithoutTrainingregisteruserInput = {
+    trainingId: string;
     authorId: string;
     title: string;
-    trainingDate: Date | string;
-    trainingImage?: string | null;
-    country?: string | null;
-    state?: string | null;
     city?: string | null;
     place?: string | null;
     description?: string | null;
-    status?: $Enums.TrainingStatus;
+    status?: $Enums.training_status;
     createdAt?: Date | string;
-    updatedAt?: Date | string;
+    updatedAt: Date | string;
+    country?: string | null;
+    state?: string | null;
+    trainingDate: Date | string;
+    trainingImage?: string | null;
 };
-export type TrainingCreateOrConnectWithoutTrainingRegisterUserInput = {
-    where: Prisma.TrainingWhereUniqueInput;
-    create: Prisma.XOR<Prisma.TrainingCreateWithoutTrainingRegisterUserInput, Prisma.TrainingUncheckedCreateWithoutTrainingRegisterUserInput>;
+export type trainingCreateOrConnectWithoutTrainingregisteruserInput = {
+    where: Prisma.trainingWhereUniqueInput;
+    create: Prisma.XOR<Prisma.trainingCreateWithoutTrainingregisteruserInput, Prisma.trainingUncheckedCreateWithoutTrainingregisteruserInput>;
 };
-export type TrainingUpsertWithoutTrainingRegisterUserInput = {
-    update: Prisma.XOR<Prisma.TrainingUpdateWithoutTrainingRegisterUserInput, Prisma.TrainingUncheckedUpdateWithoutTrainingRegisterUserInput>;
-    create: Prisma.XOR<Prisma.TrainingCreateWithoutTrainingRegisterUserInput, Prisma.TrainingUncheckedCreateWithoutTrainingRegisterUserInput>;
-    where?: Prisma.TrainingWhereInput;
+export type trainingUpsertWithoutTrainingregisteruserInput = {
+    update: Prisma.XOR<Prisma.trainingUpdateWithoutTrainingregisteruserInput, Prisma.trainingUncheckedUpdateWithoutTrainingregisteruserInput>;
+    create: Prisma.XOR<Prisma.trainingCreateWithoutTrainingregisteruserInput, Prisma.trainingUncheckedCreateWithoutTrainingregisteruserInput>;
+    where?: Prisma.trainingWhereInput;
 };
-export type TrainingUpdateToOneWithWhereWithoutTrainingRegisterUserInput = {
-    where?: Prisma.TrainingWhereInput;
-    data: Prisma.XOR<Prisma.TrainingUpdateWithoutTrainingRegisterUserInput, Prisma.TrainingUncheckedUpdateWithoutTrainingRegisterUserInput>;
+export type trainingUpdateToOneWithWhereWithoutTrainingregisteruserInput = {
+    where?: Prisma.trainingWhereInput;
+    data: Prisma.XOR<Prisma.trainingUpdateWithoutTrainingregisteruserInput, Prisma.trainingUncheckedUpdateWithoutTrainingregisteruserInput>;
 };
-export type TrainingUpdateWithoutTrainingRegisterUserInput = {
+export type trainingUpdateWithoutTrainingregisteruserInput = {
     trainingId?: Prisma.StringFieldUpdateOperationsInput | string;
     title?: Prisma.StringFieldUpdateOperationsInput | string;
-    trainingDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
-    trainingImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
-    country?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
-    state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     place?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
-    status?: Prisma.EnumTrainingStatusFieldUpdateOperationsInput | $Enums.TrainingStatus;
+    status?: Prisma.Enumtraining_statusFieldUpdateOperationsInput | $Enums.training_status;
     createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
     updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
-    user?: Prisma.UserUpdateOneRequiredWithoutTrainingNestedInput;
+    country?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
+    state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
+    trainingDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+    trainingImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
+    user?: Prisma.userUpdateOneRequiredWithoutTrainingNestedInput;
 };
-export type TrainingUncheckedUpdateWithoutTrainingRegisterUserInput = {
+export type trainingUncheckedUpdateWithoutTrainingregisteruserInput = {
     trainingId?: Prisma.StringFieldUpdateOperationsInput | string;
     authorId?: Prisma.StringFieldUpdateOperationsInput | string;
     title?: Prisma.StringFieldUpdateOperationsInput | string;
-    trainingDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
-    trainingImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
-    country?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
-    state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     place?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
-    status?: Prisma.EnumTrainingStatusFieldUpdateOperationsInput | $Enums.TrainingStatus;
+    status?: Prisma.Enumtraining_statusFieldUpdateOperationsInput | $Enums.training_status;
     createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
     updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+    country?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
+    state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
+    trainingDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+    trainingImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
 };
-export type TrainingCreateManyUserInput = {
-    trainingId?: string;
+export type trainingCreateWithoutUserInput = {
+    trainingId: string;
     title: string;
-    trainingDate: Date | string;
-    trainingImage?: string | null;
-    country?: string | null;
-    state?: string | null;
     city?: string | null;
     place?: string | null;
     description?: string | null;
-    status?: $Enums.TrainingStatus;
+    status?: $Enums.training_status;
     createdAt?: Date | string;
-    updatedAt?: Date | string;
+    updatedAt: Date | string;
+    country?: string | null;
+    state?: string | null;
+    trainingDate: Date | string;
+    trainingImage?: string | null;
+    trainingregisteruser?: Prisma.trainingregisteruserCreateNestedManyWithoutTrainingInput;
 };
-export type TrainingUpdateWithoutUserInput = {
+export type trainingUncheckedCreateWithoutUserInput = {
+    trainingId: string;
+    title: string;
+    city?: string | null;
+    place?: string | null;
+    description?: string | null;
+    status?: $Enums.training_status;
+    createdAt?: Date | string;
+    updatedAt: Date | string;
+    country?: string | null;
+    state?: string | null;
+    trainingDate: Date | string;
+    trainingImage?: string | null;
+    trainingregisteruser?: Prisma.trainingregisteruserUncheckedCreateNestedManyWithoutTrainingInput;
+};
+export type trainingCreateOrConnectWithoutUserInput = {
+    where: Prisma.trainingWhereUniqueInput;
+    create: Prisma.XOR<Prisma.trainingCreateWithoutUserInput, Prisma.trainingUncheckedCreateWithoutUserInput>;
+};
+export type trainingCreateManyUserInputEnvelope = {
+    data: Prisma.trainingCreateManyUserInput | Prisma.trainingCreateManyUserInput[];
+    skipDuplicates?: boolean;
+};
+export type trainingUpsertWithWhereUniqueWithoutUserInput = {
+    where: Prisma.trainingWhereUniqueInput;
+    update: Prisma.XOR<Prisma.trainingUpdateWithoutUserInput, Prisma.trainingUncheckedUpdateWithoutUserInput>;
+    create: Prisma.XOR<Prisma.trainingCreateWithoutUserInput, Prisma.trainingUncheckedCreateWithoutUserInput>;
+};
+export type trainingUpdateWithWhereUniqueWithoutUserInput = {
+    where: Prisma.trainingWhereUniqueInput;
+    data: Prisma.XOR<Prisma.trainingUpdateWithoutUserInput, Prisma.trainingUncheckedUpdateWithoutUserInput>;
+};
+export type trainingUpdateManyWithWhereWithoutUserInput = {
+    where: Prisma.trainingScalarWhereInput;
+    data: Prisma.XOR<Prisma.trainingUpdateManyMutationInput, Prisma.trainingUncheckedUpdateManyWithoutUserInput>;
+};
+export type trainingScalarWhereInput = {
+    AND?: Prisma.trainingScalarWhereInput | Prisma.trainingScalarWhereInput[];
+    OR?: Prisma.trainingScalarWhereInput[];
+    NOT?: Prisma.trainingScalarWhereInput | Prisma.trainingScalarWhereInput[];
+    trainingId?: Prisma.StringFilter<"training"> | string;
+    authorId?: Prisma.StringFilter<"training"> | string;
+    title?: Prisma.StringFilter<"training"> | string;
+    city?: Prisma.StringNullableFilter<"training"> | string | null;
+    place?: Prisma.StringNullableFilter<"training"> | string | null;
+    description?: Prisma.StringNullableFilter<"training"> | string | null;
+    status?: Prisma.Enumtraining_statusFilter<"training"> | $Enums.training_status;
+    createdAt?: Prisma.DateTimeFilter<"training"> | Date | string;
+    updatedAt?: Prisma.DateTimeFilter<"training"> | Date | string;
+    country?: Prisma.StringNullableFilter<"training"> | string | null;
+    state?: Prisma.StringNullableFilter<"training"> | string | null;
+    trainingDate?: Prisma.DateTimeFilter<"training"> | Date | string;
+    trainingImage?: Prisma.StringNullableFilter<"training"> | string | null;
+};
+export type trainingCreateManyUserInput = {
+    trainingId: string;
+    title: string;
+    city?: string | null;
+    place?: string | null;
+    description?: string | null;
+    status?: $Enums.training_status;
+    createdAt?: Date | string;
+    updatedAt: Date | string;
+    country?: string | null;
+    state?: string | null;
+    trainingDate: Date | string;
+    trainingImage?: string | null;
+};
+export type trainingUpdateWithoutUserInput = {
     trainingId?: Prisma.StringFieldUpdateOperationsInput | string;
     title?: Prisma.StringFieldUpdateOperationsInput | string;
-    trainingDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
-    trainingImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
-    country?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
-    state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     place?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
-    status?: Prisma.EnumTrainingStatusFieldUpdateOperationsInput | $Enums.TrainingStatus;
+    status?: Prisma.Enumtraining_statusFieldUpdateOperationsInput | $Enums.training_status;
     createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
     updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
-    trainingRegisterUser?: Prisma.TrainingRegisterUserUpdateManyWithoutTrainimgNestedInput;
-};
-export type TrainingUncheckedUpdateWithoutUserInput = {
-    trainingId?: Prisma.StringFieldUpdateOperationsInput | string;
-    title?: Prisma.StringFieldUpdateOperationsInput | string;
-    trainingDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
-    trainingImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     country?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
+    trainingDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+    trainingImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
+    trainingregisteruser?: Prisma.trainingregisteruserUpdateManyWithoutTrainingNestedInput;
+};
+export type trainingUncheckedUpdateWithoutUserInput = {
+    trainingId?: Prisma.StringFieldUpdateOperationsInput | string;
+    title?: Prisma.StringFieldUpdateOperationsInput | string;
     city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     place?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
-    status?: Prisma.EnumTrainingStatusFieldUpdateOperationsInput | $Enums.TrainingStatus;
+    status?: Prisma.Enumtraining_statusFieldUpdateOperationsInput | $Enums.training_status;
     createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
     updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
-    trainingRegisterUser?: Prisma.TrainingRegisterUserUncheckedUpdateManyWithoutTrainimgNestedInput;
-};
-export type TrainingUncheckedUpdateManyWithoutUserInput = {
-    trainingId?: Prisma.StringFieldUpdateOperationsInput | string;
-    title?: Prisma.StringFieldUpdateOperationsInput | string;
-    trainingDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
-    trainingImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     country?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
+    trainingDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+    trainingImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
+    trainingregisteruser?: Prisma.trainingregisteruserUncheckedUpdateManyWithoutTrainingNestedInput;
+};
+export type trainingUncheckedUpdateManyWithoutUserInput = {
+    trainingId?: Prisma.StringFieldUpdateOperationsInput | string;
+    title?: Prisma.StringFieldUpdateOperationsInput | string;
     city?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     place?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     description?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
-    status?: Prisma.EnumTrainingStatusFieldUpdateOperationsInput | $Enums.TrainingStatus;
+    status?: Prisma.Enumtraining_statusFieldUpdateOperationsInput | $Enums.training_status;
     createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
     updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+    country?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
+    state?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
+    trainingDate?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+    trainingImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
 };
 /**
  * Count Type TrainingCountOutputType
  */
 export type TrainingCountOutputType = {
-    trainingRegisterUser: number;
+    trainingregisteruser: number;
 };
 export type TrainingCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-    trainingRegisterUser?: boolean | TrainingCountOutputTypeCountTrainingRegisterUserArgs;
+    trainingregisteruser?: boolean | TrainingCountOutputTypeCountTrainingregisteruserArgs;
 };
 /**
  * TrainingCountOutputType without action
@@ -724,85 +724,85 @@ export type TrainingCountOutputTypeDefaultArgs<ExtArgs extends runtime.Types.Ext
 /**
  * TrainingCountOutputType without action
  */
-export type TrainingCountOutputTypeCountTrainingRegisterUserArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-    where?: Prisma.TrainingRegisterUserWhereInput;
+export type TrainingCountOutputTypeCountTrainingregisteruserArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+    where?: Prisma.trainingregisteruserWhereInput;
 };
-export type TrainingSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
+export type trainingSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
     trainingId?: boolean;
     authorId?: boolean;
     title?: boolean;
-    trainingDate?: boolean;
-    trainingImage?: boolean;
-    country?: boolean;
-    state?: boolean;
     city?: boolean;
     place?: boolean;
     description?: boolean;
     status?: boolean;
     createdAt?: boolean;
     updatedAt?: boolean;
-    user?: boolean | Prisma.UserDefaultArgs<ExtArgs>;
-    trainingRegisterUser?: boolean | Prisma.Training$trainingRegisterUserArgs<ExtArgs>;
+    country?: boolean;
+    state?: boolean;
+    trainingDate?: boolean;
+    trainingImage?: boolean;
+    user?: boolean | Prisma.userDefaultArgs<ExtArgs>;
+    trainingregisteruser?: boolean | Prisma.training$trainingregisteruserArgs<ExtArgs>;
     _count?: boolean | Prisma.TrainingCountOutputTypeDefaultArgs<ExtArgs>;
 }, ExtArgs["result"]["training"]>;
-export type TrainingSelectScalar = {
+export type trainingSelectScalar = {
     trainingId?: boolean;
     authorId?: boolean;
     title?: boolean;
-    trainingDate?: boolean;
-    trainingImage?: boolean;
-    country?: boolean;
-    state?: boolean;
     city?: boolean;
     place?: boolean;
     description?: boolean;
     status?: boolean;
     createdAt?: boolean;
     updatedAt?: boolean;
+    country?: boolean;
+    state?: boolean;
+    trainingDate?: boolean;
+    trainingImage?: boolean;
 };
-export type TrainingOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"trainingId" | "authorId" | "title" | "trainingDate" | "trainingImage" | "country" | "state" | "city" | "place" | "description" | "status" | "createdAt" | "updatedAt", ExtArgs["result"]["training"]>;
-export type TrainingInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-    user?: boolean | Prisma.UserDefaultArgs<ExtArgs>;
-    trainingRegisterUser?: boolean | Prisma.Training$trainingRegisterUserArgs<ExtArgs>;
+export type trainingOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"trainingId" | "authorId" | "title" | "city" | "place" | "description" | "status" | "createdAt" | "updatedAt" | "country" | "state" | "trainingDate" | "trainingImage", ExtArgs["result"]["training"]>;
+export type trainingInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+    user?: boolean | Prisma.userDefaultArgs<ExtArgs>;
+    trainingregisteruser?: boolean | Prisma.training$trainingregisteruserArgs<ExtArgs>;
     _count?: boolean | Prisma.TrainingCountOutputTypeDefaultArgs<ExtArgs>;
 };
-export type $TrainingPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-    name: "Training";
+export type $trainingPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+    name: "training";
     objects: {
-        user: Prisma.$UserPayload<ExtArgs>;
-        trainingRegisterUser: Prisma.$TrainingRegisterUserPayload<ExtArgs>[];
+        user: Prisma.$userPayload<ExtArgs>;
+        trainingregisteruser: Prisma.$trainingregisteruserPayload<ExtArgs>[];
     };
     scalars: runtime.Types.Extensions.GetPayloadResult<{
         trainingId: string;
         authorId: string;
         title: string;
-        trainingDate: Date;
-        trainingImage: string | null;
-        country: string | null;
-        state: string | null;
         city: string | null;
         place: string | null;
         description: string | null;
-        status: $Enums.TrainingStatus;
+        status: $Enums.training_status;
         createdAt: Date;
         updatedAt: Date;
+        country: string | null;
+        state: string | null;
+        trainingDate: Date;
+        trainingImage: string | null;
     }, ExtArgs["result"]["training"]>;
     composites: {};
 };
-export type TrainingGetPayload<S extends boolean | null | undefined | TrainingDefaultArgs> = runtime.Types.Result.GetResult<Prisma.$TrainingPayload, S>;
-export type TrainingCountArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = Omit<TrainingFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+export type trainingGetPayload<S extends boolean | null | undefined | trainingDefaultArgs> = runtime.Types.Result.GetResult<Prisma.$trainingPayload, S>;
+export type trainingCountArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = Omit<trainingFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
     select?: TrainingCountAggregateInputType | true;
 };
-export interface TrainingDelegate<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+export interface trainingDelegate<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> {
     [K: symbol]: {
-        types: Prisma.TypeMap<ExtArgs>['model']['Training'];
+        types: Prisma.TypeMap<ExtArgs>['model']['training'];
         meta: {
-            name: 'Training';
+            name: 'training';
         };
     };
     /**
      * Find zero or one Training that matches the filter.
-     * @param {TrainingFindUniqueArgs} args - Arguments to find a Training
+     * @param {trainingFindUniqueArgs} args - Arguments to find a Training
      * @example
      * // Get one Training
      * const training = await prisma.training.findUnique({
@@ -811,11 +811,11 @@ export interface TrainingDelegate<ExtArgs extends runtime.Types.Extensions.Inter
      *   }
      * })
      */
-    findUnique<T extends TrainingFindUniqueArgs>(args: Prisma.SelectSubset<T, TrainingFindUniqueArgs<ExtArgs>>): Prisma.Prisma__TrainingClient<runtime.Types.Result.GetResult<Prisma.$TrainingPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>;
+    findUnique<T extends trainingFindUniqueArgs>(args: Prisma.SelectSubset<T, trainingFindUniqueArgs<ExtArgs>>): Prisma.Prisma__trainingClient<runtime.Types.Result.GetResult<Prisma.$trainingPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>;
     /**
      * Find one Training that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {TrainingFindUniqueOrThrowArgs} args - Arguments to find a Training
+     * @param {trainingFindUniqueOrThrowArgs} args - Arguments to find a Training
      * @example
      * // Get one Training
      * const training = await prisma.training.findUniqueOrThrow({
@@ -824,12 +824,12 @@ export interface TrainingDelegate<ExtArgs extends runtime.Types.Extensions.Inter
      *   }
      * })
      */
-    findUniqueOrThrow<T extends TrainingFindUniqueOrThrowArgs>(args: Prisma.SelectSubset<T, TrainingFindUniqueOrThrowArgs<ExtArgs>>): Prisma.Prisma__TrainingClient<runtime.Types.Result.GetResult<Prisma.$TrainingPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
+    findUniqueOrThrow<T extends trainingFindUniqueOrThrowArgs>(args: Prisma.SelectSubset<T, trainingFindUniqueOrThrowArgs<ExtArgs>>): Prisma.Prisma__trainingClient<runtime.Types.Result.GetResult<Prisma.$trainingPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
     /**
      * Find the first Training that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TrainingFindFirstArgs} args - Arguments to find a Training
+     * @param {trainingFindFirstArgs} args - Arguments to find a Training
      * @example
      * // Get one Training
      * const training = await prisma.training.findFirst({
@@ -838,13 +838,13 @@ export interface TrainingDelegate<ExtArgs extends runtime.Types.Extensions.Inter
      *   }
      * })
      */
-    findFirst<T extends TrainingFindFirstArgs>(args?: Prisma.SelectSubset<T, TrainingFindFirstArgs<ExtArgs>>): Prisma.Prisma__TrainingClient<runtime.Types.Result.GetResult<Prisma.$TrainingPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>;
+    findFirst<T extends trainingFindFirstArgs>(args?: Prisma.SelectSubset<T, trainingFindFirstArgs<ExtArgs>>): Prisma.Prisma__trainingClient<runtime.Types.Result.GetResult<Prisma.$trainingPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>;
     /**
      * Find the first Training that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TrainingFindFirstOrThrowArgs} args - Arguments to find a Training
+     * @param {trainingFindFirstOrThrowArgs} args - Arguments to find a Training
      * @example
      * // Get one Training
      * const training = await prisma.training.findFirstOrThrow({
@@ -853,12 +853,12 @@ export interface TrainingDelegate<ExtArgs extends runtime.Types.Extensions.Inter
      *   }
      * })
      */
-    findFirstOrThrow<T extends TrainingFindFirstOrThrowArgs>(args?: Prisma.SelectSubset<T, TrainingFindFirstOrThrowArgs<ExtArgs>>): Prisma.Prisma__TrainingClient<runtime.Types.Result.GetResult<Prisma.$TrainingPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
+    findFirstOrThrow<T extends trainingFindFirstOrThrowArgs>(args?: Prisma.SelectSubset<T, trainingFindFirstOrThrowArgs<ExtArgs>>): Prisma.Prisma__trainingClient<runtime.Types.Result.GetResult<Prisma.$trainingPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
     /**
      * Find zero or more Trainings that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TrainingFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {trainingFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
      * // Get all Trainings
      * const trainings = await prisma.training.findMany()
@@ -870,10 +870,10 @@ export interface TrainingDelegate<ExtArgs extends runtime.Types.Extensions.Inter
      * const trainingWithTrainingIdOnly = await prisma.training.findMany({ select: { trainingId: true } })
      *
      */
-    findMany<T extends TrainingFindManyArgs>(args?: Prisma.SelectSubset<T, TrainingFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$TrainingPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>;
+    findMany<T extends trainingFindManyArgs>(args?: Prisma.SelectSubset<T, trainingFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$trainingPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>;
     /**
      * Create a Training.
-     * @param {TrainingCreateArgs} args - Arguments to create a Training.
+     * @param {trainingCreateArgs} args - Arguments to create a Training.
      * @example
      * // Create one Training
      * const Training = await prisma.training.create({
@@ -883,10 +883,10 @@ export interface TrainingDelegate<ExtArgs extends runtime.Types.Extensions.Inter
      * })
      *
      */
-    create<T extends TrainingCreateArgs>(args: Prisma.SelectSubset<T, TrainingCreateArgs<ExtArgs>>): Prisma.Prisma__TrainingClient<runtime.Types.Result.GetResult<Prisma.$TrainingPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
+    create<T extends trainingCreateArgs>(args: Prisma.SelectSubset<T, trainingCreateArgs<ExtArgs>>): Prisma.Prisma__trainingClient<runtime.Types.Result.GetResult<Prisma.$trainingPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
     /**
      * Create many Trainings.
-     * @param {TrainingCreateManyArgs} args - Arguments to create many Trainings.
+     * @param {trainingCreateManyArgs} args - Arguments to create many Trainings.
      * @example
      * // Create many Trainings
      * const training = await prisma.training.createMany({
@@ -896,10 +896,10 @@ export interface TrainingDelegate<ExtArgs extends runtime.Types.Extensions.Inter
      * })
      *
      */
-    createMany<T extends TrainingCreateManyArgs>(args?: Prisma.SelectSubset<T, TrainingCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>;
+    createMany<T extends trainingCreateManyArgs>(args?: Prisma.SelectSubset<T, trainingCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>;
     /**
      * Delete a Training.
-     * @param {TrainingDeleteArgs} args - Arguments to delete one Training.
+     * @param {trainingDeleteArgs} args - Arguments to delete one Training.
      * @example
      * // Delete one Training
      * const Training = await prisma.training.delete({
@@ -909,10 +909,10 @@ export interface TrainingDelegate<ExtArgs extends runtime.Types.Extensions.Inter
      * })
      *
      */
-    delete<T extends TrainingDeleteArgs>(args: Prisma.SelectSubset<T, TrainingDeleteArgs<ExtArgs>>): Prisma.Prisma__TrainingClient<runtime.Types.Result.GetResult<Prisma.$TrainingPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
+    delete<T extends trainingDeleteArgs>(args: Prisma.SelectSubset<T, trainingDeleteArgs<ExtArgs>>): Prisma.Prisma__trainingClient<runtime.Types.Result.GetResult<Prisma.$trainingPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
     /**
      * Update one Training.
-     * @param {TrainingUpdateArgs} args - Arguments to update one Training.
+     * @param {trainingUpdateArgs} args - Arguments to update one Training.
      * @example
      * // Update one Training
      * const training = await prisma.training.update({
@@ -925,10 +925,10 @@ export interface TrainingDelegate<ExtArgs extends runtime.Types.Extensions.Inter
      * })
      *
      */
-    update<T extends TrainingUpdateArgs>(args: Prisma.SelectSubset<T, TrainingUpdateArgs<ExtArgs>>): Prisma.Prisma__TrainingClient<runtime.Types.Result.GetResult<Prisma.$TrainingPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
+    update<T extends trainingUpdateArgs>(args: Prisma.SelectSubset<T, trainingUpdateArgs<ExtArgs>>): Prisma.Prisma__trainingClient<runtime.Types.Result.GetResult<Prisma.$trainingPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
     /**
      * Delete zero or more Trainings.
-     * @param {TrainingDeleteManyArgs} args - Arguments to filter Trainings to delete.
+     * @param {trainingDeleteManyArgs} args - Arguments to filter Trainings to delete.
      * @example
      * // Delete a few Trainings
      * const { count } = await prisma.training.deleteMany({
@@ -938,12 +938,12 @@ export interface TrainingDelegate<ExtArgs extends runtime.Types.Extensions.Inter
      * })
      *
      */
-    deleteMany<T extends TrainingDeleteManyArgs>(args?: Prisma.SelectSubset<T, TrainingDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>;
+    deleteMany<T extends trainingDeleteManyArgs>(args?: Prisma.SelectSubset<T, trainingDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>;
     /**
      * Update zero or more Trainings.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TrainingUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {trainingUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
      * // Update many Trainings
      * const training = await prisma.training.updateMany({
@@ -956,10 +956,10 @@ export interface TrainingDelegate<ExtArgs extends runtime.Types.Extensions.Inter
      * })
      *
      */
-    updateMany<T extends TrainingUpdateManyArgs>(args: Prisma.SelectSubset<T, TrainingUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>;
+    updateMany<T extends trainingUpdateManyArgs>(args: Prisma.SelectSubset<T, trainingUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<Prisma.BatchPayload>;
     /**
      * Create or update one Training.
-     * @param {TrainingUpsertArgs} args - Arguments to update or create a Training.
+     * @param {trainingUpsertArgs} args - Arguments to update or create a Training.
      * @example
      * // Update or create a Training
      * const training = await prisma.training.upsert({
@@ -974,12 +974,12 @@ export interface TrainingDelegate<ExtArgs extends runtime.Types.Extensions.Inter
      *   }
      * })
      */
-    upsert<T extends TrainingUpsertArgs>(args: Prisma.SelectSubset<T, TrainingUpsertArgs<ExtArgs>>): Prisma.Prisma__TrainingClient<runtime.Types.Result.GetResult<Prisma.$TrainingPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
+    upsert<T extends trainingUpsertArgs>(args: Prisma.SelectSubset<T, trainingUpsertArgs<ExtArgs>>): Prisma.Prisma__trainingClient<runtime.Types.Result.GetResult<Prisma.$trainingPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>;
     /**
      * Count the number of Trainings.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TrainingCountArgs} args - Arguments to filter Trainings to count.
+     * @param {trainingCountArgs} args - Arguments to filter Trainings to count.
      * @example
      * // Count the number of Trainings
      * const count = await prisma.training.count({
@@ -988,7 +988,7 @@ export interface TrainingDelegate<ExtArgs extends runtime.Types.Extensions.Inter
      *   }
      * })
     **/
-    count<T extends TrainingCountArgs>(args?: Prisma.Subset<T, TrainingCountArgs>): Prisma.PrismaPromise<T extends runtime.Types.Utils.Record<'select', any> ? T['select'] extends true ? number : Prisma.GetScalarType<T['select'], TrainingCountAggregateOutputType> : number>;
+    count<T extends trainingCountArgs>(args?: Prisma.Subset<T, trainingCountArgs>): Prisma.PrismaPromise<T extends runtime.Types.Utils.Record<'select', any> ? T['select'] extends true ? number : Prisma.GetScalarType<T['select'], TrainingCountAggregateOutputType> : number>;
     /**
      * Allows you to perform aggregations operations on a Training.
      * Note, that providing `undefined` is treated as the value not being there.
@@ -1018,7 +1018,7 @@ export interface TrainingDelegate<ExtArgs extends runtime.Types.Extensions.Inter
      * Group by Training.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {TrainingGroupByArgs} args - Group by arguments.
+     * @param {trainingGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1032,10 +1032,10 @@ export interface TrainingDelegate<ExtArgs extends runtime.Types.Extensions.Inter
      * })
      *
     **/
-    groupBy<T extends TrainingGroupByArgs, HasSelectOrTake extends Prisma.Or<Prisma.Extends<'skip', Prisma.Keys<T>>, Prisma.Extends<'take', Prisma.Keys<T>>>, OrderByArg extends Prisma.True extends HasSelectOrTake ? {
-        orderBy: TrainingGroupByArgs['orderBy'];
+    groupBy<T extends trainingGroupByArgs, HasSelectOrTake extends Prisma.Or<Prisma.Extends<'skip', Prisma.Keys<T>>, Prisma.Extends<'take', Prisma.Keys<T>>>, OrderByArg extends Prisma.True extends HasSelectOrTake ? {
+        orderBy: trainingGroupByArgs['orderBy'];
     } : {
-        orderBy?: TrainingGroupByArgs['orderBy'];
+        orderBy?: trainingGroupByArgs['orderBy'];
     }, OrderFields extends Prisma.ExcludeUnderscoreKeys<Prisma.Keys<Prisma.MaybeTupleToUnion<T['orderBy']>>>, ByFields extends Prisma.MaybeTupleToUnion<T['by']>, ByValid extends Prisma.Has<ByFields, OrderFields>, HavingFields extends Prisma.GetHavingFields<T['having']>, HavingValid extends Prisma.Has<ByFields, HavingFields>, ByEmpty extends T['by'] extends never[] ? Prisma.True : Prisma.False, InputErrors extends ByEmpty extends Prisma.True ? `Error: "by" must not be empty.` : HavingValid extends Prisma.False ? {
         [P in HavingFields]: P extends ByFields ? never : P extends string ? `Error: Field "${P}" used in "having" needs to be provided in "by".` : [
             Error,
@@ -1049,22 +1049,22 @@ export interface TrainingDelegate<ExtArgs extends runtime.Types.Extensions.Inter
         [P in OrderFields]: P extends ByFields ? never : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`;
     }[OrderFields] : 'Error: If you provide "skip", you also need to provide "orderBy"' : ByValid extends Prisma.True ? {} : {
         [P in OrderFields]: P extends ByFields ? never : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`;
-    }[OrderFields]>(args: Prisma.SubsetIntersection<T, TrainingGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetTrainingGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>;
+    }[OrderFields]>(args: Prisma.SubsetIntersection<T, trainingGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetTrainingGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>;
     /**
-     * Fields of the Training model
+     * Fields of the training model
      */
-    readonly fields: TrainingFieldRefs;
+    readonly fields: trainingFieldRefs;
 }
 /**
- * The delegate class that acts as a "Promise-like" for Training.
+ * The delegate class that acts as a "Promise-like" for training.
  * Why is this prefixed with `Prisma__`?
  * Because we want to prevent naming conflicts as mentioned in
  * https://github.com/prisma/prisma-client-js/issues/707
  */
-export interface Prisma__TrainingClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+export interface Prisma__trainingClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise";
-    user<T extends Prisma.UserDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.UserDefaultArgs<ExtArgs>>): Prisma.Prisma__UserClient<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>;
-    trainingRegisterUser<T extends Prisma.Training$trainingRegisterUserArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Training$trainingRegisterUserArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$TrainingRegisterUserPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>;
+    user<T extends Prisma.userDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.userDefaultArgs<ExtArgs>>): Prisma.Prisma__userClient<runtime.Types.Result.GetResult<Prisma.$userPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>;
+    trainingregisteruser<T extends Prisma.training$trainingregisteruserArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.training$trainingregisteruserArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$trainingregisteruserPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>;
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1087,392 +1087,392 @@ export interface Prisma__TrainingClient<T, Null = never, ExtArgs extends runtime
     finally(onfinally?: (() => void) | undefined | null): runtime.Types.Utils.JsPromise<T>;
 }
 /**
- * Fields of the Training model
+ * Fields of the training model
  */
-export interface TrainingFieldRefs {
-    readonly trainingId: Prisma.FieldRef<"Training", 'String'>;
-    readonly authorId: Prisma.FieldRef<"Training", 'String'>;
-    readonly title: Prisma.FieldRef<"Training", 'String'>;
-    readonly trainingDate: Prisma.FieldRef<"Training", 'DateTime'>;
-    readonly trainingImage: Prisma.FieldRef<"Training", 'String'>;
-    readonly country: Prisma.FieldRef<"Training", 'String'>;
-    readonly state: Prisma.FieldRef<"Training", 'String'>;
-    readonly city: Prisma.FieldRef<"Training", 'String'>;
-    readonly place: Prisma.FieldRef<"Training", 'String'>;
-    readonly description: Prisma.FieldRef<"Training", 'String'>;
-    readonly status: Prisma.FieldRef<"Training", 'TrainingStatus'>;
-    readonly createdAt: Prisma.FieldRef<"Training", 'DateTime'>;
-    readonly updatedAt: Prisma.FieldRef<"Training", 'DateTime'>;
+export interface trainingFieldRefs {
+    readonly trainingId: Prisma.FieldRef<"training", 'String'>;
+    readonly authorId: Prisma.FieldRef<"training", 'String'>;
+    readonly title: Prisma.FieldRef<"training", 'String'>;
+    readonly city: Prisma.FieldRef<"training", 'String'>;
+    readonly place: Prisma.FieldRef<"training", 'String'>;
+    readonly description: Prisma.FieldRef<"training", 'String'>;
+    readonly status: Prisma.FieldRef<"training", 'training_status'>;
+    readonly createdAt: Prisma.FieldRef<"training", 'DateTime'>;
+    readonly updatedAt: Prisma.FieldRef<"training", 'DateTime'>;
+    readonly country: Prisma.FieldRef<"training", 'String'>;
+    readonly state: Prisma.FieldRef<"training", 'String'>;
+    readonly trainingDate: Prisma.FieldRef<"training", 'DateTime'>;
+    readonly trainingImage: Prisma.FieldRef<"training", 'String'>;
 }
 /**
- * Training findUnique
+ * training findUnique
  */
-export type TrainingFindUniqueArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingFindUniqueArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Training
+     * Select specific fields to fetch from the training
      */
-    select?: Prisma.TrainingSelect<ExtArgs> | null;
+    select?: Prisma.trainingSelect<ExtArgs> | null;
     /**
-     * Omit specific fields from the Training
+     * Omit specific fields from the training
      */
-    omit?: Prisma.TrainingOmit<ExtArgs> | null;
+    omit?: Prisma.trainingOmit<ExtArgs> | null;
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Prisma.TrainingInclude<ExtArgs> | null;
+    include?: Prisma.trainingInclude<ExtArgs> | null;
     /**
-     * Filter, which Training to fetch.
+     * Filter, which training to fetch.
      */
-    where: Prisma.TrainingWhereUniqueInput;
+    where: Prisma.trainingWhereUniqueInput;
 };
 /**
- * Training findUniqueOrThrow
+ * training findUniqueOrThrow
  */
-export type TrainingFindUniqueOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingFindUniqueOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Training
+     * Select specific fields to fetch from the training
      */
-    select?: Prisma.TrainingSelect<ExtArgs> | null;
+    select?: Prisma.trainingSelect<ExtArgs> | null;
     /**
-     * Omit specific fields from the Training
+     * Omit specific fields from the training
      */
-    omit?: Prisma.TrainingOmit<ExtArgs> | null;
+    omit?: Prisma.trainingOmit<ExtArgs> | null;
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Prisma.TrainingInclude<ExtArgs> | null;
+    include?: Prisma.trainingInclude<ExtArgs> | null;
     /**
-     * Filter, which Training to fetch.
+     * Filter, which training to fetch.
      */
-    where: Prisma.TrainingWhereUniqueInput;
+    where: Prisma.trainingWhereUniqueInput;
 };
 /**
- * Training findFirst
+ * training findFirst
  */
-export type TrainingFindFirstArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingFindFirstArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Training
+     * Select specific fields to fetch from the training
      */
-    select?: Prisma.TrainingSelect<ExtArgs> | null;
+    select?: Prisma.trainingSelect<ExtArgs> | null;
     /**
-     * Omit specific fields from the Training
+     * Omit specific fields from the training
      */
-    omit?: Prisma.TrainingOmit<ExtArgs> | null;
+    omit?: Prisma.trainingOmit<ExtArgs> | null;
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Prisma.TrainingInclude<ExtArgs> | null;
+    include?: Prisma.trainingInclude<ExtArgs> | null;
     /**
-     * Filter, which Training to fetch.
+     * Filter, which training to fetch.
      */
-    where?: Prisma.TrainingWhereInput;
+    where?: Prisma.trainingWhereInput;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      *
-     * Determine the order of Trainings to fetch.
+     * Determine the order of trainings to fetch.
      */
-    orderBy?: Prisma.TrainingOrderByWithRelationInput | Prisma.TrainingOrderByWithRelationInput[];
+    orderBy?: Prisma.trainingOrderByWithRelationInput | Prisma.trainingOrderByWithRelationInput[];
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      *
-     * Sets the position for searching for Trainings.
+     * Sets the position for searching for trainings.
      */
-    cursor?: Prisma.TrainingWhereUniqueInput;
+    cursor?: Prisma.trainingWhereUniqueInput;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      *
-     * Take `±n` Trainings from the position of the cursor.
+     * Take `±n` trainings from the position of the cursor.
      */
     take?: number;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      *
-     * Skip the first `n` Trainings.
+     * Skip the first `n` trainings.
      */
     skip?: number;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      *
-     * Filter by unique combinations of Trainings.
+     * Filter by unique combinations of trainings.
      */
     distinct?: Prisma.TrainingScalarFieldEnum | Prisma.TrainingScalarFieldEnum[];
 };
 /**
- * Training findFirstOrThrow
+ * training findFirstOrThrow
  */
-export type TrainingFindFirstOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingFindFirstOrThrowArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Training
+     * Select specific fields to fetch from the training
      */
-    select?: Prisma.TrainingSelect<ExtArgs> | null;
+    select?: Prisma.trainingSelect<ExtArgs> | null;
     /**
-     * Omit specific fields from the Training
+     * Omit specific fields from the training
      */
-    omit?: Prisma.TrainingOmit<ExtArgs> | null;
+    omit?: Prisma.trainingOmit<ExtArgs> | null;
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Prisma.TrainingInclude<ExtArgs> | null;
+    include?: Prisma.trainingInclude<ExtArgs> | null;
     /**
-     * Filter, which Training to fetch.
+     * Filter, which training to fetch.
      */
-    where?: Prisma.TrainingWhereInput;
+    where?: Prisma.trainingWhereInput;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      *
-     * Determine the order of Trainings to fetch.
+     * Determine the order of trainings to fetch.
      */
-    orderBy?: Prisma.TrainingOrderByWithRelationInput | Prisma.TrainingOrderByWithRelationInput[];
+    orderBy?: Prisma.trainingOrderByWithRelationInput | Prisma.trainingOrderByWithRelationInput[];
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      *
-     * Sets the position for searching for Trainings.
+     * Sets the position for searching for trainings.
      */
-    cursor?: Prisma.TrainingWhereUniqueInput;
+    cursor?: Prisma.trainingWhereUniqueInput;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      *
-     * Take `±n` Trainings from the position of the cursor.
+     * Take `±n` trainings from the position of the cursor.
      */
     take?: number;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      *
-     * Skip the first `n` Trainings.
+     * Skip the first `n` trainings.
      */
     skip?: number;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      *
-     * Filter by unique combinations of Trainings.
+     * Filter by unique combinations of trainings.
      */
     distinct?: Prisma.TrainingScalarFieldEnum | Prisma.TrainingScalarFieldEnum[];
 };
 /**
- * Training findMany
+ * training findMany
  */
-export type TrainingFindManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingFindManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Training
+     * Select specific fields to fetch from the training
      */
-    select?: Prisma.TrainingSelect<ExtArgs> | null;
+    select?: Prisma.trainingSelect<ExtArgs> | null;
     /**
-     * Omit specific fields from the Training
+     * Omit specific fields from the training
      */
-    omit?: Prisma.TrainingOmit<ExtArgs> | null;
+    omit?: Prisma.trainingOmit<ExtArgs> | null;
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Prisma.TrainingInclude<ExtArgs> | null;
+    include?: Prisma.trainingInclude<ExtArgs> | null;
     /**
-     * Filter, which Trainings to fetch.
+     * Filter, which trainings to fetch.
      */
-    where?: Prisma.TrainingWhereInput;
+    where?: Prisma.trainingWhereInput;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      *
-     * Determine the order of Trainings to fetch.
+     * Determine the order of trainings to fetch.
      */
-    orderBy?: Prisma.TrainingOrderByWithRelationInput | Prisma.TrainingOrderByWithRelationInput[];
+    orderBy?: Prisma.trainingOrderByWithRelationInput | Prisma.trainingOrderByWithRelationInput[];
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      *
-     * Sets the position for listing Trainings.
+     * Sets the position for listing trainings.
      */
-    cursor?: Prisma.TrainingWhereUniqueInput;
+    cursor?: Prisma.trainingWhereUniqueInput;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      *
-     * Take `±n` Trainings from the position of the cursor.
+     * Take `±n` trainings from the position of the cursor.
      */
     take?: number;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      *
-     * Skip the first `n` Trainings.
+     * Skip the first `n` trainings.
      */
     skip?: number;
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      *
-     * Filter by unique combinations of Trainings.
+     * Filter by unique combinations of trainings.
      */
     distinct?: Prisma.TrainingScalarFieldEnum | Prisma.TrainingScalarFieldEnum[];
 };
 /**
- * Training create
+ * training create
  */
-export type TrainingCreateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingCreateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Training
+     * Select specific fields to fetch from the training
      */
-    select?: Prisma.TrainingSelect<ExtArgs> | null;
+    select?: Prisma.trainingSelect<ExtArgs> | null;
     /**
-     * Omit specific fields from the Training
+     * Omit specific fields from the training
      */
-    omit?: Prisma.TrainingOmit<ExtArgs> | null;
+    omit?: Prisma.trainingOmit<ExtArgs> | null;
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Prisma.TrainingInclude<ExtArgs> | null;
+    include?: Prisma.trainingInclude<ExtArgs> | null;
     /**
-     * The data needed to create a Training.
+     * The data needed to create a training.
      */
-    data: Prisma.XOR<Prisma.TrainingCreateInput, Prisma.TrainingUncheckedCreateInput>;
+    data: Prisma.XOR<Prisma.trainingCreateInput, Prisma.trainingUncheckedCreateInput>;
 };
 /**
- * Training createMany
+ * training createMany
  */
-export type TrainingCreateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingCreateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Trainings.
+     * The data used to create many trainings.
      */
-    data: Prisma.TrainingCreateManyInput | Prisma.TrainingCreateManyInput[];
+    data: Prisma.trainingCreateManyInput | Prisma.trainingCreateManyInput[];
     skipDuplicates?: boolean;
 };
 /**
- * Training update
+ * training update
  */
-export type TrainingUpdateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingUpdateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Training
+     * Select specific fields to fetch from the training
      */
-    select?: Prisma.TrainingSelect<ExtArgs> | null;
+    select?: Prisma.trainingSelect<ExtArgs> | null;
     /**
-     * Omit specific fields from the Training
+     * Omit specific fields from the training
      */
-    omit?: Prisma.TrainingOmit<ExtArgs> | null;
+    omit?: Prisma.trainingOmit<ExtArgs> | null;
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Prisma.TrainingInclude<ExtArgs> | null;
+    include?: Prisma.trainingInclude<ExtArgs> | null;
     /**
-     * The data needed to update a Training.
+     * The data needed to update a training.
      */
-    data: Prisma.XOR<Prisma.TrainingUpdateInput, Prisma.TrainingUncheckedUpdateInput>;
+    data: Prisma.XOR<Prisma.trainingUpdateInput, Prisma.trainingUncheckedUpdateInput>;
     /**
-     * Choose, which Training to update.
+     * Choose, which training to update.
      */
-    where: Prisma.TrainingWhereUniqueInput;
+    where: Prisma.trainingWhereUniqueInput;
 };
 /**
- * Training updateMany
+ * training updateMany
  */
-export type TrainingUpdateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingUpdateManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * The data used to update Trainings.
+     * The data used to update trainings.
      */
-    data: Prisma.XOR<Prisma.TrainingUpdateManyMutationInput, Prisma.TrainingUncheckedUpdateManyInput>;
+    data: Prisma.XOR<Prisma.trainingUpdateManyMutationInput, Prisma.trainingUncheckedUpdateManyInput>;
     /**
-     * Filter which Trainings to update
+     * Filter which trainings to update
      */
-    where?: Prisma.TrainingWhereInput;
+    where?: Prisma.trainingWhereInput;
     /**
-     * Limit how many Trainings to update.
+     * Limit how many trainings to update.
      */
     limit?: number;
 };
 /**
- * Training upsert
+ * training upsert
  */
-export type TrainingUpsertArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingUpsertArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Training
+     * Select specific fields to fetch from the training
      */
-    select?: Prisma.TrainingSelect<ExtArgs> | null;
+    select?: Prisma.trainingSelect<ExtArgs> | null;
     /**
-     * Omit specific fields from the Training
+     * Omit specific fields from the training
      */
-    omit?: Prisma.TrainingOmit<ExtArgs> | null;
+    omit?: Prisma.trainingOmit<ExtArgs> | null;
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Prisma.TrainingInclude<ExtArgs> | null;
+    include?: Prisma.trainingInclude<ExtArgs> | null;
     /**
-     * The filter to search for the Training to update in case it exists.
+     * The filter to search for the training to update in case it exists.
      */
-    where: Prisma.TrainingWhereUniqueInput;
+    where: Prisma.trainingWhereUniqueInput;
     /**
-     * In case the Training found by the `where` argument doesn't exist, create a new Training with this data.
+     * In case the training found by the `where` argument doesn't exist, create a new training with this data.
      */
-    create: Prisma.XOR<Prisma.TrainingCreateInput, Prisma.TrainingUncheckedCreateInput>;
+    create: Prisma.XOR<Prisma.trainingCreateInput, Prisma.trainingUncheckedCreateInput>;
     /**
-     * In case the Training was found with the provided `where` argument, update it with this data.
+     * In case the training was found with the provided `where` argument, update it with this data.
      */
-    update: Prisma.XOR<Prisma.TrainingUpdateInput, Prisma.TrainingUncheckedUpdateInput>;
+    update: Prisma.XOR<Prisma.trainingUpdateInput, Prisma.trainingUncheckedUpdateInput>;
 };
 /**
- * Training delete
+ * training delete
  */
-export type TrainingDeleteArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingDeleteArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Training
+     * Select specific fields to fetch from the training
      */
-    select?: Prisma.TrainingSelect<ExtArgs> | null;
+    select?: Prisma.trainingSelect<ExtArgs> | null;
     /**
-     * Omit specific fields from the Training
+     * Omit specific fields from the training
      */
-    omit?: Prisma.TrainingOmit<ExtArgs> | null;
+    omit?: Prisma.trainingOmit<ExtArgs> | null;
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Prisma.TrainingInclude<ExtArgs> | null;
+    include?: Prisma.trainingInclude<ExtArgs> | null;
     /**
-     * Filter which Training to delete.
+     * Filter which training to delete.
      */
-    where: Prisma.TrainingWhereUniqueInput;
+    where: Prisma.trainingWhereUniqueInput;
 };
 /**
- * Training deleteMany
+ * training deleteMany
  */
-export type TrainingDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Filter which Trainings to delete
+     * Filter which trainings to delete
      */
-    where?: Prisma.TrainingWhereInput;
+    where?: Prisma.trainingWhereInput;
     /**
-     * Limit how many Trainings to delete.
+     * Limit how many trainings to delete.
      */
     limit?: number;
 };
 /**
- * Training.trainingRegisterUser
+ * training.trainingregisteruser
  */
-export type Training$trainingRegisterUserArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type training$trainingregisteruserArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the TrainingRegisterUser
+     * Select specific fields to fetch from the trainingregisteruser
      */
-    select?: Prisma.TrainingRegisterUserSelect<ExtArgs> | null;
+    select?: Prisma.trainingregisteruserSelect<ExtArgs> | null;
     /**
-     * Omit specific fields from the TrainingRegisterUser
+     * Omit specific fields from the trainingregisteruser
      */
-    omit?: Prisma.TrainingRegisterUserOmit<ExtArgs> | null;
+    omit?: Prisma.trainingregisteruserOmit<ExtArgs> | null;
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Prisma.TrainingRegisterUserInclude<ExtArgs> | null;
-    where?: Prisma.TrainingRegisterUserWhereInput;
-    orderBy?: Prisma.TrainingRegisterUserOrderByWithRelationInput | Prisma.TrainingRegisterUserOrderByWithRelationInput[];
-    cursor?: Prisma.TrainingRegisterUserWhereUniqueInput;
+    include?: Prisma.trainingregisteruserInclude<ExtArgs> | null;
+    where?: Prisma.trainingregisteruserWhereInput;
+    orderBy?: Prisma.trainingregisteruserOrderByWithRelationInput | Prisma.trainingregisteruserOrderByWithRelationInput[];
+    cursor?: Prisma.trainingregisteruserWhereUniqueInput;
     take?: number;
     skip?: number;
-    distinct?: Prisma.TrainingRegisterUserScalarFieldEnum | Prisma.TrainingRegisterUserScalarFieldEnum[];
+    distinct?: Prisma.TrainingregisteruserScalarFieldEnum | Prisma.TrainingregisteruserScalarFieldEnum[];
 };
 /**
- * Training without action
+ * training without action
  */
-export type TrainingDefaultArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type trainingDefaultArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Training
+     * Select specific fields to fetch from the training
      */
-    select?: Prisma.TrainingSelect<ExtArgs> | null;
+    select?: Prisma.trainingSelect<ExtArgs> | null;
     /**
-     * Omit specific fields from the Training
+     * Omit specific fields from the training
      */
-    omit?: Prisma.TrainingOmit<ExtArgs> | null;
+    omit?: Prisma.trainingOmit<ExtArgs> | null;
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: Prisma.TrainingInclude<ExtArgs> | null;
+    include?: Prisma.trainingInclude<ExtArgs> | null;
 };
-//# sourceMappingURL=Training.d.ts.map
+//# sourceMappingURL=training.d.ts.map

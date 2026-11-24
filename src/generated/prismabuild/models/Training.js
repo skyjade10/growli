@@ -1,2 +1,2 @@
 export {};
-//# sourceMappingURL=Training.js.map
+//# sourceMappingURL=training.js.map

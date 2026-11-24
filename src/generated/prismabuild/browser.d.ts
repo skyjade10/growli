@@ -3,28 +3,28 @@ export { Prisma };
 export * as $Enums from './enums.js';
 export * from './enums.js';
 /**
- * Model User
- *
- */
-export type User = Prisma.UserModel;
-/**
  * Model Product
  *
  */
 export type Product = Prisma.ProductModel;
 /**
- * Model Training
+ * Model farminginformation
  *
  */
-export type Training = Prisma.TrainingModel;
+export type farminginformation = Prisma.farminginformationModel;
 /**
- * Model TrainingRegisterUser
+ * Model training
  *
  */
-export type TrainingRegisterUser = Prisma.TrainingRegisterUserModel;
+export type training = Prisma.trainingModel;
 /**
- * Model FarmingInformation
+ * Model trainingregisteruser
  *
  */
-export type FarmingInformation = Prisma.FarmingInformationModel;
+export type trainingregisteruser = Prisma.trainingregisteruserModel;
+/**
+ * Model user
+ *
+ */
+export type user = Prisma.userModel;
 //# sourceMappingURL=browser.d.ts.map

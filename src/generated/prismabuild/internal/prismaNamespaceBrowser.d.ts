@@ -26,11 +26,11 @@ export declare const JsonNull: import("@prisma/client-runtime-utils").JsonNullCl
  */
 export declare const AnyNull: import("@prisma/client-runtime-utils").AnyNullClass;
 export declare const ModelName: {
-    readonly User: "User";
     readonly Product: "Product";
-    readonly Training: "Training";
-    readonly TrainingRegisterUser: "TrainingRegisterUser";
-    readonly FarmingInformation: "FarmingInformation";
+    readonly farminginformation: "farminginformation";
+    readonly training: "training";
+    readonly trainingregisteruser: "trainingregisteruser";
+    readonly user: "user";
 };
 export type ModelName = (typeof ModelName)[keyof typeof ModelName];
 export declare const TransactionIsolationLevel: {
@@ -40,72 +40,72 @@ export declare const TransactionIsolationLevel: {
     readonly Serializable: "Serializable";
 };
 export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel];
-export declare const UserScalarFieldEnum: {
-    readonly userId: "userId";
-    readonly email: "email";
-    readonly password: "password";
-    readonly profileImage: "profileImage";
-    readonly role: "role";
-    readonly firstName: "firstName";
-    readonly lastName: "lastName";
-    readonly bio: "bio";
-    readonly country: "country";
-    readonly state: "state";
-    readonly city: "city";
-    readonly farming: "farming";
-    readonly scale: "scale";
-    readonly createdAt: "createdAt";
-    readonly updatedAt: "updatedAt";
-};
-export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum];
 export declare const ProductScalarFieldEnum: {
     readonly productId: "productId";
     readonly userId: "userId";
     readonly price: "price";
-    readonly pronductImage: "pronductImage";
     readonly quantity: "quantity";
     readonly farmersName: "farmersName";
     readonly productName: "productName";
     readonly phoneNumber: "phoneNumber";
     readonly createdAt: "createdAt";
     readonly updatedAt: "updatedAt";
+    readonly pronductImage: "pronductImage";
 };
 export type ProductScalarFieldEnum = (typeof ProductScalarFieldEnum)[keyof typeof ProductScalarFieldEnum];
+export declare const FarminginformationScalarFieldEnum: {
+    readonly farmingId: "farmingId";
+    readonly authorId: "authorId";
+    readonly status: "status";
+    readonly title: "title";
+    readonly article: "article";
+    readonly createdAt: "createdAt";
+    readonly updatedAt: "updatedAt";
+    readonly farmingInfoImage: "farmingInfoImage";
+};
+export type FarminginformationScalarFieldEnum = (typeof FarminginformationScalarFieldEnum)[keyof typeof FarminginformationScalarFieldEnum];
 export declare const TrainingScalarFieldEnum: {
     readonly trainingId: "trainingId";
     readonly authorId: "authorId";
     readonly title: "title";
-    readonly trainingDate: "trainingDate";
-    readonly trainingImage: "trainingImage";
-    readonly country: "country";
-    readonly state: "state";
     readonly city: "city";
     readonly place: "place";
     readonly description: "description";
     readonly status: "status";
     readonly createdAt: "createdAt";
     readonly updatedAt: "updatedAt";
+    readonly country: "country";
+    readonly state: "state";
+    readonly trainingDate: "trainingDate";
+    readonly trainingImage: "trainingImage";
 };
 export type TrainingScalarFieldEnum = (typeof TrainingScalarFieldEnum)[keyof typeof TrainingScalarFieldEnum];
-export declare const TrainingRegisterUserScalarFieldEnum: {
+export declare const TrainingregisteruserScalarFieldEnum: {
     readonly registryId: "registryId";
     readonly userId: "userId";
     readonly trainingEventId: "trainingEventId";
     readonly createdAt: "createdAt";
     readonly updatedAt: "updatedAt";
 };
-export type TrainingRegisterUserScalarFieldEnum = (typeof TrainingRegisterUserScalarFieldEnum)[keyof typeof TrainingRegisterUserScalarFieldEnum];
-export declare const FarmingInformationScalarFieldEnum: {
-    readonly farmingId: "farmingId";
-    readonly authorId: "authorId";
-    readonly farmingInfoImage: "farmingInfoImage";
-    readonly status: "status";
-    readonly title: "title";
-    readonly article: "article";
+export type TrainingregisteruserScalarFieldEnum = (typeof TrainingregisteruserScalarFieldEnum)[keyof typeof TrainingregisteruserScalarFieldEnum];
+export declare const UserScalarFieldEnum: {
+    readonly userId: "userId";
+    readonly email: "email";
+    readonly password: "password";
+    readonly role: "role";
+    readonly firstName: "firstName";
+    readonly lastName: "lastName";
     readonly createdAt: "createdAt";
     readonly updatedAt: "updatedAt";
+    readonly bio: "bio";
+    readonly city: "city";
+    readonly country: "country";
+    readonly farming: "farming";
+    readonly scale: "scale";
+    readonly state: "state";
+    readonly profileImage: "profileImage";
 };
-export type FarmingInformationScalarFieldEnum = (typeof FarmingInformationScalarFieldEnum)[keyof typeof FarmingInformationScalarFieldEnum];
+export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum];
 export declare const SortOrder: {
     readonly asc: "asc";
     readonly desc: "desc";
@@ -116,52 +116,52 @@ export declare const NullsOrder: {
     readonly last: "last";
 };
 export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder];
-export declare const UserOrderByRelevanceFieldEnum: {
-    readonly userId: "userId";
-    readonly email: "email";
-    readonly password: "password";
-    readonly profileImage: "profileImage";
-    readonly firstName: "firstName";
-    readonly lastName: "lastName";
-    readonly bio: "bio";
-    readonly country: "country";
-    readonly state: "state";
-    readonly city: "city";
-};
-export type UserOrderByRelevanceFieldEnum = (typeof UserOrderByRelevanceFieldEnum)[keyof typeof UserOrderByRelevanceFieldEnum];
 export declare const ProductOrderByRelevanceFieldEnum: {
     readonly productId: "productId";
     readonly userId: "userId";
-    readonly pronductImage: "pronductImage";
     readonly farmersName: "farmersName";
     readonly productName: "productName";
     readonly phoneNumber: "phoneNumber";
+    readonly pronductImage: "pronductImage";
 };
 export type ProductOrderByRelevanceFieldEnum = (typeof ProductOrderByRelevanceFieldEnum)[keyof typeof ProductOrderByRelevanceFieldEnum];
-export declare const TrainingOrderByRelevanceFieldEnum: {
+export declare const farminginformationOrderByRelevanceFieldEnum: {
+    readonly farmingId: "farmingId";
+    readonly authorId: "authorId";
+    readonly title: "title";
+    readonly article: "article";
+    readonly farmingInfoImage: "farmingInfoImage";
+};
+export type farminginformationOrderByRelevanceFieldEnum = (typeof farminginformationOrderByRelevanceFieldEnum)[keyof typeof farminginformationOrderByRelevanceFieldEnum];
+export declare const trainingOrderByRelevanceFieldEnum: {
     readonly trainingId: "trainingId";
     readonly authorId: "authorId";
     readonly title: "title";
-    readonly trainingImage: "trainingImage";
-    readonly country: "country";
-    readonly state: "state";
     readonly city: "city";
     readonly place: "place";
     readonly description: "description";
+    readonly country: "country";
+    readonly state: "state";
+    readonly trainingImage: "trainingImage";
 };
-export type TrainingOrderByRelevanceFieldEnum = (typeof TrainingOrderByRelevanceFieldEnum)[keyof typeof TrainingOrderByRelevanceFieldEnum];
-export declare const TrainingRegisterUserOrderByRelevanceFieldEnum: {
+export type trainingOrderByRelevanceFieldEnum = (typeof trainingOrderByRelevanceFieldEnum)[keyof typeof trainingOrderByRelevanceFieldEnum];
+export declare const trainingregisteruserOrderByRelevanceFieldEnum: {
     readonly registryId: "registryId";
     readonly userId: "userId";
     readonly trainingEventId: "trainingEventId";
 };
-export type TrainingRegisterUserOrderByRelevanceFieldEnum = (typeof TrainingRegisterUserOrderByRelevanceFieldEnum)[keyof typeof TrainingRegisterUserOrderByRelevanceFieldEnum];
-export declare const FarmingInformationOrderByRelevanceFieldEnum: {
-    readonly farmingId: "farmingId";
-    readonly authorId: "authorId";
-    readonly farmingInfoImage: "farmingInfoImage";
-    readonly title: "title";
-    readonly article: "article";
+export type trainingregisteruserOrderByRelevanceFieldEnum = (typeof trainingregisteruserOrderByRelevanceFieldEnum)[keyof typeof trainingregisteruserOrderByRelevanceFieldEnum];
+export declare const userOrderByRelevanceFieldEnum: {
+    readonly userId: "userId";
+    readonly email: "email";
+    readonly password: "password";
+    readonly firstName: "firstName";
+    readonly lastName: "lastName";
+    readonly bio: "bio";
+    readonly city: "city";
+    readonly country: "country";
+    readonly state: "state";
+    readonly profileImage: "profileImage";
 };
-export type FarmingInformationOrderByRelevanceFieldEnum = (typeof FarmingInformationOrderByRelevanceFieldEnum)[keyof typeof FarmingInformationOrderByRelevanceFieldEnum];
+export type userOrderByRelevanceFieldEnum = (typeof userOrderByRelevanceFieldEnum)[keyof typeof userOrderByRelevanceFieldEnum];
 //# sourceMappingURL=prismaNamespaceBrowser.d.ts.map

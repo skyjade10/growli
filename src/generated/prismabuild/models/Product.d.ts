@@ -24,37 +24,37 @@ export type ProductMinAggregateOutputType = {
     productId: string | null;
     userId: string | null;
     price: number | null;
-    pronductImage: string | null;
     quantity: number | null;
     farmersName: string | null;
     productName: string | null;
     phoneNumber: string | null;
     createdAt: Date | null;
     updatedAt: Date | null;
+    pronductImage: string | null;
 };
 export type ProductMaxAggregateOutputType = {
     productId: string | null;
     userId: string | null;
     price: number | null;
-    pronductImage: string | null;
     quantity: number | null;
     farmersName: string | null;
     productName: string | null;
     phoneNumber: string | null;
     createdAt: Date | null;
     updatedAt: Date | null;
+    pronductImage: string | null;
 };
 export type ProductCountAggregateOutputType = {
     productId: number;
     userId: number;
     price: number;
-    pronductImage: number;
     quantity: number;
     farmersName: number;
     productName: number;
     phoneNumber: number;
     createdAt: number;
     updatedAt: number;
+    pronductImage: number;
     _all: number;
 };
 export type ProductAvgAggregateInputType = {
@@ -69,37 +69,37 @@ export type ProductMinAggregateInputType = {
     productId?: true;
     userId?: true;
     price?: true;
-    pronductImage?: true;
     quantity?: true;
     farmersName?: true;
     productName?: true;
     phoneNumber?: true;
     createdAt?: true;
     updatedAt?: true;
+    pronductImage?: true;
 };
 export type ProductMaxAggregateInputType = {
     productId?: true;
     userId?: true;
     price?: true;
-    pronductImage?: true;
     quantity?: true;
     farmersName?: true;
     productName?: true;
     phoneNumber?: true;
     createdAt?: true;
     updatedAt?: true;
+    pronductImage?: true;
 };
 export type ProductCountAggregateInputType = {
     productId?: true;
     userId?: true;
     price?: true;
-    pronductImage?: true;
     quantity?: true;
     farmersName?: true;
     productName?: true;
     phoneNumber?: true;
     createdAt?: true;
     updatedAt?: true;
+    pronductImage?: true;
     _all?: true;
 };
 export type ProductAggregateArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
@@ -182,13 +182,13 @@ export type ProductGroupByOutputType = {
     productId: string;
     userId: string;
     price: number;
-    pronductImage: string | null;
     quantity: number | null;
     farmersName: string;
     productName: string;
     phoneNumber: string | null;
     createdAt: Date;
     updatedAt: Date;
+    pronductImage: string | null;
     _count: ProductCountAggregateOutputType | null;
     _avg: ProductAvgAggregateOutputType | null;
     _sum: ProductSumAggregateOutputType | null;
@@ -205,27 +205,27 @@ export type ProductWhereInput = {
     productId?: Prisma.StringFilter<"Product"> | string;
     userId?: Prisma.StringFilter<"Product"> | string;
     price?: Prisma.FloatFilter<"Product"> | number;
-    pronductImage?: Prisma.StringNullableFilter<"Product"> | string | null;
     quantity?: Prisma.FloatNullableFilter<"Product"> | number | null;
     farmersName?: Prisma.StringFilter<"Product"> | string;
     productName?: Prisma.StringFilter<"Product"> | string;
     phoneNumber?: Prisma.StringNullableFilter<"Product"> | string | null;
     createdAt?: Prisma.DateTimeFilter<"Product"> | Date | string;
     updatedAt?: Prisma.DateTimeFilter<"Product"> | Date | string;
-    user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>;
+    pronductImage?: Prisma.StringNullableFilter<"Product"> | string | null;
+    user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.userWhereInput>;
 };
 export type ProductOrderByWithRelationInput = {
     productId?: Prisma.SortOrder;
     userId?: Prisma.SortOrder;
     price?: Prisma.SortOrder;
-    pronductImage?: Prisma.SortOrderInput | Prisma.SortOrder;
     quantity?: Prisma.SortOrderInput | Prisma.SortOrder;
     farmersName?: Prisma.SortOrder;
     productName?: Prisma.SortOrder;
     phoneNumber?: Prisma.SortOrderInput | Prisma.SortOrder;
     createdAt?: Prisma.SortOrder;
     updatedAt?: Prisma.SortOrder;
-    user?: Prisma.UserOrderByWithRelationInput;
+    pronductImage?: Prisma.SortOrderInput | Prisma.SortOrder;
+    user?: Prisma.userOrderByWithRelationInput;
     _relevance?: Prisma.ProductOrderByRelevanceInput;
 };
 export type ProductWhereUniqueInput = Prisma.AtLeast<{
@@ -235,26 +235,26 @@ export type ProductWhereUniqueInput = Prisma.AtLeast<{
     NOT?: Prisma.ProductWhereInput | Prisma.ProductWhereInput[];
     userId?: Prisma.StringFilter<"Product"> | string;
     price?: Prisma.FloatFilter<"Product"> | number;
-    pronductImage?: Prisma.StringNullableFilter<"Product"> | string | null;
     quantity?: Prisma.FloatNullableFilter<"Product"> | number | null;
     farmersName?: Prisma.StringFilter<"Product"> | string;
     productName?: Prisma.StringFilter<"Product"> | string;
     phoneNumber?: Prisma.StringNullableFilter<"Product"> | string | null;
     createdAt?: Prisma.DateTimeFilter<"Product"> | Date | string;
     updatedAt?: Prisma.DateTimeFilter<"Product"> | Date | string;
-    user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.UserWhereInput>;
+    pronductImage?: Prisma.StringNullableFilter<"Product"> | string | null;
+    user?: Prisma.XOR<Prisma.UserScalarRelationFilter, Prisma.userWhereInput>;
 }, "productId">;
 export type ProductOrderByWithAggregationInput = {
     productId?: Prisma.SortOrder;
     userId?: Prisma.SortOrder;
     price?: Prisma.SortOrder;
-    pronductImage?: Prisma.SortOrderInput | Prisma.SortOrder;
     quantity?: Prisma.SortOrderInput | Prisma.SortOrder;
     farmersName?: Prisma.SortOrder;
     productName?: Prisma.SortOrder;
     phoneNumber?: Prisma.SortOrderInput | Prisma.SortOrder;
     createdAt?: Prisma.SortOrder;
     updatedAt?: Prisma.SortOrder;
+    pronductImage?: Prisma.SortOrderInput | Prisma.SortOrder;
     _count?: Prisma.ProductCountOrderByAggregateInput;
     _avg?: Prisma.ProductAvgOrderByAggregateInput;
     _max?: Prisma.ProductMaxOrderByAggregateInput;
@@ -268,104 +268,96 @@ export type ProductScalarWhereWithAggregatesInput = {
     productId?: Prisma.StringWithAggregatesFilter<"Product"> | string;
     userId?: Prisma.StringWithAggregatesFilter<"Product"> | string;
     price?: Prisma.FloatWithAggregatesFilter<"Product"> | number;
-    pronductImage?: Prisma.StringNullableWithAggregatesFilter<"Product"> | string | null;
     quantity?: Prisma.FloatNullableWithAggregatesFilter<"Product"> | number | null;
     farmersName?: Prisma.StringWithAggregatesFilter<"Product"> | string;
     productName?: Prisma.StringWithAggregatesFilter<"Product"> | string;
     phoneNumber?: Prisma.StringNullableWithAggregatesFilter<"Product"> | string | null;
     createdAt?: Prisma.DateTimeWithAggregatesFilter<"Product"> | Date | string;
     updatedAt?: Prisma.DateTimeWithAggregatesFilter<"Product"> | Date | string;
+    pronductImage?: Prisma.StringNullableWithAggregatesFilter<"Product"> | string | null;
 };
 export type ProductCreateInput = {
     productId?: string;
     price: number;
-    pronductImage?: string | null;
     quantity?: number | null;
     farmersName: string;
     productName: string;
     phoneNumber?: string | null;
     createdAt?: Date | string;
     updatedAt?: Date | string;
-    user: Prisma.UserCreateNestedOneWithoutProductInput;
+    pronductImage?: string | null;
+    user: Prisma.userCreateNestedOneWithoutProductInput;
 };
 export type ProductUncheckedCreateInput = {
     productId?: string;
     userId: string;
     price: number;
-    pronductImage?: string | null;
     quantity?: number | null;
     farmersName: string;
     productName: string;
     phoneNumber?: string | null;
     createdAt?: Date | string;
     updatedAt?: Date | string;
+    pronductImage?: string | null;
 };
 export type ProductUpdateInput = {
     productId?: Prisma.StringFieldUpdateOperationsInput | string;
     price?: Prisma.FloatFieldUpdateOperationsInput | number;
-    pronductImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     quantity?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null;
     farmersName?: Prisma.StringFieldUpdateOperationsInput | string;
     productName?: Prisma.StringFieldUpdateOperationsInput | string;
     phoneNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
     updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
-    user?: Prisma.UserUpdateOneRequiredWithoutProductNestedInput;
+    pronductImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
+    user?: Prisma.userUpdateOneRequiredWithoutProductNestedInput;
 };
 export type ProductUncheckedUpdateInput = {
     productId?: Prisma.StringFieldUpdateOperationsInput | string;
     userId?: Prisma.StringFieldUpdateOperationsInput | string;
     price?: Prisma.FloatFieldUpdateOperationsInput | number;
-    pronductImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     quantity?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null;
     farmersName?: Prisma.StringFieldUpdateOperationsInput | string;
     productName?: Prisma.StringFieldUpdateOperationsInput | string;
     phoneNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
     updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+    pronductImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
 };
 export type ProductCreateManyInput = {
     productId?: string;
     userId: string;
     price: number;
-    pronductImage?: string | null;
     quantity?: number | null;
     farmersName: string;
     productName: string;
     phoneNumber?: string | null;
     createdAt?: Date | string;
     updatedAt?: Date | string;
+    pronductImage?: string | null;
 };
 export type ProductUpdateManyMutationInput = {
     productId?: Prisma.StringFieldUpdateOperationsInput | string;
     price?: Prisma.FloatFieldUpdateOperationsInput | number;
-    pronductImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     quantity?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null;
     farmersName?: Prisma.StringFieldUpdateOperationsInput | string;
     productName?: Prisma.StringFieldUpdateOperationsInput | string;
     phoneNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
     updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+    pronductImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
 };
 export type ProductUncheckedUpdateManyInput = {
     productId?: Prisma.StringFieldUpdateOperationsInput | string;
     userId?: Prisma.StringFieldUpdateOperationsInput | string;
     price?: Prisma.FloatFieldUpdateOperationsInput | number;
-    pronductImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     quantity?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null;
     farmersName?: Prisma.StringFieldUpdateOperationsInput | string;
     productName?: Prisma.StringFieldUpdateOperationsInput | string;
     phoneNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
     updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
-};
-export type ProductListRelationFilter = {
-    every?: Prisma.ProductWhereInput;
-    some?: Prisma.ProductWhereInput;
-    none?: Prisma.ProductWhereInput;
-};
-export type ProductOrderByRelationAggregateInput = {
-    _count?: Prisma.SortOrder;
+    pronductImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
 };
 export type ProductOrderByRelevanceInput = {
     fields: Prisma.ProductOrderByRelevanceFieldEnum | Prisma.ProductOrderByRelevanceFieldEnum[];
@@ -376,13 +368,13 @@ export type ProductCountOrderByAggregateInput = {
     productId?: Prisma.SortOrder;
     userId?: Prisma.SortOrder;
     price?: Prisma.SortOrder;
-    pronductImage?: Prisma.SortOrder;
     quantity?: Prisma.SortOrder;
     farmersName?: Prisma.SortOrder;
     productName?: Prisma.SortOrder;
     phoneNumber?: Prisma.SortOrder;
     createdAt?: Prisma.SortOrder;
     updatedAt?: Prisma.SortOrder;
+    pronductImage?: Prisma.SortOrder;
 };
 export type ProductAvgOrderByAggregateInput = {
     price?: Prisma.SortOrder;
@@ -392,29 +384,60 @@ export type ProductMaxOrderByAggregateInput = {
     productId?: Prisma.SortOrder;
     userId?: Prisma.SortOrder;
     price?: Prisma.SortOrder;
-    pronductImage?: Prisma.SortOrder;
     quantity?: Prisma.SortOrder;
     farmersName?: Prisma.SortOrder;
     productName?: Prisma.SortOrder;
     phoneNumber?: Prisma.SortOrder;
     createdAt?: Prisma.SortOrder;
     updatedAt?: Prisma.SortOrder;
+    pronductImage?: Prisma.SortOrder;
 };
 export type ProductMinOrderByAggregateInput = {
     productId?: Prisma.SortOrder;
     userId?: Prisma.SortOrder;
     price?: Prisma.SortOrder;
-    pronductImage?: Prisma.SortOrder;
     quantity?: Prisma.SortOrder;
     farmersName?: Prisma.SortOrder;
     productName?: Prisma.SortOrder;
     phoneNumber?: Prisma.SortOrder;
     createdAt?: Prisma.SortOrder;
     updatedAt?: Prisma.SortOrder;
+    pronductImage?: Prisma.SortOrder;
 };
 export type ProductSumOrderByAggregateInput = {
     price?: Prisma.SortOrder;
     quantity?: Prisma.SortOrder;
+};
+export type ProductListRelationFilter = {
+    every?: Prisma.ProductWhereInput;
+    some?: Prisma.ProductWhereInput;
+    none?: Prisma.ProductWhereInput;
+};
+export type ProductOrderByRelationAggregateInput = {
+    _count?: Prisma.SortOrder;
+};
+export type StringFieldUpdateOperationsInput = {
+    set?: string;
+};
+export type FloatFieldUpdateOperationsInput = {
+    set?: number;
+    increment?: number;
+    decrement?: number;
+    multiply?: number;
+    divide?: number;
+};
+export type NullableFloatFieldUpdateOperationsInput = {
+    set?: number | null;
+    increment?: number;
+    decrement?: number;
+    multiply?: number;
+    divide?: number;
+};
+export type NullableStringFieldUpdateOperationsInput = {
+    set?: string | null;
+};
+export type DateTimeFieldUpdateOperationsInput = {
+    set?: Date | string;
 };
 export type ProductCreateNestedManyWithoutUserInput = {
     create?: Prisma.XOR<Prisma.ProductCreateWithoutUserInput, Prisma.ProductUncheckedCreateWithoutUserInput> | Prisma.ProductCreateWithoutUserInput[] | Prisma.ProductUncheckedCreateWithoutUserInput[];
@@ -454,41 +477,27 @@ export type ProductUncheckedUpdateManyWithoutUserNestedInput = {
     updateMany?: Prisma.ProductUpdateManyWithWhereWithoutUserInput | Prisma.ProductUpdateManyWithWhereWithoutUserInput[];
     deleteMany?: Prisma.ProductScalarWhereInput | Prisma.ProductScalarWhereInput[];
 };
-export type FloatFieldUpdateOperationsInput = {
-    set?: number;
-    increment?: number;
-    decrement?: number;
-    multiply?: number;
-    divide?: number;
-};
-export type NullableFloatFieldUpdateOperationsInput = {
-    set?: number | null;
-    increment?: number;
-    decrement?: number;
-    multiply?: number;
-    divide?: number;
-};
 export type ProductCreateWithoutUserInput = {
     productId?: string;
     price: number;
-    pronductImage?: string | null;
     quantity?: number | null;
     farmersName: string;
     productName: string;
     phoneNumber?: string | null;
     createdAt?: Date | string;
     updatedAt?: Date | string;
+    pronductImage?: string | null;
 };
 export type ProductUncheckedCreateWithoutUserInput = {
     productId?: string;
     price: number;
-    pronductImage?: string | null;
     quantity?: number | null;
     farmersName: string;
     productName: string;
     phoneNumber?: string | null;
     createdAt?: Date | string;
     updatedAt?: Date | string;
+    pronductImage?: string | null;
 };
 export type ProductCreateOrConnectWithoutUserInput = {
     where: Prisma.ProductWhereUniqueInput;
@@ -518,103 +527,103 @@ export type ProductScalarWhereInput = {
     productId?: Prisma.StringFilter<"Product"> | string;
     userId?: Prisma.StringFilter<"Product"> | string;
     price?: Prisma.FloatFilter<"Product"> | number;
-    pronductImage?: Prisma.StringNullableFilter<"Product"> | string | null;
     quantity?: Prisma.FloatNullableFilter<"Product"> | number | null;
     farmersName?: Prisma.StringFilter<"Product"> | string;
     productName?: Prisma.StringFilter<"Product"> | string;
     phoneNumber?: Prisma.StringNullableFilter<"Product"> | string | null;
     createdAt?: Prisma.DateTimeFilter<"Product"> | Date | string;
     updatedAt?: Prisma.DateTimeFilter<"Product"> | Date | string;
+    pronductImage?: Prisma.StringNullableFilter<"Product"> | string | null;
 };
 export type ProductCreateManyUserInput = {
     productId?: string;
     price: number;
-    pronductImage?: string | null;
     quantity?: number | null;
     farmersName: string;
     productName: string;
     phoneNumber?: string | null;
     createdAt?: Date | string;
     updatedAt?: Date | string;
+    pronductImage?: string | null;
 };
 export type ProductUpdateWithoutUserInput = {
     productId?: Prisma.StringFieldUpdateOperationsInput | string;
     price?: Prisma.FloatFieldUpdateOperationsInput | number;
-    pronductImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     quantity?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null;
     farmersName?: Prisma.StringFieldUpdateOperationsInput | string;
     productName?: Prisma.StringFieldUpdateOperationsInput | string;
     phoneNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
     updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+    pronductImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
 };
 export type ProductUncheckedUpdateWithoutUserInput = {
     productId?: Prisma.StringFieldUpdateOperationsInput | string;
     price?: Prisma.FloatFieldUpdateOperationsInput | number;
-    pronductImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     quantity?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null;
     farmersName?: Prisma.StringFieldUpdateOperationsInput | string;
     productName?: Prisma.StringFieldUpdateOperationsInput | string;
     phoneNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
     updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+    pronductImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
 };
 export type ProductUncheckedUpdateManyWithoutUserInput = {
     productId?: Prisma.StringFieldUpdateOperationsInput | string;
     price?: Prisma.FloatFieldUpdateOperationsInput | number;
-    pronductImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     quantity?: Prisma.NullableFloatFieldUpdateOperationsInput | number | null;
     farmersName?: Prisma.StringFieldUpdateOperationsInput | string;
     productName?: Prisma.StringFieldUpdateOperationsInput | string;
     phoneNumber?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
     createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
     updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string;
+    pronductImage?: Prisma.NullableStringFieldUpdateOperationsInput | string | null;
 };
 export type ProductSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
     productId?: boolean;
     userId?: boolean;
     price?: boolean;
-    pronductImage?: boolean;
     quantity?: boolean;
     farmersName?: boolean;
     productName?: boolean;
     phoneNumber?: boolean;
     createdAt?: boolean;
     updatedAt?: boolean;
-    user?: boolean | Prisma.UserDefaultArgs<ExtArgs>;
+    pronductImage?: boolean;
+    user?: boolean | Prisma.userDefaultArgs<ExtArgs>;
 }, ExtArgs["result"]["product"]>;
 export type ProductSelectScalar = {
     productId?: boolean;
     userId?: boolean;
     price?: boolean;
-    pronductImage?: boolean;
     quantity?: boolean;
     farmersName?: boolean;
     productName?: boolean;
     phoneNumber?: boolean;
     createdAt?: boolean;
     updatedAt?: boolean;
+    pronductImage?: boolean;
 };
-export type ProductOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"productId" | "userId" | "price" | "pronductImage" | "quantity" | "farmersName" | "productName" | "phoneNumber" | "createdAt" | "updatedAt", ExtArgs["result"]["product"]>;
+export type ProductOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"productId" | "userId" | "price" | "quantity" | "farmersName" | "productName" | "phoneNumber" | "createdAt" | "updatedAt" | "pronductImage", ExtArgs["result"]["product"]>;
 export type ProductInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-    user?: boolean | Prisma.UserDefaultArgs<ExtArgs>;
+    user?: boolean | Prisma.userDefaultArgs<ExtArgs>;
 };
 export type $ProductPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
     name: "Product";
     objects: {
-        user: Prisma.$UserPayload<ExtArgs>;
+        user: Prisma.$userPayload<ExtArgs>;
     };
     scalars: runtime.Types.Extensions.GetPayloadResult<{
         productId: string;
         userId: string;
         price: number;
-        pronductImage: string | null;
         quantity: number | null;
         farmersName: string;
         productName: string;
         phoneNumber: string | null;
         createdAt: Date;
         updatedAt: Date;
+        pronductImage: string | null;
     }, ExtArgs["result"]["product"]>;
     composites: {};
 };
@@ -892,7 +901,7 @@ export interface ProductDelegate<ExtArgs extends runtime.Types.Extensions.Intern
  */
 export interface Prisma__ProductClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise";
-    user<T extends Prisma.UserDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.UserDefaultArgs<ExtArgs>>): Prisma.Prisma__UserClient<runtime.Types.Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>;
+    user<T extends Prisma.userDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.userDefaultArgs<ExtArgs>>): Prisma.Prisma__userClient<runtime.Types.Result.GetResult<Prisma.$userPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>;
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -921,13 +930,13 @@ export interface ProductFieldRefs {
     readonly productId: Prisma.FieldRef<"Product", 'String'>;
     readonly userId: Prisma.FieldRef<"Product", 'String'>;
     readonly price: Prisma.FieldRef<"Product", 'Float'>;
-    readonly pronductImage: Prisma.FieldRef<"Product", 'String'>;
     readonly quantity: Prisma.FieldRef<"Product", 'Float'>;
     readonly farmersName: Prisma.FieldRef<"Product", 'String'>;
     readonly productName: Prisma.FieldRef<"Product", 'String'>;
     readonly phoneNumber: Prisma.FieldRef<"Product", 'String'>;
     readonly createdAt: Prisma.FieldRef<"Product", 'DateTime'>;
     readonly updatedAt: Prisma.FieldRef<"Product", 'DateTime'>;
+    readonly pronductImage: Prisma.FieldRef<"Product", 'String'>;
 }
 /**
  * Product findUnique

@@ -16,6 +16,7 @@ if(true){
     try {
         
         const info = await getFarmingInfo();
+        console.log("Farming Info: ",info)
 
         const infoData = JSON.parse(JSON.stringify(info));
 
@@ -49,6 +50,7 @@ if(true){
     try {
         
         const event = await getEvents();
+        console.log("Events: ",event)
 
         const eventData = JSON.parse(JSON.stringify(event));
 
@@ -234,7 +236,7 @@ function infoHolder(container) {
     container.insertAdjacentHTML('beforeend',
         `
         <article class="card">
-            <figure class="img-box"><img src="../public/images/cattle.jpg" alt="Image of cattle"></figure>
+            <figure class="img-box"><img src="./images/cattle.jpg" alt="Image of cattle"></figure>
             <h3>Livestock Guide</h3>
             <p>Discover best practices for raising healthy livestock, including nutrition, housing, and disease prevention.</p>
             <a href="./pages/farming-info.html">Learn More</a>

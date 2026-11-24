@@ -39,11 +39,11 @@ export const JsonNull = runtime.JsonNull;
  */
 export const AnyNull = runtime.AnyNull;
 export const ModelName = {
-    User: 'User',
     Product: 'Product',
-    Training: 'Training',
-    TrainingRegisterUser: 'TrainingRegisterUser',
-    FarmingInformation: 'FarmingInformation'
+    farminginformation: 'farminginformation',
+    training: 'training',
+    trainingregisteruser: 'trainingregisteruser',
+    user: 'user'
 };
 /*
  * Enums
@@ -54,66 +54,66 @@ export const TransactionIsolationLevel = runtime.makeStrictEnum({
     RepeatableRead: 'RepeatableRead',
     Serializable: 'Serializable'
 });
-export const UserScalarFieldEnum = {
-    userId: 'userId',
-    email: 'email',
-    password: 'password',
-    profileImage: 'profileImage',
-    role: 'role',
-    firstName: 'firstName',
-    lastName: 'lastName',
-    bio: 'bio',
-    country: 'country',
-    state: 'state',
-    city: 'city',
-    farming: 'farming',
-    scale: 'scale',
-    createdAt: 'createdAt',
-    updatedAt: 'updatedAt'
-};
 export const ProductScalarFieldEnum = {
     productId: 'productId',
     userId: 'userId',
     price: 'price',
-    pronductImage: 'pronductImage',
     quantity: 'quantity',
     farmersName: 'farmersName',
     productName: 'productName',
     phoneNumber: 'phoneNumber',
     createdAt: 'createdAt',
-    updatedAt: 'updatedAt'
+    updatedAt: 'updatedAt',
+    pronductImage: 'pronductImage'
+};
+export const FarminginformationScalarFieldEnum = {
+    farmingId: 'farmingId',
+    authorId: 'authorId',
+    status: 'status',
+    title: 'title',
+    article: 'article',
+    createdAt: 'createdAt',
+    updatedAt: 'updatedAt',
+    farmingInfoImage: 'farmingInfoImage'
 };
 export const TrainingScalarFieldEnum = {
     trainingId: 'trainingId',
     authorId: 'authorId',
     title: 'title',
-    trainingDate: 'trainingDate',
-    trainingImage: 'trainingImage',
-    country: 'country',
-    state: 'state',
     city: 'city',
     place: 'place',
     description: 'description',
     status: 'status',
     createdAt: 'createdAt',
-    updatedAt: 'updatedAt'
+    updatedAt: 'updatedAt',
+    country: 'country',
+    state: 'state',
+    trainingDate: 'trainingDate',
+    trainingImage: 'trainingImage'
 };
-export const TrainingRegisterUserScalarFieldEnum = {
+export const TrainingregisteruserScalarFieldEnum = {
     registryId: 'registryId',
     userId: 'userId',
     trainingEventId: 'trainingEventId',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt'
 };
-export const FarmingInformationScalarFieldEnum = {
-    farmingId: 'farmingId',
-    authorId: 'authorId',
-    farmingInfoImage: 'farmingInfoImage',
-    status: 'status',
-    title: 'title',
-    article: 'article',
+export const UserScalarFieldEnum = {
+    userId: 'userId',
+    email: 'email',
+    password: 'password',
+    role: 'role',
+    firstName: 'firstName',
+    lastName: 'lastName',
     createdAt: 'createdAt',
-    updatedAt: 'updatedAt'
+    updatedAt: 'updatedAt',
+    bio: 'bio',
+    city: 'city',
+    country: 'country',
+    farming: 'farming',
+    scale: 'scale',
+    state: 'state',
+    profileImage: 'profileImage'
 };
 export const SortOrder = {
     asc: 'asc',
@@ -123,47 +123,47 @@ export const NullsOrder = {
     first: 'first',
     last: 'last'
 };
-export const UserOrderByRelevanceFieldEnum = {
-    userId: 'userId',
-    email: 'email',
-    password: 'password',
-    profileImage: 'profileImage',
-    firstName: 'firstName',
-    lastName: 'lastName',
-    bio: 'bio',
-    country: 'country',
-    state: 'state',
-    city: 'city'
-};
 export const ProductOrderByRelevanceFieldEnum = {
     productId: 'productId',
     userId: 'userId',
-    pronductImage: 'pronductImage',
     farmersName: 'farmersName',
     productName: 'productName',
-    phoneNumber: 'phoneNumber'
+    phoneNumber: 'phoneNumber',
+    pronductImage: 'pronductImage'
 };
-export const TrainingOrderByRelevanceFieldEnum = {
+export const farminginformationOrderByRelevanceFieldEnum = {
+    farmingId: 'farmingId',
+    authorId: 'authorId',
+    title: 'title',
+    article: 'article',
+    farmingInfoImage: 'farmingInfoImage'
+};
+export const trainingOrderByRelevanceFieldEnum = {
     trainingId: 'trainingId',
     authorId: 'authorId',
     title: 'title',
-    trainingImage: 'trainingImage',
-    country: 'country',
-    state: 'state',
     city: 'city',
     place: 'place',
-    description: 'description'
+    description: 'description',
+    country: 'country',
+    state: 'state',
+    trainingImage: 'trainingImage'
 };
-export const TrainingRegisterUserOrderByRelevanceFieldEnum = {
+export const trainingregisteruserOrderByRelevanceFieldEnum = {
     registryId: 'registryId',
     userId: 'userId',
     trainingEventId: 'trainingEventId'
 };
-export const FarmingInformationOrderByRelevanceFieldEnum = {
-    farmingId: 'farmingId',
-    authorId: 'authorId',
-    farmingInfoImage: 'farmingInfoImage',
-    title: 'title',
-    article: 'article'
+export const userOrderByRelevanceFieldEnum = {
+    userId: 'userId',
+    email: 'email',
+    password: 'password',
+    firstName: 'firstName',
+    lastName: 'lastName',
+    bio: 'bio',
+    city: 'city',
+    country: 'country',
+    state: 'state',
+    profileImage: 'profileImage'
 };
 //# sourceMappingURL=prismaNamespaceBrowser.js.map
