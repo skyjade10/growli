@@ -64,6 +64,7 @@ export const getProducts = async (req, res) => {
         res.json(products);
 
     }catch(error){
+        console.error('REAL DB ERROR:', error.meta?.driverAdapterError?.cause);
         console.log("Error getting products", error);
         res.status(500).json({message: error});
     }
