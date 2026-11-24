@@ -16,9 +16,14 @@ const adapter = new PrismaMariaDb({
     acquireTimeout: 20000,  
     idleTimeout: 10000,
     allowPublicKeyRetrieval: true,
+    ssl: false
 
 });
 
 const prisma = new PrismaClient({adapter});
+
+prisma.$connect()
+  .then(() => console.log('Connected to FreeDB successfully'))
+  .catch((err) => console.error('DB Connection Cause:', JSON.stringify(err, null, 2)));
 
 export default prisma;
