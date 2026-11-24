@@ -4,6 +4,7 @@ const serverUrl = SERVER_URL;
 const serverPort = SERVER_PORT;
 
 const infoContainer = document.getElementById("farming-info-container");
+const imageType =  "farmingInfo";
 
 if(true){
     const itemList = [];
@@ -85,8 +86,6 @@ if(true){
     });
 
 }
-
-const imageType =  "farmingInfo";
 
 function setData(mData) {
     console.log(mData)

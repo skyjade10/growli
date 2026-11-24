@@ -37,7 +37,7 @@ export const getAllFarmingInfo = async (req, res) => {
 
     try {
 
-        const info = await prisma.farmingInformation.findMany();
+        const info = await prisma.farminginformation.findMany();
         res.json(info);
 
     }catch(error){
@@ -53,7 +53,7 @@ export const getFarmingInfos = async (req, res) => {
 
     try {
 
-        const info = await prisma.farmingInformation.findMany({
+        const info = await prisma.farminginformation.findMany({
             skip: (page - 1) * limit,
             take: parseInt(limit)
         });
@@ -70,7 +70,7 @@ export const updateFarmingInfo = async (req, res) => {
     const {data } = req.body;
 
     try{
-        const updateInfo = await prisma.farmingInformation.update({
+        const updateInfo = await prisma.farminginformation.update({
             data:data
         })
 
@@ -86,7 +86,7 @@ export const searchFarmingInfo = async (req, res) => {
 
     try{
 
-        const info = await prisma.farmingInformation.findMany({
+        const info = await prisma.farminginformation.findMany({
             skip: (page-1) * limit,
             take: parseInt(limit),
             where:{
@@ -108,7 +108,7 @@ export const searchFarmingInfo = async (req, res) => {
 export const deleteFarmingInfo = async (req, res) => {
     const {id} = req.params;
     try{
-        const deleteInfo = await prisma.farmingInformation.delete({
+        const deleteInfo = await prisma.farminginformation.delete({
             where: {id: parseInt(id)}
         })
         res.status(200).json({message: "Farming info deleted successfully"});

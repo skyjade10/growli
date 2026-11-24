@@ -5,6 +5,8 @@ const serverPort = SERVER_PORT;
 
 const trainingContainer = document.getElementById("training-container");
 
+const imageType = "training";
+
 if(true){
     const itemList = [];
 
@@ -86,7 +88,6 @@ if(true){
 
 }
 
-const imageType = "training";
 
 function setData(mData) {
     

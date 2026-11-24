@@ -52,13 +52,5 @@ function logOut() {
 
 logOut()
 
-// admin@growli.test
-// john@growli.test
-// mary@growli.test
-// peter@growli.test
-// superuser@growli.test
-// sky@gmail.com
-// zambwe361@gmail.com
-// zambwe@gmail.com
-// nzambwe@gmail.com
+
 

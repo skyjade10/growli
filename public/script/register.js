@@ -45,7 +45,7 @@ const createUser = async (data) =>{
 
     try {
 
-        const user = await api(`${serverUrl}/signup/`,{
+        const user = await api(`${serverUrl}/auth/signup/`,{
             method: 'POST',
             mode: 'cors',
             body: JSON.stringify(data)
