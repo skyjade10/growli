@@ -493,7 +493,7 @@ if(true){
 
     //this one is for the api call
     async function createProduct(data) {
-         const product = await api(`${serverUrl}:${serverPort}/product/create`,{
+         const product = await api(`${serverUrl}/product/create`,{
             method: 'POST',
             mode: 'cors',
             body: JSON.stringify(data)
@@ -503,7 +503,7 @@ if(true){
 
     async function editProduct(data) {
         
-        const product = await api(`${serverUrl}:${serverPort}/product/update`,{
+        const product = await api(`${serverUrl}/product/update`,{
             method: 'POST',
             mode: 'cors',
             body: JSON.stringify(data)
@@ -513,7 +513,7 @@ if(true){
     }
 
     async function deleteProduct(id) {
-        const product = await api(`${serverUrl}:${serverPort}/product/delete`,{
+        const product = await api(`${serverUrl}/product/delete`,{
             method: 'DELETE',
             mode: 'cors',
             body: JSON.stringify({id:id})

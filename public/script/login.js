@@ -31,7 +31,7 @@ form.addEventListener('submit',async (e) => {
 const login = async (mData) => {
     
     try {
-        const user = await api(`${serverUrl}:${serverPort}/login/`,{
+        const user = await api(`${serverUrl}/login/`,{
             method: 'POST',
             mode: 'cors',
             body: JSON.stringify(mData)

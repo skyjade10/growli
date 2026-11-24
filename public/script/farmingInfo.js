@@ -1,4 +1,4 @@
-import { api, showLoginUi, loggedInKey, token, tokenKey, userKey,SERVER_PORT,SERVER_URL } from "./util.js";
+import { api, showLoginUi, loggedInKey, token, tokenKey, userKey,SERVER_PORT,SERVER_URL,setImage } from "./util.js";
 
 const serverUrl = SERVER_URL;
 const serverPort = SERVER_PORT;
@@ -86,6 +86,8 @@ if(true){
 
 }
 
+const imageType =  "farmingInfo";
+
 function setData(mData) {
     console.log(mData)
     
@@ -94,7 +96,7 @@ function setData(mData) {
         infoContainer.insertAdjacentHTML('beforeend',
             `
             <article id="${v.farmingId}" class="card">
-                <figure class="img-box"><img src="${v.farmingInfoImage}" alt="Image of ${v.title}" /></figure>
+                <figure class="img-box"><img src="${setImage(v.farmingInfoImage,false,imageType)}" alt="Image of ${v.title}" /></figure>
                 <h3>${v.title}</h3>
                 <p class="trex" >${v.article}.</p><a href="#">Read More</a>
             </article>
@@ -112,7 +114,7 @@ function setData(mData) {
 
 async function getInfo() {
     
-    const trainings = await api(`${serverUrl}:${serverPort}/farminginfo?page=${page}&limit=${limit}`,{
+    const trainings = await api(`${serverUrl}/farminginfo?page=${page}&limit=${limit}`,{
         method: 'GET',
         mode: 'cors'
     });
@@ -122,7 +124,7 @@ async function getInfo() {
 
 async function searchInfo(querys) {
 
-    const trainings = await api(`${serverUrl}:${serverPort}/farminginfo/search?query=${querys}&page=${page}&limit=${limit}`,{
+    const trainings = await api(`${serverUrl}/farminginfo/search?query=${querys}&page=${page}&limit=${limit}`,{
         method: 'GET',
         mode: 'cors'
     });

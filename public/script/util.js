@@ -78,3 +78,35 @@ export function parsePrice(price){
     //price conversion will be done here
     return price;
 }
+
+export function setImage(imageUrl,isHomepage = false,imageType){ 
+    let url = imageUrl;
+    if (imageUrl) {
+        return imageUrl;
+    } else {
+        if(isHomepage){
+            if(imageType === "training"){
+                return "./images/cattle.jpg";
+            }
+            if(imageType === "farminginfo"){
+                return "./images/soil-preparation.webp";
+            }
+            if(imageType === "product"){
+                return "./images/meat.avif";
+            }
+        }else{
+            if(imageType === "training"){
+                return "../images/cattle.jpg";
+            }
+            if(imageType === "farminginfo"){
+                return "../images/soil-preparation.webp";
+            }
+            if(imageType === "product"){
+                return "../images/meat.avif";
+            }
+
+        }
+    }
+
+    return url;
+}

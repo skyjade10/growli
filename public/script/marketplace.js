@@ -1,9 +1,10 @@
-import { api, showLoginUi, loggedInKey, token, tokenKey, userKey, isLoggedIn,SERVER_PORT,SERVER_URL } from "./util.js";
+import { api, showLoginUi, loggedInKey, token, tokenKey, userKey, isLoggedIn,SERVER_PORT,SERVER_URL, setImage } from "./util.js";
 
 const serverUrl = SERVER_URL;
 const serverPort = SERVER_PORT;
 
 const productContainer = document.getElementById("market-container");
+const imageType = "product";
 
 if(true){
     const itemList = [];
@@ -98,7 +99,7 @@ function setData(mData) {
         
         productContainer.insertAdjacentHTML('beforeend',
             `<article id="${v.productId}" class="card">
-                <figure class="img-box"><img src="${v.pronductImage}" alt="Image of ${v.productName}" /></figure>
+                <figure class="img-box"><img src="${setImage(v.pronductImage,false,imageType)}" alt="Image of ${v.productName}" /></figure>
                 <h3>${v.productName}</h3>
                 <p>Price: ZMW ${parsePrice(v.price)} /kg</p>
                 <a class="view-btn" href="./marketplace.html">View</a>
@@ -116,7 +117,7 @@ function setData(mData) {
 
 async function getProducts() {
     
-    const products = await api(`${serverUrl}:${serverPort}/product?page=${page}&limit=${limit}`,{
+    const products = await api(`${serverUrl}/product?page=${page}&limit=${limit}`,{
         method: 'GET',
         mode: 'cors'
     });
@@ -126,7 +127,7 @@ async function getProducts() {
 
 async function searchProducts(querys) {
 
-    const products = await api(`${serverUrl}:${serverPort}/product/search?q=${querys}&page=${page}&limit=${limit}`,{
+    const products = await api(`${serverUrl}/product/search?q=${querys}&page=${page}&limit=${limit}`,{
         method: 'GET',
         mode: 'cors'
     });
