@@ -98,7 +98,8 @@ function setData(mData) {
                 <figure class="img-box"><img src="${setImage(v.trainingImage,false,imageType)}" alt="Image of ${v.title}"></figure>
                 <h3>${v.title}</h3>
                 <p>Date: ${parseDate(v.trainingDate)}</p>
-                <p>Location: ${v.city}</p><button class="view-btn" type="button">View Details</button>
+                <p>Location: ${v.city}</p>
+                <button class="view-btn" type="button">View Details</button>
             </article>
             `
         );
