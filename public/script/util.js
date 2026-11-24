@@ -89,7 +89,7 @@ export function setImage(imageUrl,isHomepage = false,imageType){
                 return "./images/cattle.jpg";
             }
             if(imageType === "farminginfo"){
-                return "./images/soil-preparation.webp";
+                return "./images/morden-Farm.jpg";
             }
             if(imageType === "product"){
                 return "./images/meat.avif";
@@ -99,7 +99,7 @@ export function setImage(imageUrl,isHomepage = false,imageType){
                 return "../images/cattle.jpg";
             }
             if(imageType === "farminginfo"){
-                return "../images/soil-preparation.webp";
+                return "../images/morden-Farm.jpg";
             }
             if(imageType === "product"){
                 return "../images/meat.avif";

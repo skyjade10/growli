@@ -483,7 +483,7 @@ if(true){
 
     async function getProducts(){
 
-        const products =  await api(`${serverUrl}:${serverPort}/product/user?id=${loggedUser.user.userId}&page=${pageP}&limit=${limitP}`,{
+        const products =  await api(`${serverUrl}/product/user?id=${loggedUser.user.userId}&page=${pageP}&limit=${limitP}`,{
             method: 'GET',
             mode: 'cors'
         });
