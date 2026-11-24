@@ -41,7 +41,7 @@ const login = async (mData) => {
         localStorage.setItem(tokenKey,user.data.accessToken)
         localStorage.setItem(loggedInKey,JSON.stringify(true));
         localStorage.setItem(userKey,JSON.stringify(user.data));
-        loggedUser.user = user;
+        loggedUser.user = user.data;
         window.location.replace("../index.html")
     } catch (error) {
         localStorage.setItem(loggedInKey,JSON.stringify(false));

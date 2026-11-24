@@ -12,7 +12,7 @@ if(true){
 
     var isSearching = false;
 
-    var page = 1, limit = 10;
+    var page = 1, limit = 12;
 
     const searchBtn = document.getElementById("search-button");
     const input = document.getElementById("search-training");

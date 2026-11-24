@@ -4,7 +4,7 @@ const serverUrl = SERVER_URL;
 const serverPort = SERVER_PORT;
 
 const infoContainer = document.getElementById("farming-info-container");
-const imageType =  "farmingInfo";
+const imageType =  "farminginfo";
 
 if(true){
     const itemList = [];
