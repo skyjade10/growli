@@ -73,7 +73,7 @@ export const getProducts = async (req, res) => {
 
     }catch(error){
         console.log("Error getting products", error);
-        res.status(500).json({message: "Internal server error"});
+        res.status(500).json({message: error});
     }
 }
 
