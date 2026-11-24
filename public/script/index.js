@@ -9,133 +9,128 @@ const cardContainer = document.getElementById('card-container');
 console.log("index", isLoggedIn.isLogged)
 
 //if true simulates if user is authenticated; to be implemented
-async function init() {
-    if(true){
+if(true){
 
-        //farming info
-        const infoContainer = document.getElementById("info-container");
-        try {
-            
-            const info = await getFarmingInfo();
-            console.log("Farming Info: ",info)
+    //farming info
+    const infoContainer = document.getElementById("info-container");
+    // try {
+        
+    //     const info = await getFarmingInfo();
+    //     console.log("Farming Info: ",info)
 
-            const infoData = JSON.parse(JSON.stringify(info));
-
-
-            if(!infoData){
-                    
-                infoData.forEach((v,k)=>{
-                    infoContainer.insertAdjacentHTML('beforeend',
-                        `<article id="${v.farmingId}" class="card">
-                            <figure class="img-box"><img src="${v.farmingInfoImage}" alt="Picture of ${v.title}" ></figure>
-                            <h3>${v.title}</h3>
-                            <p>${v.article}</p><a href="./pages/farming-info.html">→ Read More</a>
-                        </article>
-                        `
-                    );
-                });
-
-            }else{
-                //placeholdr if info data is empty
-                infoHolder(infoContainer);
-
-            }
-
-        } catch (error) {
-            console.log("Error fetching farming info: ", error);
-            infoHolder(infoContainer);
-        }
-
-        //events
-        const eventContainer = document.getElementById("event-container");
-        try {
-            
-            const event = await getEvents();
-            console.log("Events: ",event)
-
-            const eventData = JSON.parse(JSON.stringify(event));
+    //     const infoData = JSON.parse(JSON.stringify(info));
 
 
-            if(!eventData){
-
-                eventData.forEach((v,k)=>{
-
-                    eventContainer.insertAdjacentHTML("beforeend",
-                        `
-                        <article id="${v.trainingId}" class="training-bar">
-                            <p><b>${v.title}</b> • Date: ${parseDate(v.trainingDate)} • Location: ${v.city}, ${v.country} </p>
-                            <a class="training-link" href="./pages/training.html">View Details</a>
-                        </article>
-                        `
-                    );
-                });
+    //     if(!infoData){
                 
-            }else{
+    //         infoData.forEach((v,k)=>{
+    //             infoContainer.insertAdjacentHTML('beforeend',
+    //                 `<article id="${v.farmingId}" class="card">
+    //                     <figure class="img-box"><img src="${v.farmingInfoImage}" alt="Picture of ${v.title}" ></figure>
+    //                     <h3>${v.title}</h3>
+    //                     <p>${v.article}</p><a href="./pages/farming-info.html">→ Read More</a>
+    //                 </article>
+    //                 `
+    //             );
+    //         });
 
-                //if event data is empty
-                eventContainer.insertAdjacentHTML("beforeend",
-                    `
-                    <article id="event-container" class="training-bar">
-                        <p><b>Agricultural Training Conference</b> &bull; Date: 1 November &bull; Location: Ndola</p>
-                        <a class="training-link" href="./pages/training.html">View Details</a>
-                    </article>
-                    `
+    //     }else{
+    //         //placeholdr if info data is empty
+    //         infoHolder(infoContainer);
+
+    //     }
+
+    // } catch (error) {
+    //     console.log("Error fetching farming info: ", error);
+    //     infoHolder(infoContainer);
+    // }
+
+    //events
+    const eventContainer = document.getElementById("event-container");
+    // try {
+        
+    //     const event = await getEvents();
+    //     console.log("Events: ",event)
+
+    //     const eventData = JSON.parse(JSON.stringify(event));
+
+
+    //     if(!eventData){
+
+    //         eventData.forEach((v,k)=>{
+
+    //             eventContainer.insertAdjacentHTML("beforeend",
+    //                 `
+    //                 <article id="${v.trainingId}" class="training-bar">
+    //                     <p><b>${v.title}</b> • Date: ${parseDate(v.trainingDate)} • Location: ${v.city}, ${v.country} </p>
+    //                     <a class="training-link" href="./pages/training.html">View Details</a>
+    //                 </article>
+    //                 `
+    //             );
+    //         });
+            
+    //     }else{
+
+    //         //if event data is empty
+    //         eventContainer.insertAdjacentHTML("beforeend",
+    //             `
+    //             <article id="event-container" class="training-bar">
+    //                 <p><b>Agricultural Training Conference</b> &bull; Date: 1 November &bull; Location: Ndola</p>
+    //                 <a class="training-link" href="./pages/training.html">View Details</a>
+    //             </article>
+    //             `
+    //         );
+
+    //     }
+
+    // } catch (error) {
+    //     console.log("Error fetching events: ", error);
+    //     eventContainer.insertAdjacentHTML("beforeend",
+    //         `
+    //         <article id="event-container" class="training-bar">
+    //             <p><b>Agricultural Training Conference</b> &bull; Date: 1 November &bull; Location: Ndola</p>
+    //             <a class="training-link" href="./pages/training.html">View Details</a>
+    //         </article>
+    //         `
+    //     );
+    // }
+
+
+    //Products
+
+    try {
+            
+        const product = await getProducts();
+
+        console.log("Product: ",product)
+
+        const datav = JSON.parse(JSON.stringify(product.data));
+
+        if(datav){
+            datav.forEach((v,k)=>{
+                cardContainer.insertAdjacentHTML('beforeend',
+                    `<article id="${v.productId}" class="card">
+                        <figure class="img-box"><img src="${v.pronductImage}" alt="Image of ${v.productName}" /></figure>
+                        <h3>${v.productName}</h3>
+                        <p>Price: ZMW ${parsePrices(v.price)} /kg</p>
+                        <a class="view-btn" href="./pages/marketplace.html">View</a>
+                    </article>`
                 );
-
-            }
-
-        } catch (error) {
-            console.log("Error fetching events: ", error);
-            eventContainer.insertAdjacentHTML("beforeend",
-                `
-                <article id="event-container" class="training-bar">
-                    <p><b>Agricultural Training Conference</b> &bull; Date: 1 November &bull; Location: Ndola</p>
-                    <a class="training-link" href="./pages/training.html">View Details</a>
-                </article>
-                `
-            );
-        }
-
-
-        //Products
-
-        try {
-                
-            const product = await getProducts();
-
-            console.log("Product: ",product)
-
-            const datav = JSON.parse(JSON.stringify(product.data));
-
-            if(datav){
-                datav.forEach((v,k)=>{
-                    cardContainer.insertAdjacentHTML('beforeend',
-                        `<article id="${v.productId}" class="card">
-                            <figure class="img-box"><img src="${v.pronductImage}" alt="Image of ${v.productName}" /></figure>
-                            <h3>${v.productName}</h3>
-                            <p>Price: ZMW ${parsePrices(v.price)} /kg</p>
-                            <a class="view-btn" href="./pages/marketplace.html">View</a>
-                        </article>`
-                    );
-                })
-            }else{
-                
-                productHolder(cardContainer);
-
+            })
+        }else{
             
-            }
-            
-        } catch (error) {
-            console.log("Error fetching products: ", error);
-
             productHolder(cardContainer);
-        }
 
+        
+        }
+        
+    } catch (error) {
+        console.log("Error fetching products: ", error);
+
+        productHolder(cardContainer);
     }
 
 }
-
-init();
 
 function parsePrices(price){
     if(!price)
@@ -180,7 +175,7 @@ async function getFarmingInfo(){
 
 async function getEvents() {
     
-    const event = await api(`${serverUrl}/product/`,{
+    const event = await api(`${serverUrl}/event/`,{
         method: 'GET',
         mode: 'cors'
     });
