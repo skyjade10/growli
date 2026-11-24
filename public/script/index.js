@@ -155,7 +155,7 @@ function parseDate(date) {
 
 async function getProducts(){
 
-    const products = await api(`${serverUrl}:${serverPort}/product?page=${1}&limit=${6}`,{
+    const products = await api(`${serverUrl}/product?page=${1}&limit=${6}`,{
         method: 'GET',
         mode: 'cors'
     });
