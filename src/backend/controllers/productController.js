@@ -56,15 +56,7 @@ export const getProducts = async (req, res) => {
     var l = parseInt(limit);
 
     try {
-
-        // Notice the \"Product\" with escaped double quotes
-            const data = await prisma.$queryRaw`
-            SELECT * FROM product; 
-            `;
-
-            console.log("Data: ", data);
-
-
+        
         const products = await prisma.product.findMany({
             skip: (p - 1) * l,
             take: l
